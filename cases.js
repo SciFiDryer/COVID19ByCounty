@@ -65,11 +65,13 @@ var countycases = { "counties" : [
 ,
 {"name": "Wyoming", "stateid": 36,"cases": 1}
 ,
-{"name": "Total Number of Positive Cases", "stateid": 36, "cases": 2382}
+{"name": "Total Number of Positive Cases", "stateid": 36,"cases": 2382}
 ,
 {"name": "Allegheny", "stateid": 42, "cases": 11}
 ,
 {"name": "Beaver", "stateid": 42, "cases": 2}
+,
+{"name": "Berks", "stateid": 42, "cases": 1}
 ,
 {"name": "Bucks", "stateid": 42, "cases": 9}
 ,
@@ -78,7 +80,8 @@ var countycases = { "counties" : [
 {"name": "Cumberland", "stateid": 42, "cases": 10}
 ,
 {"name": "Delaware", "stateid": 42, "cases": 14}
-
+,
+{"name": "Lackawanna", "stateid": 42, "cases": 1}
 ,
 {"name": "Lehigh", "stateid": 42, "cases": 1}
 ,
@@ -97,5 +100,6 @@ var countycases = { "counties" : [
 {"name": "Washington", "stateid": 42, "cases": 2}
 ,
 {"name": "Wayne", "stateid": 42, "cases": 1}
-
+,
+{"name": "York", "stateid": 42, "cases": 2}
 ]}
