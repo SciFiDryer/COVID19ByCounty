@@ -1,0 +1,109 @@
+<html><head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="counties.json"></script>
+</head><body>
+
+   <div id="map" style="height: 100%"></div>
+   <script src="cases.js"></script>
+   <script language="javascript">
+   var map = L.map('map').setView([43, -76], 7);
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var nycCases = getNYCCases();
+var i;
+for (i = 0; i < counties.features.length; i++)
+{
+	
+	var properties = generateProperties(counties.features[i].properties.NAME, counties.features[i].properties.STATE);
+	var theStyle = {"color" : properties.color, "weight" : 0};
+	var marker = L.geoJSON(counties.features[i], {style: theStyle});
+	marker.bindTooltip(properties.popupContent);	
+	marker.addTo(map)
+	
+}
+function generateProperties(countyName, stateId)
+{
+	var popupContent = countyName + " County: no reported cases";
+	var color = "#00ff00";
+	var i = 0;
+	for (i = 0; i < countycases.counties.length; i++)
+	{
+		
+		if ((stateId == countycases.counties[i].stateid && countyName == countycases.counties[i].name) || isBigApple(countyName))
+		{
+			popupContent = countyName + " County: " + countycases.counties[i].cases + " reported case";
+			var numCases = countycases.counties[i].cases;
+			//make plurl if needed
+			if (countycases.counties[i].cases > 1)
+			{
+				popupContent = popupContent + "s";
+			}
+			if (isBigApple(countyName))
+			{
+				popupContent = "NYC: " + nycCases + " reported cases";
+				numCases = nycCases;
+			}
+			if (numCases > 0 && numCases <= 5)
+			{
+				color = "#ffe100";
+			}
+			if (numCases > 5 && numCases <= 10)
+			{
+				color = "#ffdd00";
+			}
+			if (numCases > 10 && numCases <= 15)
+			{
+				color = "#ff9500";
+			}
+			if (numCases > 15 && numCases <= 20)
+			{
+				color = "#ff6a00";
+			}
+			if (numCases > 20 && numCases <= 50)
+			{
+				color = "#ff5100";
+			}
+			if (numCases > 50 && numCases <= 100)
+			{
+				color = "#ff3300";
+			}
+			if (numCases > 100 && numCases <= 500)
+			{
+				color = "#ff2200";
+			}
+			if (numCases > 500)
+			{
+				color = "#ff0000";
+			}
+		}
+		
+	}
+	return {"color" : color, "popupContent": popupContent};
+}
+function getNYCCases()
+{
+	for (i = 0; i < countycases.counties.length; i++)
+	{
+		if (countycases.counties[i].name == "New York City")
+		{
+			return countycases.counties[i].cases;
+		}
+	}
+	return 0;
+}
+function isBigApple(countyName)
+{
+	if (countyName == "New York" || countyName == "Queens" || countyName == "Kings" || countyName == "Bronx" || countyName == "Richmond")
+	{
+		return true;
+	}
+	return false;
+}
+</script>
+   </body>
