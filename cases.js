@@ -112,4 +112,74 @@ var countycases = { "counties" : [
 {"name": "Middlesex", "stateid": 9, "cases": 1}
 ,
 {"name": "New Haven", "stateid": 9, "cases": 10}
+,
+{"name": "Ashland", "stateid": 39,"cases": 1}
+,
+{"name": "Belmont", "stateid": 39,"cases": 2}
+,
+{"name": "Butler", "stateid": 39,"cases": 8}
+,
+{"name": "Coshocton", "stateid": 39,"cases": 2}
+,
+{"name": "Cuyahoga", "stateid": 39,"cases": 38}
+,
+{"name": "Darke", "stateid": 39,"cases": 1}
+,
+{"name": "Delaware", "stateid": 39,"cases": 1}
+,
+{"name": "Franklin", "stateid": 39,"cases": 7}
+,
+{"name": "Geauga", "stateid": 39,"cases": 1}
+,
+{"name": "Huron", "stateid": 39,"cases": 1}
+,
+{"name": "Lake", "stateid": 39,"cases": 2}
+,
+{"name": "Lorain", "stateid": 39,"cases": 6}
+,
+{"name": "Lucas", "stateid": 39,"cases": 1}
+,
+{"name": "Mahoning", "stateid": 39,"cases": 3}
+,
+{"name": "Medina", "stateid": 39,"cases": 4}
+,
+{"name": "Stark", "stateid": 39,"cases": 3}
+,
+{"name": "Summit", "stateid": 39,"cases": 4}
+,
+{"name": "Trumbull", "stateid": 39,"cases": 2}
+,
+{"name": "Tuscarawas", "stateid": 39,"cases": 1}
+,
+{"name": "Bergen", "stateid": 34, "cases": 114}
+,
+{"name": "Essex", "stateid": 34, "cases": 45}
+,
+{"name": "Middlesex", "stateid": 34, "cases": 40}
+,
+{"name": "Hudson", "stateid": 34, "cases": 34}
+,
+{"name": "Monmouth", "stateid": 34, "cases": 32}
+,
+{"name": "Union", "stateid": 34, "cases": 26}
+,
+{"name": "Morris", "stateid": 34, "cases": 19}
+,
+{"name": "Passaic", "stateid": 34, "cases": 18}
+,
+{"name": "Somerset", "stateid": 34, "cases": 16}
+,
+{"name": "Mercer", "stateid": 34, "cases": 15}
+,
+{"name": "Burlington", "stateid": 34, "cases": 10}
+,
+{"name": "Camden", "stateid": 34, "cases": 8}
+,
+{"name": "Ocean", "stateid": 34, "cases": 8}
+,
+{"name": "Hunterdon", "stateid": 34, "cases": 6}
+,
+{"name": "Atlantic", "stateid": 34, "cases": 3}
+,
+{"name": "Gloucester", "stateid": 34, "cases": 2}
 ]}
