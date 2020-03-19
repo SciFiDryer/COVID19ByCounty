@@ -6,6 +6,15 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
    <script src="counties.json"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161411893-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-161411893-1');
+</script>
+
 </head><body>
 
    <div id="map" style="height: 100%"></div>
@@ -15,6 +24,24 @@
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+	L.Control.Watermark = L.Control.extend({
+    onAdd: function(map) {
+        var theDiv = L.DomUtil.create('div');
+        theDiv.style.fontSize = "14px";
+        theDiv.innerHTML = "<strong>COVID19 cases by county</strong><br><a href=\"https://github.com/SciFiDryer/COVID19ByCounty\">Project page</a><br>State Data Refreshed " + batchTime + "<br>Visualization by Matt Jamesson";
+        theDiv.style.backgroundColor = "#ffffff";
+        theDiv.style.opacity = ".75";
+        theDiv.align = "center";
+        return theDiv;
+    },
+});
+
+L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+}
+
+L.control.watermark({ position: 'topright' }).addTo(map);
 var nycCases = getNYCCases();
 var i;
 for (i = 0; i < counties.features.length; i++)

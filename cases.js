@@ -1,3 +1,4 @@
+var batchTime = "2020-03-19 07:18 PM EST";
 var countycases = { "counties" : [
 {"name": "Albany", "stateid": 36,"cases": 43}
 ,
@@ -363,7 +364,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Coles", "stateid": 17, "cases": 0}
 ,
-{"name": "Cook", "stateid": 17, "cases": 178}
+{"name": "Cook", "stateid": 17, "cases": 278}
 ,
 {"name": "Crawford", "stateid": 17, "cases": 0}
 ,
