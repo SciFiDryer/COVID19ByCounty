@@ -182,4 +182,28 @@ var countycases = { "counties" : [
 {"name": "Atlantic", "stateid": 34, "cases": 3}
 ,
 {"name": "Gloucester", "stateid": 34, "cases": 2}
+,
+{"name": "Barnstable", "stateid": 25, "cases": 2}
+,
+{"name": "Berkshire", "stateid": 25, "cases": 17}
+,
+{"name": "Bristol", "stateid": 25, "cases": 5}
+,
+{"name": "Essex", "stateid": 25, "cases": 14}
+,
+{"name": "Franklin", "stateid": 25, "cases": 1}
+,
+{"name": "Hampden", "stateid": 25, "cases": 2}
+,
+{"name": "Middlesex", "stateid": 25, "cases": 100}
+,
+{"name": "Norfolk", "stateid": 25, "cases": 45}
+,
+{"name": "Plymouth", "stateid": 25, "cases": 5}
+,
+{"name": "Suffolk", "stateid": 25, "cases": 51}
+,
+{"name": "Worcester", "stateid": 25, "cases": 10}
+,
+{"name": "Unknown", "stateid": 25, "cases": 4}
 ]}
