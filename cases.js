@@ -67,51 +67,81 @@ var countycases = { "counties" : [
 ,
 {"name": "Total Number of Positive Cases", "stateid": 36,"cases": 2382}
 ,
-{"name": "Allegheny", "stateid": 42, "cases": 11}
+{"name": "Adams", "stateid": 42, "cases": 1}
+,
+{"name": "Allegheny", "stateid": 42, "cases": 16}
 ,
 {"name": "Beaver", "stateid": 42, "cases": 2}
 ,
 {"name": "Berks", "stateid": 42, "cases": 1}
 ,
-{"name": "Bucks", "stateid": 42, "cases": 9}
+{"name": "Bucks", "stateid": 42, "cases": 12}
 ,
-{"name": "Chester", "stateid": 42, "cases": 9}
+{"name": "Chester", "stateid": 42, "cases": 10}
 ,
-{"name": "Cumberland", "stateid": 42, "cases": 10}
+{"name": "Cumberland", "stateid": 42, "cases": 11}
 ,
 {"name": "Delaware", "stateid": 42, "cases": 14}
 ,
-{"name": "Lackawanna", "stateid": 42, "cases": 1}
+{"name": "Lackawanna", "stateid": 42, "cases": 2}
+,
+{"name": "Lancaster", "stateid": 42, "cases": 2}
+,
+{"name": "Lebanon", "stateid": 42, "cases": 1}
 ,
 {"name": "Lehigh", "stateid": 42, "cases": 1}
 ,
 {"name": "Luzerne", "stateid": 42, "cases": 1}
 ,
-{"name": "Monroe", "stateid": 42, "cases": 7}
+{"name": "Monroe", "stateid": 42, "cases": 15}
 ,
-{"name": "Montgomery", "stateid": 42, "cases": 42}
+{"name": "Montgomery", "stateid": 42, "cases": 47}
 ,
-{"name": "Northampton", "stateid": 42, "cases": 1}
+{"name": "Northampton", "stateid": 42, "cases": 5}
 ,
-{"name": "Philadelphia", "stateid": 42, "cases": 17}
+{"name": "Philadelphia", "stateid": 42, "cases": 33}
 ,
-{"name": "Pike", "stateid": 42, "cases": 2}
+{"name": "Pike", "stateid": 42, "cases": 3}
 ,
-{"name": "Washington", "stateid": 42, "cases": 2}
+{"name": "Washington", "stateid": 42, "cases": 3}
 ,
 {"name": "Wayne", "stateid": 42, "cases": 1}
 ,
+{"name": "Westmoreland", "stateid": 42, "cases": 2}
+,
 {"name": "York", "stateid": 42, "cases": 2}
 ,
-{"name": "Fairfield", "stateid": 9, "cases": 69}
+{"name": "Bergen", "stateid": 34, "cases": 114}
 ,
-{"name": "Hartford", "stateid": 9, "cases": 11}
+{"name": "Essex", "stateid": 34, "cases": 45}
 ,
-{"name": "Litchfield", "stateid": 9, "cases": 5}
+{"name": "Middlesex", "stateid": 34, "cases": 40}
 ,
-{"name": "Middlesex", "stateid": 9, "cases": 1}
+{"name": "Hudson", "stateid": 34, "cases": 34}
 ,
-{"name": "New Haven", "stateid": 9, "cases": 10}
+{"name": "Monmouth", "stateid": 34, "cases": 32}
+,
+{"name": "Union", "stateid": 34, "cases": 26}
+,
+{"name": "Morris", "stateid": 34, "cases": 19}
+,
+{"name": "Passaic", "stateid": 34, "cases": 18}
+,
+{"name": "Somerset", "stateid": 34, "cases": 16}
+,
+{"name": "Mercer", "stateid": 34, "cases": 15}
+,
+{"name": "Burlington", "stateid": 34, "cases": 10}
+,
+{"name": "Camden", "stateid": 34, "cases": 8}
+,
+{"name": "Ocean", "stateid": 34, "cases": 8}
+,
+{"name": "Hunterdon", "stateid": 34, "cases": 6}
+,
+{"name": "Atlantic", "stateid": 34, "cases": 3}
+,
+{"name": "Gloucester", "stateid": 34, "cases": 2}
 ,
 {"name": "Ashland", "stateid": 39,"cases": 1}
 ,
@@ -151,37 +181,15 @@ var countycases = { "counties" : [
 ,
 {"name": "Tuscarawas", "stateid": 39,"cases": 1}
 ,
-{"name": "Bergen", "stateid": 34, "cases": 114}
+{"name": "Fairfield", "stateid": 9, "cases": 69}
 ,
-{"name": "Essex", "stateid": 34, "cases": 45}
+{"name": "Hartford", "stateid": 9, "cases": 11}
 ,
-{"name": "Middlesex", "stateid": 34, "cases": 40}
+{"name": "Litchfield", "stateid": 9, "cases": 5}
 ,
-{"name": "Hudson", "stateid": 34, "cases": 34}
+{"name": "Middlesex", "stateid": 9, "cases": 1}
 ,
-{"name": "Monmouth", "stateid": 34, "cases": 32}
-,
-{"name": "Union", "stateid": 34, "cases": 26}
-,
-{"name": "Morris", "stateid": 34, "cases": 19}
-,
-{"name": "Passaic", "stateid": 34, "cases": 18}
-,
-{"name": "Somerset", "stateid": 34, "cases": 16}
-,
-{"name": "Mercer", "stateid": 34, "cases": 15}
-,
-{"name": "Burlington", "stateid": 34, "cases": 10}
-,
-{"name": "Camden", "stateid": 34, "cases": 8}
-,
-{"name": "Ocean", "stateid": 34, "cases": 8}
-,
-{"name": "Hunterdon", "stateid": 34, "cases": 6}
-,
-{"name": "Atlantic", "stateid": 34, "cases": 3}
-,
-{"name": "Gloucester", "stateid": 34, "cases": 2}
+{"name": "New Haven", "stateid": 9, "cases": 10}
 ,
 {"name": "Barnstable", "stateid": 25, "cases": 2}
 ,
