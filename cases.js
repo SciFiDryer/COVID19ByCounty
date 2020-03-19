@@ -102,4 +102,14 @@ var countycases = { "counties" : [
 {"name": "Wayne", "stateid": 42, "cases": 1}
 ,
 {"name": "York", "stateid": 42, "cases": 2}
+,
+{"name": "Fairfield", "stateid": 9, "cases": 69}
+,
+{"name": "Hartford", "stateid": 9, "cases": 11}
+,
+{"name": "Litchfield", "stateid": 9, "cases": 5}
+,
+{"name": "Middlesex", "stateid": 9, "cases": 1}
+,
+{"name": "New Haven", "stateid": 9, "cases": 10}
 ]}
