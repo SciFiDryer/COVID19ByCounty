@@ -805,4 +805,36 @@ var countycases = { "counties" : [
 {"name": "Kent", "stateid": 10, "cases": 5}
 ,
 {"name": "Sussex", "stateid": 10, "cases": 6}
+,
+{"name": "Androscoggin", "stateid": 23, "cases": 2}
+,
+{"name": "Aroostook", "stateid": 23, "cases": 0}
+,
+{"name": "Cumberland", "stateid": 23, "cases": 26}
+,
+{"name": "Franklin", "stateid": 23, "cases": 0}
+,
+{"name": "Hancock", "stateid": 23, "cases": 0}
+,
+{"name": "Kennebec", "stateid": 23, "cases": 4}
+,
+{"name": "Knox", "stateid": 23, "cases": 0}
+,
+{"name": "Lincoln", "stateid": 23, "cases": 3}
+,
+{"name": "Oxford", "stateid": 23, "cases": 1}
+,
+{"name": "Penobscot", "stateid": 23, "cases": 2}
+,
+{"name": "Piscataquis", "stateid": 23, "cases": 0}
+,
+{"name": "Sagadahoc", "stateid": 23, "cases": 0}
+,
+{"name": "Somerset", "stateid": 23, "cases": 0}
+,
+{"name": "Waldo", "stateid": 23, "cases": 0}
+,
+{"name": "Washington", "stateid": 23, "cases": 0}
+,
+{"name": "York", "stateid": 23, "cases": 4}
 ]}
