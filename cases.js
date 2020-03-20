@@ -1,4 +1,4 @@
-var batchTime = "2020-03-19 07:18 PM EST";
+var batchTime = "2020-03-20 12:22 PM EST";
 var countycases = { "counties" : [
 {"name": "Albany", "stateid": 36,"cases": 43}
 ,
@@ -82,49 +82,57 @@ var countycases = { "counties" : [
 ,
 {"name": "Total Number of Positive Cases", "stateid": 36,"cases": 4152}
 ,
-{"name": "Adams", "stateid": 42, "cases": 1}
+{"name": "Adams", "stateid": 42, "cases": 4}
 ,
-{"name": "Allegheny", "stateid": 42, "cases": 16}
+{"name": "Allegheny", "stateid": 42, "cases": 28}
 ,
-{"name": "Beaver", "stateid": 42, "cases": 2}
+{"name": "Beaver", "stateid": 42, "cases": 3}
 ,
-{"name": "Berks", "stateid": 42, "cases": 1}
+{"name": "Berks", "stateid": 42, "cases": 5}
 ,
-{"name": "Bucks", "stateid": 42, "cases": 12}
+{"name": "Bucks", "stateid": 42, "cases": 16}
 ,
-{"name": "Chester", "stateid": 42, "cases": 10}
+{"name": "Centre", "stateid": 42, "cases": 1}
+,
+{"name": "Chester", "stateid": 42, "cases": 17}
 ,
 {"name": "Cumberland", "stateid": 42, "cases": 11}
 ,
-{"name": "Delaware", "stateid": 42, "cases": 14}
+{"name": "Delaware", "stateid": 42, "cases": 23}
 ,
-{"name": "Lackawanna", "stateid": 42, "cases": 2}
+{"name": "Erie", "stateid": 42, "cases": 1}
+,
+{"name": "Franklin", "stateid": 42, "cases": 1}
+,
+{"name": "Lackawanna", "stateid": 42, "cases": 4}
 ,
 {"name": "Lancaster", "stateid": 42, "cases": 2}
 ,
 {"name": "Lebanon", "stateid": 42, "cases": 1}
 ,
-{"name": "Lehigh", "stateid": 42, "cases": 1}
+{"name": "Lehigh", "stateid": 42, "cases": 2}
 ,
-{"name": "Luzerne", "stateid": 42, "cases": 1}
+{"name": "Luzerne", "stateid": 42, "cases": 2}
 ,
-{"name": "Monroe", "stateid": 42, "cases": 15}
+{"name": "Monroe", "stateid": 42, "cases": 19}
 ,
-{"name": "Montgomery", "stateid": 42, "cases": 47}
+{"name": "Montgomery", "stateid": 42, "cases": 59}
 ,
-{"name": "Northampton", "stateid": 42, "cases": 5}
+{"name": "Northampton", "stateid": 42, "cases": 10}
 ,
-{"name": "Philadelphia", "stateid": 42, "cases": 33}
+{"name": "Philadelphia", "stateid": 42, "cases": 42}
 ,
-{"name": "Pike", "stateid": 42, "cases": 3}
+{"name": "Pike", "stateid": 42, "cases": 2}
+,
+{"name": "Potter", "stateid": 42, "cases": 1}
 ,
 {"name": "Washington", "stateid": 42, "cases": 3}
 ,
 {"name": "Wayne", "stateid": 42, "cases": 1}
 ,
-{"name": "Westmoreland", "stateid": 42, "cases": 2}
+{"name": "Westmoreland", "stateid": 42, "cases": 4}
 ,
-{"name": "York", "stateid": 42, "cases": 2}
+{"name": "York", "stateid": 42, "cases": 6}
 ,
 {"name": "Bergen", "stateid": 34, "cases": 114}
 ,
@@ -286,19 +294,23 @@ var countycases = { "counties" : [
 ,
 {"name": "Adams", "stateid": 18, "cases": 1}
 ,
+{"name": "Allen", "stateid": 18, "cases": 1}
+,
 {"name": "Bartholomew", "stateid": 18, "cases": 1}
 ,
-{"name": "Boone", "stateid": 18, "cases": 1}
+{"name": "Boone", "stateid": 18, "cases": 2}
 ,
 {"name": "Clark", "stateid": 18, "cases": 1}
 ,
 {"name": "Fayette", "stateid": 18, "cases": 1}
 ,
-{"name": "Floyd", "stateid": 18, "cases": 1}
+{"name": "Floyd", "stateid": 18, "cases": 2}
 ,
 {"name": "Franklin", "stateid": 18, "cases": 2}
 ,
-{"name": "Hamilton", "stateid": 18, "cases": 2}
+{"name": "Grant", "stateid": 18, "cases": 1}
+,
+{"name": "Hamilton", "stateid": 18, "cases": 5}
 ,
 {"name": "Hendricks", "stateid": 18, "cases": 4}
 ,
@@ -306,23 +318,29 @@ var countycases = { "counties" : [
 ,
 {"name": "Jennings", "stateid": 18, "cases": 1}
 ,
-{"name": "Johnson", "stateid": 18, "cases": 3}
+{"name": "Johnson", "stateid": 18, "cases": 4}
 ,
-{"name": "Lake", "stateid": 18, "cases": 4}
+{"name": "Lake", "stateid": 18, "cases": 6}
 ,
 {"name": "LaPorte", "stateid": 18, "cases": 1}
 ,
 {"name": "Madison", "stateid": 18, "cases": 1}
 ,
-{"name": "Marion", "stateid": 18, "cases": 19}
+{"name": "Marion", "stateid": 18, "cases": 25}
 ,
 {"name": "Noble", "stateid": 18, "cases": 1}
 ,
 {"name": "Owen", "stateid": 18, "cases": 1}
 ,
-{"name": "St Joseph", "stateid": 18, "cases": 3}
+{"name": "Shelby", "stateid": 18, "cases": 1}
 ,
-{"name": "Tippecanoe", "stateid": 18, "cases": 1}
+{"name": "St Joseph", "stateid": 18, "cases": 6}
+,
+{"name": "Tippecanoe", "stateid": 18, "cases": 2}
+,
+{"name": "Vander.", "stateid": 18, "cases": 1}
+,
+{"name": "Vigo", "stateid": 18, "cases": 1}
 ,
 {"name": "Wayne", "stateid": 18, "cases": 1}
 ,
@@ -658,7 +676,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Isanti", "stateid": 27, "cases": 0}
 ,
-{"name": "Chisago", "stateid": 27, "cases": 0}
+{"name": "Chisago", "stateid": 27, "cases": 1}
 ,
 {"name": "Big Stone", "stateid": 27, "cases": 0}
 ,
@@ -678,11 +696,11 @@ var countycases = { "counties" : [
 ,
 {"name": "Washington", "stateid": 27, "cases": 3}
 ,
-{"name": "Hennepin", "stateid": 27, "cases": 33}
+{"name": "Hennepin", "stateid": 27, "cases": 45}
 ,
 {"name": "Chippewa", "stateid": 27, "cases": 0}
 ,
-{"name": "Ramsey", "stateid": 27, "cases": 12}
+{"name": "Ramsey", "stateid": 27, "cases": 16}
 ,
 {"name": "McLeod", "stateid": 27, "cases": 0}
 ,
@@ -694,7 +712,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Renville", "stateid": 27, "cases": 1}
 ,
-{"name": "Scott", "stateid": 27, "cases": 1}
+{"name": "Scott", "stateid": 27, "cases": 2}
 ,
 {"name": "Sibley", "stateid": 27, "cases": 0}
 ,
@@ -732,7 +750,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Dodge", "stateid": 27, "cases": 0}
 ,
-{"name": "Olmsted", "stateid": 27, "cases": 6}
+{"name": "Olmsted", "stateid": 27, "cases": 11}
 ,
 {"name": "Watonwan", "stateid": 27, "cases": 0}
 ,
@@ -742,47 +760,49 @@ var countycases = { "counties" : [
 ,
 {"name": "Jackson", "stateid": 27, "cases": 0}
 ,
-{"name": "Martin", "stateid": 27, "cases": 3}
+{"name": "Martin", "stateid": 27, "cases": 4}
 ,
 {"name": "Houston", "stateid": 27, "cases": 0}
 ,
 {"name": "Faribault", "stateid": 27, "cases": 0}
 ,
-{"name": "Fillmore", "stateid": 27, "cases": 0}
+{"name": "Fillmore", "stateid": 27, "cases": 2}
 ,
 {"name": "Freeborn", "stateid": 27, "cases": 0}
 ,
 {"name": "Mower", "stateid": 27, "cases": 1}
 ,
-{"name": "Androscoggin", "stateid": 23, "cases": 1}
+{"name": "Montgomery", "stateid": 24, "cases": 51}
 ,
-{"name": "Aroostook", "stateid": 23, "cases": 0}
+{"name": "Prince George's", "stateid": 24, "cases": 31}
 ,
-{"name": "Cumberland", "stateid": 23, "cases": 21}
+{"name": "Howard", "stateid": 24, "cases": 18}
 ,
-{"name": "Franklin", "stateid": 23, "cases": 0}
+{"name": "Baltimore", "stateid": 24, "cases": 13}
 ,
-{"name": "Hancock", "stateid": 23, "cases": 1}
+{"name": "Baltimore City", "stateid": 24, "cases": 11}
 ,
-{"name": "Kennebec", "stateid": 23, "cases": 3}
+{"name": "Anne Arundel", "stateid": 24, "cases": 10}
 ,
-{"name": "Knox", "stateid": 23, "cases": 0}
+{"name": "Harford", "stateid": 24, "cases": 5}
 ,
-{"name": "Lincoln", "stateid": 23, "cases": 3}
+{"name": "Carroll", "stateid": 24, "cases": 3}
 ,
-{"name": "Oxford", "stateid": 23, "cases": 1}
+{"name": "Charles", "stateid": 24, "cases": 2}
 ,
-{"name": "Penobscot", "stateid": 23, "cases": 1}
+{"name": "Calvert", "stateid": 24, "cases": 1}
 ,
-{"name": "Piscataquis", "stateid": 23, "cases": 0}
+{"name": "Frederick", "stateid": 24, "cases": 1}
 ,
-{"name": "Sagadahoc", "stateid": 23, "cases": 0}
+{"name": "Talbot", "stateid": 24, "cases": 1}
 ,
-{"name": "Somerset", "stateid": 23, "cases": 0}
+{"name": "Wicomico", "stateid": 24, "cases": 1}
 ,
-{"name": "Waldo", "stateid": 23, "cases": 0}
+{"name": "Worcester", "stateid": 24, "cases": 1}
 ,
-{"name": "Washington", "stateid": 23, "cases": 0}
+{"name": "New Castle", "stateid": 10, "cases": 27}
 ,
-{"name": "York", "stateid": 23, "cases": 2}
+{"name": "Kent", "stateid": 10, "cases": 5}
+,
+{"name": "Sussex", "stateid": 10, "cases": 6}
 ]}
