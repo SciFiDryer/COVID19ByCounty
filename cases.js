@@ -1432,7 +1432,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Columbia", "stateid": 12, "cases": 2}
 ,
-{"name": "Dade", "stateid": 12, "cases": 278}
+{"name": "Miami-Dade", "stateid": 12, "cases": 278}
 ,
 {"name": "Desoto", "stateid": 12, "cases": 1}
 ,
