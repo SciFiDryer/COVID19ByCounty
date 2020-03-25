@@ -21,7 +21,7 @@
    <div id="map" style="height: 100%"></div>
    <script src="cases.js"></script>
    <script language="javascript">
-   var map = L.map('map').setView([38, -83], 5);
+   var map = L.map('map').setView([38, -95], 5);
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -72,14 +72,14 @@ function generateProperties(countyName, stateId)
 			{
 				popupContent = popupContent + "s";
 			}
-			if (isBigApple(countyName))
+			if (isBigApple(countyName) && stateId == 36)
 			{
 				popupContent = "NYC: " + nycCases + " reported cases";
 				numCases = nycCases;
 			}
 			if (numCases > 0 && numCases <= 5)
 			{
-				color = "#ffe100";
+				color = "#ddff00";
 			}
 			if (numCases > 5 && numCases <= 10)
 			{
@@ -91,23 +91,27 @@ function generateProperties(countyName, stateId)
 			}
 			if (numCases > 15 && numCases <= 20)
 			{
-				color = "#ff6a00";
+				color = "#ff6000";
 			}
 			if (numCases > 20 && numCases <= 50)
 			{
-				color = "#ff5100";
+				color = "#ff5000";
 			}
 			if (numCases > 50 && numCases <= 100)
 			{
-				color = "#ff3300";
+				color = "#ff4000";
 			}
 			if (numCases > 100 && numCases <= 500)
 			{
-				color = "#ff2200";
+				color = "#ff2500";
 			}
-			if (numCases > 500)
+			if (numCases > 500 && numCases <=1000)
 			{
-				color = "#ff0000";
+				color = "#ff1500";
+			}
+			if (numCases > 1000)
+			{
+				color = "#850000";
 			}
 		}
 		
