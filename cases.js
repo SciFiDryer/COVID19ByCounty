@@ -1948,105 +1948,105 @@ var countycases = { "counties" : [
 ,
 {"name": "Yazoo", "stateid": 28, "cases": 3}
 ,
-{"name": "Anderson County", "stateid": 47,"cases": 1}
+{"name": "Anderson", "stateid": 47,"cases": 1}
 ,
-{"name": "Blount County", "stateid": 47,"cases": 3}
+{"name": "Blount", "stateid": 47,"cases": 3}
 ,
-{"name": "Bradley County", "stateid": 47,"cases": 2}
+{"name": "Bradley", "stateid": 47,"cases": 2}
 ,
-{"name": "Campbell County", "stateid": 47,"cases": 2}
+{"name": "Campbell", "stateid": 47,"cases": 2}
 ,
-{"name": "Carroll County", "stateid": 47,"cases": 3}
+{"name": "Carroll", "stateid": 47,"cases": 3}
 ,
-{"name": "Cheatham County", "stateid": 47,"cases": 5}
+{"name": "Cheatham", "stateid": 47,"cases": 5}
 ,
-{"name": "Chester County", "stateid": 47,"cases": 1}
+{"name": "Chester", "stateid": 47,"cases": 1}
 ,
-{"name": "Claiborne County", "stateid": 47,"cases": 1}
+{"name": "Claiborne", "stateid": 47,"cases": 1}
 ,
-{"name": "Cocke County", "stateid": 47,"cases": 1}
+{"name": "Cocke", "stateid": 47,"cases": 1}
 ,
-{"name": "Cumberland County", "stateid": 47,"cases": 3}
+{"name": "Cumberland", "stateid": 47,"cases": 3}
 ,
-{"name": "Davidson County", "stateid": 47,"cases": 183}
+{"name": "Davidson", "stateid": 47,"cases": 183}
 ,
-{"name": "Dekalb County", "stateid": 47,"cases": 1}
+{"name": "Dekalb", "stateid": 47,"cases": 1}
 ,
-{"name": "Dickson County", "stateid": 47,"cases": 5}
+{"name": "Dickson", "stateid": 47,"cases": 5}
 ,
-{"name": "Dyer County", "stateid": 47,"cases": 2}
+{"name": "Dyer", "stateid": 47,"cases": 2}
 ,
-{"name": "Fayette County", "stateid": 47,"cases": 2}
+{"name": "Fayette", "stateid": 47,"cases": 2}
 ,
-{"name": "Franklin County", "stateid": 47,"cases": 1}
+{"name": "Franklin", "stateid": 47,"cases": 1}
 ,
-{"name": "Gibson County", "stateid": 47,"cases": 2}
+{"name": "Gibson", "stateid": 47,"cases": 2}
 ,
-{"name": "Greene County", "stateid": 47,"cases": 5}
+{"name": "Greene", "stateid": 47,"cases": 5}
 ,
-{"name": "Grundy County", "stateid": 47,"cases": 1}
+{"name": "Grundy", "stateid": 47,"cases": 1}
 ,
-{"name": "Hamblen County", "stateid": 47,"cases": 2}
+{"name": "Hamblen", "stateid": 47,"cases": 2}
 ,
-{"name": "Hamilton County", "stateid": 47,"cases": 8}
+{"name": "Hamilton", "stateid": 47,"cases": 8}
 ,
-{"name": "Hardin County", "stateid": 47,"cases": 1}
+{"name": "Hardin", "stateid": 47,"cases": 1}
 ,
-{"name": "Houston County", "stateid": 47,"cases": 1}
+{"name": "Houston", "stateid": 47,"cases": 1}
 ,
-{"name": "Jefferson County", "stateid": 47,"cases": 4}
+{"name": "Jefferson", "stateid": 47,"cases": 4}
 ,
-{"name": "Knox County", "stateid": 47,"cases": 15}
+{"name": "Knox", "stateid": 47,"cases": 15}
 ,
-{"name": "Lincoln County", "stateid": 47,"cases": 1}
+{"name": "Lincoln", "stateid": 47,"cases": 1}
 ,
-{"name": "Loudon County", "stateid": 47,"cases": 2}
+{"name": "Loudon", "stateid": 47,"cases": 2}
 ,
-{"name": "Madison County", "stateid": 47,"cases": 1}
+{"name": "Madison", "stateid": 47,"cases": 1}
 ,
-{"name": "Marion County", "stateid": 47,"cases": 1}
+{"name": "Marion", "stateid": 47,"cases": 1}
 ,
-{"name": "Maury County", "stateid": 47,"cases": 6}
+{"name": "Maury", "stateid": 47,"cases": 6}
 ,
-{"name": "McMinn County", "stateid": 47,"cases": 2}
+{"name": "McMinn", "stateid": 47,"cases": 2}
 ,
-{"name": "Monroe County", "stateid": 47,"cases": 2}
+{"name": "Monroe", "stateid": 47,"cases": 2}
 ,
-{"name": "Montgomery County", "stateid": 47,"cases": 6}
+{"name": "Montgomery", "stateid": 47,"cases": 6}
 ,
-{"name": "Overton County", "stateid": 47,"cases": 1}
+{"name": "Overton", "stateid": 47,"cases": 1}
 ,
-{"name": "Perry County", "stateid": 47,"cases": 1}
+{"name": "Perry", "stateid": 47,"cases": 1}
 ,
-{"name": "Putnam County", "stateid": 47,"cases": 8}
+{"name": "Putnam", "stateid": 47,"cases": 8}
 ,
-{"name": "Roane County", "stateid": 47,"cases": 1}
+{"name": "Roane", "stateid": 47,"cases": 1}
 ,
-{"name": "Robertson County", "stateid": 47,"cases": 12}
+{"name": "Robertson", "stateid": 47,"cases": 12}
 ,
-{"name": "Rutherford County", "stateid": 47,"cases": 13}
+{"name": "Rutherford", "stateid": 47,"cases": 13}
 ,
-{"name": "Scott County", "stateid": 47,"cases": 1}
+{"name": "Scott", "stateid": 47,"cases": 1}
 ,
-{"name": "Sevier County", "stateid": 47,"cases": 2}
+{"name": "Sevier", "stateid": 47,"cases": 2}
 ,
-{"name": "Shelby County", "stateid": 47,"cases": 99}
+{"name": "Shelby", "stateid": 47,"cases": 99}
 ,
-{"name": "Sullivan County", "stateid": 47,"cases": 2}
+{"name": "Sullivan", "stateid": 47,"cases": 2}
 ,
-{"name": "Sumner County", "stateid": 47,"cases": 34}
+{"name": "Sumner", "stateid": 47,"cases": 34}
 ,
-{"name": "Tipton County", "stateid": 47,"cases": 6}
+{"name": "Tipton", "stateid": 47,"cases": 6}
 ,
-{"name": "Washington County", "stateid": 47,"cases": 7}
+{"name": "Washington", "stateid": 47,"cases": 7}
 ,
-{"name": "Williamson County", "stateid": 47,"cases": 64}
+{"name": "Williamson", "stateid": 47,"cases": 64}
 ,
-{"name": "Wilson County", "stateid": 47,"cases": 7}
+{"name": "Wilson", "stateid": 47,"cases": 7}
 ,
-{"name": "Out of TN", "stateid": 47,"cases": 95}
+{"name": "Out of T", "stateid": 47,"cases": 95}
 ,
-{"name": "Pending", "stateid": 47,"cases": 38}
+{"name": "Pendin", "stateid": 47,"cases": 38}
 ,
 {"name": "Guilford", "stateid": 37, "cases": 16}
 ,
