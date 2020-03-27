@@ -3183,4 +3183,190 @@ var countycases = { "counties" : [
 {"name": "Madison", "stateid": 16,"cases": 2}
 ,
 {"name": "Teton", "stateid": 16,"cases": 2}
+,
+{"name": "Douglas", "stateid": 31, "cases": 43}
+,
+{"name": "Sarpy", "stateid": 31, "cases": 7}
+,
+{"name": "Washington", "stateid": 31, "cases": 5}
+,
+{"name": "Lincoln", "stateid": 31, "cases": 3}
+,
+{"name": "Lancaster", "stateid": 31, "cases": 3}
+,
+{"name": "Cass", "stateid": 31, "cases": 2}
+,
+{"name": "Saunders", "stateid": 31, "cases": 2}
+,
+{"name": "Buffalo", "stateid": 31, "cases": 2}
+,
+{"name": "Knox", "stateid": 31, "cases": 2}
+,
+{"name": "Nemaha", "stateid": 31, "cases": 1}
+,
+{"name": "Dawson", "stateid": 31, "cases": 1}
+,
+{"name": "Adams", "stateid": 31, "cases": 1}
+,
+{"name": "Madison", "stateid": 31, "cases": 1}
+,
+{"name": "McPherson", "stateid": 31, "cases": 0}
+,
+{"name": "Red Willow", "stateid": 31, "cases": 0}
+,
+{"name": "Rock", "stateid": 31, "cases": 0}
+,
+{"name": "Gosper", "stateid": 31, "cases": 0}
+,
+{"name": "Gage", "stateid": 31, "cases": 0}
+,
+{"name": "Pierce", "stateid": 31, "cases": 0}
+,
+{"name": "Platte", "stateid": 31, "cases": 0}
+,
+{"name": "Box Butte", "stateid": 31, "cases": 0}
+,
+{"name": "Thurston", "stateid": 31, "cases": 0}
+,
+{"name": "Boone", "stateid": 31, "cases": 0}
+,
+{"name": "Otoe", "stateid": 31, "cases": 0}
+,
+{"name": "Kearney", "stateid": 31, "cases": 0}
+,
+{"name": "Hitchcock", "stateid": 31, "cases": 0}
+,
+{"name": "Kimball", "stateid": 31, "cases": 0}
+,
+{"name": "Polk", "stateid": 31, "cases": 0}
+,
+{"name": "Dawes", "stateid": 31, "cases": 0}
+,
+{"name": "Wayne", "stateid": 31, "cases": 0}
+,
+{"name": "Garfield", "stateid": 31, "cases": 0}
+,
+{"name": "Nuckolls", "stateid": 31, "cases": 0}
+,
+{"name": "Keith", "stateid": 31, "cases": 0}
+,
+{"name": "Phelps", "stateid": 31, "cases": 0}
+,
+{"name": "Webster", "stateid": 31, "cases": 0}
+,
+{"name": "Dakota", "stateid": 31, "cases": 0}
+,
+{"name": "Boyd", "stateid": 31, "cases": 0}
+,
+{"name": "Thomas", "stateid": 31, "cases": 0}
+,
+{"name": "Holt", "stateid": 31, "cases": 0}
+,
+{"name": "Brown", "stateid": 31, "cases": 0}
+,
+{"name": "Keya Paha", "stateid": 31, "cases": 0}
+,
+{"name": "Banner", "stateid": 31, "cases": 0}
+,
+{"name": "Greeley", "stateid": 31, "cases": 0}
+,
+{"name": "Jefferson", "stateid": 31, "cases": 0}
+,
+{"name": "Saline", "stateid": 31, "cases": 0}
+,
+{"name": "Dundy", "stateid": 31, "cases": 0}
+,
+{"name": "Scotts Bluff", "stateid": 31, "cases": 0}
+,
+{"name": "Arthur", "stateid": 31, "cases": 0}
+,
+{"name": "Hayes", "stateid": 31, "cases": 0}
+,
+{"name": "Johnson", "stateid": 31, "cases": 0}
+,
+{"name": "Antelope", "stateid": 31, "cases": 0}
+,
+{"name": "Sioux", "stateid": 31, "cases": 0}
+,
+{"name": "Sherman", "stateid": 31, "cases": 0}
+,
+{"name": "Logan", "stateid": 31, "cases": 0}
+,
+{"name": "Merrick", "stateid": 31, "cases": 0}
+,
+{"name": "Sheridan", "stateid": 31, "cases": 0}
+,
+{"name": "Pawnee", "stateid": 31, "cases": 0}
+,
+{"name": "Blaine", "stateid": 31, "cases": 0}
+,
+{"name": "Dixon", "stateid": 31, "cases": 0}
+,
+{"name": "Stanton", "stateid": 31, "cases": 0}
+,
+{"name": "Wheeler", "stateid": 31, "cases": 0}
+,
+{"name": "Franklin", "stateid": 31, "cases": 0}
+,
+{"name": "Dodge", "stateid": 31, "cases": 0}
+,
+{"name": "Chase", "stateid": 31, "cases": 0}
+,
+{"name": "Fillmore", "stateid": 31, "cases": 0}
+,
+{"name": "York", "stateid": 31, "cases": 0}
+,
+{"name": "Seward", "stateid": 31, "cases": 0}
+,
+{"name": "Clay", "stateid": 31, "cases": 0}
+,
+{"name": "Cheyenne", "stateid": 31, "cases": 0}
+,
+{"name": "Garden", "stateid": 31, "cases": 0}
+,
+{"name": "Harlan", "stateid": 31, "cases": 0}
+,
+{"name": "Hooker", "stateid": 31, "cases": 0}
+,
+{"name": "Richardson", "stateid": 31, "cases": 0}
+,
+{"name": "Furnas", "stateid": 31, "cases": 0}
+,
+{"name": "Howard", "stateid": 31, "cases": 0}
+,
+{"name": "Valley", "stateid": 31, "cases": 0}
+,
+{"name": "Cedar", "stateid": 31, "cases": 0}
+,
+{"name": "Thayer", "stateid": 31, "cases": 0}
+,
+{"name": "Deuel", "stateid": 31, "cases": 0}
+,
+{"name": "Morrill", "stateid": 31, "cases": 0}
+,
+{"name": "Hall", "stateid": 31, "cases": 0}
+,
+{"name": "Hamilton", "stateid": 31, "cases": 0}
+,
+{"name": "Loup", "stateid": 31, "cases": 0}
+,
+{"name": "Frontier", "stateid": 31, "cases": 0}
+,
+{"name": "Nance", "stateid": 31, "cases": 0}
+,
+{"name": "Custer", "stateid": 31, "cases": 0}
+,
+{"name": "Grant", "stateid": 31, "cases": 0}
+,
+{"name": "Burt", "stateid": 31, "cases": 0}
+,
+{"name": "Perkins", "stateid": 31, "cases": 0}
+,
+{"name": "Colfax", "stateid": 31, "cases": 0}
+,
+{"name": "Butler", "stateid": 31, "cases": 0}
+,
+{"name": "Cherry", "stateid": 31, "cases": 0}
+,
+{"name": "Cuming", "stateid": 31, "cases": 0}
 ]}
