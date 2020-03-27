@@ -3369,4 +3369,270 @@ var countycases = { "counties" : [
 {"name": "Cherry", "stateid": 31, "cases": 0}
 ,
 {"name": "Cuming", "stateid": 31, "cases": 0}
+,
+{"name": "Albemarle", "stateid": 51,"cases": 6}
+,
+{"name": "Amherst", "stateid": 51,"cases": 1}
+,
+{"name": "Appomattox", "stateid": 51,"cases": 0}
+,
+{"name": "Arlington", "stateid": 51,"cases": 54}
+,
+{"name": "Augusta", "stateid": 51,"cases": 0}
+,
+{"name": "Bedford", "stateid": 51,"cases": 2}
+,
+{"name": "Bland", "stateid": 51,"cases": 0}
+,
+{"name": "Brunswick", "stateid": 51,"cases": 0}
+,
+{"name": "Buchanan", "stateid": 51,"cases": 0}
+,
+{"name": "Buckingham", "stateid": 51,"cases": 0}
+,
+{"name": "Campbell", "stateid": 51,"cases": 0}
+,
+{"name": "Caroline", "stateid": 51,"cases": 0}
+,
+{"name": "Carroll", "stateid": 51,"cases": 0}
+,
+{"name": "Charles City", "stateid": 51,"cases": 1}
+,
+{"name": "Charlotte", "stateid": 51,"cases": 0}
+,
+{"name": "Clarke", "stateid": 51,"cases": 0}
+,
+{"name": "Culpeper", "stateid": 51,"cases": 2}
+,
+{"name": "Cumberland", "stateid": 51,"cases": 0}
+,
+{"name": "Dinwiddie", "stateid": 51,"cases": 0}
+,
+{"name": "Essex", "stateid": 51,"cases": 0}
+,
+{"name": "Grayson", "stateid": 51,"cases": 0}
+,
+{"name": "Greene", "stateid": 51,"cases": 0}
+,
+{"name": "Greensville", "stateid": 51,"cases": 0}
+,
+{"name": "Halifax", "stateid": 51,"cases": 1}
+,
+{"name": "Hanover", "stateid": 51,"cases": 2}
+,
+{"name": "Henrico", "stateid": 51,"cases": 21}
+,
+{"name": "Highland", "stateid": 51,"cases": 0}
+,
+{"name": "Isle of Wight", "stateid": 51,"cases": 2}
+,
+{"name": "King and Queen", "stateid": 51,"cases": 0}
+,
+{"name": "Lee", "stateid": 51,"cases": 2}
+,
+{"name": "Louisa", "stateid": 51,"cases": 4}
+,
+{"name": "Lunenburg", "stateid": 51,"cases": 0}
+,
+{"name": "Madison", "stateid": 51,"cases": 1}
+,
+{"name": "Mathews", "stateid": 51,"cases": 1}
+,
+{"name": "Middlesex", "stateid": 51,"cases": 0}
+,
+{"name": "New Kent", "stateid": 51,"cases": 0}
+,
+{"name": "Northampton", "stateid": 51,"cases": 0}
+,
+{"name": "Northumberland", "stateid": 51,"cases": 0}
+,
+{"name": "Patrick", "stateid": 51,"cases": 0}
+,
+{"name": "Pittsylvania", "stateid": 51,"cases": 1}
+,
+{"name": "Powhatan", "stateid": 51,"cases": 0}
+,
+{"name": "Prince George", "stateid": 51,"cases": 0}
+,
+{"name": "Prince William", "stateid": 51,"cases": 36}
+,
+{"name": "Pulaski", "stateid": 51,"cases": 0}
+,
+{"name": "Rockbridge", "stateid": 51,"cases": 1}
+,
+{"name": "Rockingham", "stateid": 51,"cases": 2}
+,
+{"name": "Russell", "stateid": 51,"cases": 0}
+,
+{"name": "Tazewell", "stateid": 51,"cases": 0}
+,
+{"name": "Warren", "stateid": 51,"cases": 1}
+,
+{"name": "Westmoreland", "stateid": 51,"cases": 0}
+,
+{"name": "Wythe", "stateid": 51,"cases": 0}
+,
+{"name": "York", "stateid": 51,"cases": 9}
+,
+{"name": "Alexandria", "stateid": 51,"cases": 14}
+,
+{"name": "Bristol", "stateid": 51,"cases": 0}
+,
+{"name": "Chesapeake", "stateid": 51,"cases": 4}
+,
+{"name": "Danville", "stateid": 51,"cases": 2}
+,
+{"name": "Fairfax City", "stateid": 51,"cases": 1}
+,
+{"name": "Franklin City", "stateid": 51,"cases": 0}
+,
+{"name": "Harrisonburg", "stateid": 51,"cases": 3}
+,
+{"name": "Lynchburg", "stateid": 51,"cases": 1}
+,
+{"name": "Manassas Park", "stateid": 51,"cases": 0}
+,
+{"name": "Martinsville", "stateid": 51,"cases": 0}
+,
+{"name": "Newport News", "stateid": 51,"cases": 8}
+,
+{"name": "Norfolk", "stateid": 51,"cases": 6}
+,
+{"name": "Salem", "stateid": 51,"cases": 0}
+,
+{"name": "Waynesboro", "stateid": 51,"cases": 0}
+,
+{"name": "Williamsburg", "stateid": 51,"cases": 5}
+,
+{"name": "Winchester", "stateid": 51,"cases": 0}
+,
+{"name": "Accomack", "stateid": 51,"cases": 2}
+,
+{"name": "Alleghany", "stateid": 51,"cases": 0}
+,
+{"name": "Amelia", "stateid": 51,"cases": 1}
+,
+{"name": "Bath", "stateid": 51,"cases": 0}
+,
+{"name": "Botetourt", "stateid": 51,"cases": 1}
+,
+{"name": "Chesterfield", "stateid": 51,"cases": 12}
+,
+{"name": "Craig", "stateid": 51,"cases": 0}
+,
+{"name": "Dickenson", "stateid": 51,"cases": 0}
+,
+{"name": "Fairfax", "stateid": 51,"cases": 79}
+,
+{"name": "Fauquier", "stateid": 51,"cases": 1}
+,
+{"name": "Floyd", "stateid": 51,"cases": 0}
+,
+{"name": "Fluvanna", "stateid": 51,"cases": 3}
+,
+{"name": "Franklin County", "stateid": 51,"cases": 1}
+,
+{"name": "Frederick", "stateid": 51,"cases": 2}
+,
+{"name": "Giles", "stateid": 51,"cases": 0}
+,
+{"name": "Gloucester", "stateid": 51,"cases": 2}
+,
+{"name": "Goochland", "stateid": 51,"cases": 3}
+,
+{"name": "Henry", "stateid": 51,"cases": 0}
+,
+{"name": "James City", "stateid": 51,"cases": 49}
+,
+{"name": "King George", "stateid": 51,"cases": 0}
+,
+{"name": "King William", "stateid": 51,"cases": 0}
+,
+{"name": "Lancaster", "stateid": 51,"cases": 0}
+,
+{"name": "Loudoun", "stateid": 51,"cases": 28}
+,
+{"name": "Mecklenburg", "stateid": 51,"cases": 3}
+,
+{"name": "Montgomery", "stateid": 51,"cases": 0}
+,
+{"name": "Nelson", "stateid": 51,"cases": 1}
+,
+{"name": "Nottoway", "stateid": 51,"cases": 1}
+,
+{"name": "Orange", "stateid": 51,"cases": 1}
+,
+{"name": "Page", "stateid": 51,"cases": 0}
+,
+{"name": "Prince Edward", "stateid": 51,"cases": 2}
+,
+{"name": "Rappahannock", "stateid": 51,"cases": 0}
+,
+{"name": "Richmond County", "stateid": 51,"cases": 0}
+,
+{"name": "Roanoke County", "stateid": 51,"cases": 1}
+,
+{"name": "Scott", "stateid": 51,"cases": 0}
+,
+{"name": "Shenandoah", "stateid": 51,"cases": 3}
+,
+{"name": "Smyth", "stateid": 51,"cases": 0}
+,
+{"name": "Southampton", "stateid": 51,"cases": 0}
+,
+{"name": "Spotsylvania", "stateid": 51,"cases": 2}
+,
+{"name": "Stafford", "stateid": 51,"cases": 7}
+,
+{"name": "Surry", "stateid": 51,"cases": 0}
+,
+{"name": "Sussex", "stateid": 51,"cases": 0}
+,
+{"name": "Washington", "stateid": 51,"cases": 1}
+,
+{"name": "Wise", "stateid": 51,"cases": 0}
+,
+{"name": "Buena Vista City", "stateid": 51,"cases": 0}
+,
+{"name": "Charlottesville", "stateid": 51,"cases": 9}
+,
+{"name": "Colonial Heights", "stateid": 51,"cases": 0}
+,
+{"name": "Covington", "stateid": 51,"cases": 0}
+,
+{"name": "Emporia", "stateid": 51,"cases": 0}
+,
+{"name": "Falls Church", "stateid": 51,"cases": 0}
+,
+{"name": "Fredericksburg", "stateid": 51,"cases": 1}
+,
+{"name": "Galax", "stateid": 51,"cases": 0}
+,
+{"name": "Hampton", "stateid": 51,"cases": 1}
+,
+{"name": "Hopewell", "stateid": 51,"cases": 0}
+,
+{"name": "Lexington", "stateid": 51,"cases": 0}
+,
+{"name": "Manassas City", "stateid": 51,"cases": 3}
+,
+{"name": "Norton", "stateid": 51,"cases": 0}
+,
+{"name": "Petersburg", "stateid": 51,"cases": 0}
+,
+{"name": "Poquoson", "stateid": 51,"cases": 1}
+,
+{"name": "Portsmouth", "stateid": 51,"cases": 3}
+,
+{"name": "Radford", "stateid": 51,"cases": 1}
+,
+{"name": "Richmond City", "stateid": 51,"cases": 14}
+,
+{"name": "Roanoke City", "stateid": 51,"cases": 0}
+,
+{"name": "Staunton", "stateid": 51,"cases": 0}
+,
+{"name": "Suffolk", "stateid": 51,"cases": 1}
+,
+{"name": "Virginia Beach", "stateid": 51,"cases": 26}
 ]}
