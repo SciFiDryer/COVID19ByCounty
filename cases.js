@@ -1,234 +1,256 @@
-var batchTime = "2020-03-24 08:57 PM EST";
+var batchTime = "2020-03-26 07:58 PM EST";
 var countycases = { "counties" : [
-{"name": "Albany", "stateid": 36,"cases": 146}
+{"name": "Albany", "stateid": 36,"cases": 171}
 ,
 {"name": "Allegany", "stateid": 36,"cases": 2}
 ,
-{"name": "Broome", "stateid": 36,"cases": 9}
+{"name": "Broome", "stateid": 36,"cases": 16}
 ,
 {"name": "Cayuga", "stateid": 36,"cases": 2}
 ,
-{"name": "Chemung", "stateid": 36,"cases": 1}
+{"name": "Chautauqua", "stateid": 36,"cases": 1}
+,
+{"name": "Chemung", "stateid": 36,"cases": 7}
 ,
 {"name": "Chenango", "stateid": 36,"cases": 3}
 ,
-{"name": "Clinton", "stateid": 36,"cases": 8}
+{"name": "Clinton", "stateid": 36,"cases": 11}
 ,
-{"name": "Columbia", "stateid": 36,"cases": 11}
+{"name": "Columbia", "stateid": 36,"cases": 13}
 ,
 {"name": "Cortland", "stateid": 36,"cases": 2}
 ,
-{"name": "Delaware", "stateid": 36,"cases": 3}
+{"name": "Delaware", "stateid": 36,"cases": 7}
 ,
-{"name": "Dutchess", "stateid": 36,"cases": 124}
+{"name": "Dutchess", "stateid": 36,"cases": 190}
 ,
-{"name": "Erie", "stateid": 36,"cases": 107}
+{"name": "Erie", "stateid": 36,"cases": 134}
 ,
-{"name": "Essex", "stateid": 36,"cases": 3}
+{"name": "Essex", "stateid": 36,"cases": 4}
+,
+{"name": "Franklin", "stateid": 36,"cases": 1}
 ,
 {"name": "Fulton", "stateid": 36,"cases": 1}
 ,
-{"name": "Genesee", "stateid": 36,"cases": 1}
+{"name": "Genesee", "stateid": 36,"cases": 4}
 ,
-{"name": "Greene", "stateid": 36,"cases": 4}
+{"name": "Greene", "stateid": 36,"cases": 5}
 ,
 {"name": "Hamilton", "stateid": 36,"cases": 2}
 ,
-{"name": "Herkimer", "stateid": 36,"cases": 4}
+{"name": "Herkimer", "stateid": 36,"cases": 7}
 ,
-{"name": "Jefferson", "stateid": 36,"cases": 2}
+{"name": "Jefferson", "stateid": 36,"cases": 3}
 ,
 {"name": "Livingston", "stateid": 36,"cases": 3}
 ,
-{"name": "Madison", "stateid": 36,"cases": 5}
+{"name": "Madison", "stateid": 36,"cases": 9}
 ,
-{"name": "Monroe", "stateid": 36,"cases": 96}
+{"name": "Monroe", "stateid": 36,"cases": 139}
 ,
-{"name": "Montgomery", "stateid": 36,"cases": 3}
+{"name": "Montgomery", "stateid": 36,"cases": 5}
 ,
-{"name": "Nassau", "stateid": 36,"cases": 2869}
+{"name": "Nassau", "stateid": 36,"cases": 3914}
 ,
-{"name": "Niagara", "stateid": 36,"cases": 11}
+{"name": "Niagara", "stateid": 36,"cases": 14}
 ,
-{"name": "New York City", "stateid": 36,"cases": 14904}
+{"name": "New York City", "stateid": 36,"cases": 21393}
 ,
-{"name": "Oneida", "stateid": 36,"cases": 8}
+{"name": "Oneida", "stateid": 36,"cases": 13}
 ,
-{"name": "Onondaga", "stateid": 36,"cases": 60}
+{"name": "Onondaga", "stateid": 36,"cases": 83}
 ,
-{"name": "Ontario", "stateid": 36,"cases": 7}
+{"name": "Ontario", "stateid": 36,"cases": 11}
 ,
-{"name": "Orange", "stateid": 36,"cases": 498}
+{"name": "Orange", "stateid": 36,"cases": 751}
 ,
-{"name": "Oswego", "stateid": 36,"cases": 2}
+{"name": "Orleans", "stateid": 36,"cases": 2}
 ,
-{"name": "Otsego", "stateid": 36,"cases": 1}
+{"name": "Oswego", "stateid": 36,"cases": 4}
 ,
-{"name": "Putnam", "stateid": 36,"cases": 67}
+{"name": "Otsego", "stateid": 36,"cases": 3}
 ,
-{"name": "Rensselaer", "stateid": 36,"cases": 30}
+{"name": "Putnam", "stateid": 36,"cases": 94}
 ,
-{"name": "Rockland", "stateid": 36,"cases": 671}
+{"name": "Rensselaer", "stateid": 36,"cases": 32}
 ,
-{"name": "Saratoga", "stateid": 36,"cases": 60}
+{"name": "Rockland", "stateid": 36,"cases": 1197}
 ,
-{"name": "Schenectady", "stateid": 36,"cases": 46}
+{"name": "Saratoga", "stateid": 36,"cases": 73}
 ,
-{"name": "Schoharie", "stateid": 36,"cases": 1}
+{"name": "Schenectady", "stateid": 36,"cases": 62}
 ,
-{"name": "St. Lawrence", "stateid": 36,"cases": 1}
+{"name": "Schoharie", "stateid": 36,"cases": 2}
 ,
-{"name": "Steuben", "stateid": 36,"cases": 5}
+{"name": "St. Lawrence", "stateid": 36,"cases": 2}
 ,
-{"name": "Suffolk", "stateid": 36,"cases": 1880}
+{"name": "Steuben", "stateid": 36,"cases": 11}
 ,
-{"name": "Sullivan", "stateid": 36,"cases": 30}
+{"name": "Suffolk", "stateid": 36,"cases": 2735}
 ,
-{"name": "Tioga", "stateid": 36,"cases": 1}
+{"name": "Sullivan", "stateid": 36,"cases": 53}
 ,
-{"name": "Tompkins", "stateid": 36,"cases": 16}
+{"name": "Tioga", "stateid": 36,"cases": 2}
 ,
-{"name": "Ulster", "stateid": 36,"cases": 47}
+{"name": "Tompkins", "stateid": 36,"cases": 22}
+,
+{"name": "Ulster", "stateid": 36,"cases": 78}
 ,
 {"name": "Warren", "stateid": 36,"cases": 2}
 ,
-{"name": "Washington", "stateid": 36,"cases": 3}
+{"name": "Washington", "stateid": 36,"cases": 4}
 ,
-{"name": "Wayne", "stateid": 36,"cases": 6}
+{"name": "Wayne", "stateid": 36,"cases": 8}
 ,
-{"name": "Westchester", "stateid": 36,"cases": 3891}
+{"name": "Westchester", "stateid": 36,"cases": 5944}
 ,
-{"name": "Wyoming", "stateid": 36,"cases": 4}
+{"name": "Wyoming", "stateid": 36,"cases": 7}
 ,
-{"name": "Total Number of Positive Cases", "stateid": 36,"cases": 25665}
+{"name": "Total Number of Positive Cases", "stateid": 36,"cases": 37258}
 ,
-{"name": "Adams", "stateid": 42, "cases": 6}
+{"name": "Adams", "stateid": 42, "cases": 7}
 ,
-{"name": "Allegheny", "stateid": 42, "cases": 58}
+{"name": "Allegheny", "stateid": 42, "cases": 133}
 ,
 {"name": "Armstrong", "stateid": 42, "cases": 1}
 ,
-{"name": "Beaver", "stateid": 42, "cases": 3}
+{"name": "Beaver", "stateid": 42, "cases": 13}
 ,
-{"name": "Carbon", "stateid": 42, "cases": 1}
+{"name": "Carbon", "stateid": 42, "cases": 2}
 ,
-{"name": "Centre", "stateid": 42, "cases": 7}
+{"name": "Centre", "stateid": 42, "cases": 9}
 ,
-{"name": "Chester", "stateid": 42, "cases": 40}
+{"name": "Chester", "stateid": 42, "cases": 84}
 ,
-{"name": "Clearfield", "stateid": 42, "cases": 1}
+{"name": "Clearfield", "stateid": 42, "cases": 2}
 ,
-{"name": "Columbia", "stateid": 42, "cases": 1}
+{"name": "Columbia", "stateid": 42, "cases": 3}
 ,
-{"name": "Berks", "stateid": 42, "cases": 16}
+{"name": "Berks", "stateid": 42, "cases": 36}
 ,
-{"name": "Bradford", "stateid": 42, "cases": 1}
+{"name": "Blair", "stateid": 42, "cases": 1}
 ,
-{"name": "Bucks", "stateid": 42, "cases": 65}
+{"name": "Bradford", "stateid": 42, "cases": 2}
 ,
-{"name": "Butler", "stateid": 42, "cases": 6}
+{"name": "Bucks", "stateid": 42, "cases": 107}
+,
+{"name": "Butler", "stateid": 42, "cases": 19}
 ,
 {"name": "Cambria", "stateid": 42, "cases": 1}
 ,
-{"name": "Cumberland", "stateid": 42, "cases": 13}
+{"name": "Crawford", "stateid": 42, "cases": 1}
 ,
-{"name": "Dauphin", "stateid": 42, "cases": 4}
+{"name": "Cumberland", "stateid": 42, "cases": 15}
 ,
-{"name": "Delaware", "stateid": 42, "cases": 84}
+{"name": "Dauphin", "stateid": 42, "cases": 13}
+,
+{"name": "Delaware", "stateid": 42, "cases": 156}
 ,
 {"name": "Erie", "stateid": 42, "cases": 4}
 ,
-{"name": "Fayette", "stateid": 42, "cases": 2}
+{"name": "Fayette", "stateid": 42, "cases": 8}
 ,
 {"name": "Potter", "stateid": 42, "cases": 1}
 ,
-{"name": "Franklin", "stateid": 42, "cases": 3}
+{"name": "Franklin", "stateid": 42, "cases": 5}
+,
+{"name": "Greene", "stateid": 42, "cases": 3}
+,
+{"name": "Indiana", "stateid": 42, "cases": 1}
 ,
 {"name": "Juniata", "stateid": 42, "cases": 1}
 ,
-{"name": "Lackawanna", "stateid": 42, "cases": 15}
+{"name": "Lackawanna", "stateid": 42, "cases": 28}
 ,
-{"name": "Lancaster", "stateid": 42, "cases": 10}
+{"name": "Lancaster", "stateid": 42, "cases": 21}
 ,
-{"name": "Lebanon", "stateid": 42, "cases": 3}
+{"name": "Lawrence", "stateid": 42, "cases": 1}
 ,
-{"name": "Lehigh", "stateid": 42, "cases": 27}
+{"name": "Lebanon", "stateid": 42, "cases": 4}
 ,
-{"name": "Luzerne", "stateid": 42, "cases": 21}
+{"name": "Lehigh", "stateid": 42, "cases": 63}
 ,
-{"name": "Mercer", "stateid": 42, "cases": 2}
+{"name": "Luzerne", "stateid": 42, "cases": 36}
 ,
-{"name": "Monroe", "stateid": 42, "cases": 45}
+{"name": "Lycoming", "stateid": 42, "cases": 1}
 ,
-{"name": "Montgomery", "stateid": 42, "cases": 144}
+{"name": "Mercer", "stateid": 42, "cases": 3}
 ,
-{"name": "Montour", "stateid": 42, "cases": 3}
+{"name": "Susquehanna", "stateid": 42, "cases": 1}
 ,
-{"name": "Northampton", "stateid": 42, "cases": 33}
+{"name": "Monroe", "stateid": 42, "cases": 67}
 ,
-{"name": "Pike", "stateid": 42, "cases": 4}
+{"name": "Montgomery", "stateid": 42, "cases": 282}
 ,
-{"name": "Schuylkill", "stateid": 42, "cases": 5}
+{"name": "Montour", "stateid": 42, "cases": 4}
 ,
-{"name": "Somerset", "stateid": 42, "cases": 1}
+{"name": "Northampton", "stateid": 42, "cases": 56}
 ,
-{"name": "Washington", "stateid": 42, "cases": 9}
+{"name": "Pike", "stateid": 42, "cases": 15}
 ,
-{"name": "Wayne", "stateid": 42, "cases": 4}
+{"name": "Schuylkill", "stateid": 42, "cases": 9}
 ,
-{"name": "Westmoreland", "stateid": 42, "cases": 11}
+{"name": "Somerset", "stateid": 42, "cases": 2}
 ,
-{"name": "York", "stateid": 42, "cases": 18}
+{"name": "Warren", "stateid": 42, "cases": 1}
 ,
-{"name": "Philadelphia", "stateid": 42, "cases": 177}
+{"name": "Washington", "stateid": 42, "cases": 12}
 ,
-{"name": "Bergen", "stateid": 34, "cases": 701}
+{"name": "Wayne", "stateid": 42, "cases": 6}
 ,
-{"name": "Essex", "stateid": 34, "cases": 342}
+{"name": "Westmoreland", "stateid": 42, "cases": 24}
 ,
-{"name": "Monmouth", "stateid": 34, "cases": 288}
+{"name": "York", "stateid": 42, "cases": 21}
 ,
-{"name": "Middlesex", "stateid": 34, "cases": 277}
+{"name": "Philadelphia", "stateid": 42, "cases": 402}
 ,
-{"name": "Union", "stateid": 34, "cases": 246}
+{"name": "Bergen", "stateid": 34, "cases": 1206}
 ,
-{"name": "Hudson", "stateid": 34, "cases": 234}
+{"name": "Essex", "stateid": 34, "cases": 609}
 ,
-{"name": "Passaic", "stateid": 34, "cases": 216}
+{"name": "Middlesex", "stateid": 34, "cases": 505}
 ,
-{"name": "Morris", "stateid": 34, "cases": 204}
+{"name": "Monmouth", "stateid": 34, "cases": 501}
 ,
-{"name": "Ocean", "stateid": 34, "cases": 180}
+{"name": "Hudson", "stateid": 34, "cases": 441}
 ,
-{"name": "Somerset", "stateid": 34, "cases": 102}
+{"name": "Union", "stateid": 34, "cases": 432}
 ,
-{"name": "Mercer", "stateid": 34, "cases": 58}
+{"name": "Passaic", "stateid": 34, "cases": 399}
 ,
-{"name": "Camden", "stateid": 34, "cases": 51}
+{"name": "Ocean", "stateid": 34, "cases": 389}
 ,
-{"name": "Burlington", "stateid": 34, "cases": 42}
+{"name": "Morris", "stateid": 34, "cases": 315}
 ,
-{"name": "Hunterdon", "stateid": 34, "cases": 25}
+{"name": "Somerset", "stateid": 34, "cases": 179}
 ,
-{"name": "Gloucester", "stateid": 34, "cases": 19}
+{"name": "Mercer", "stateid": 34, "cases": 111}
 ,
-{"name": "Sussex", "stateid": 34, "cases": 18}
+{"name": "Camden", "stateid": 34, "cases": 73}
 ,
-{"name": "Warren", "stateid": 34, "cases": 15}
+{"name": "Burlington", "stateid": 34, "cases": 64}
 ,
-{"name": "Atlantic", "stateid": 34, "cases": 6}
+{"name": "Sussex", "stateid": 34, "cases": 49}
 ,
-{"name": "Cape may", "stateid": 34, "cases": 3}
+{"name": "Hunterdon", "stateid": 34, "cases": 39}
 ,
-{"name": "Cumberland", "stateid": 34, "cases": 2}
+{"name": "Gloucester", "stateid": 34, "cases": 33}
 ,
-{"name": "Salem", "stateid": 34, "cases": 1}
+{"name": "Warren", "stateid": 34, "cases": 31}
 ,
-{"name": "Ashland", "stateid": 39,"cases": 1}
+{"name": "Atlantic", "stateid": 34, "cases": 10}
+,
+{"name": "Cape may", "stateid": 34, "cases": 6}
+,
+{"name": "Cumberland", "stateid": 34, "cases": 4}
+,
+{"name": "Salem", "stateid": 34, "cases": 2}
+,
+{"name": "%2055%20%E2%80%93%20Ashland", "stateid": 39,"cases": 1}
 ,
 {"name": "Ashtabula", "stateid": 39,"cases": 3}
 ,
-{"name": "Belmont", "stateid": 39,"cases": 2}
+{"name": "Belmont", "stateid": 39,"cases": 3}
 ,
 {"name": "Butler", "stateid": 39,"cases": 18}
 ,
@@ -240,35 +262,37 @@ var countycases = { "counties" : [
 ,
 {"name": "Clermont", "stateid": 39,"cases": 5}
 ,
-{"name": "Clinton", "stateid": 39,"cases": 1}
+{"name": "Clinton", "stateid": 39,"cases": 2}
 ,
-{"name": "Columbiana", "stateid": 39,"cases": 3}
+{"name": "Columbiana", "stateid": 39,"cases": 4}
 ,
-{"name": "Coshocton", "stateid": 39,"cases": 3}
+{"name": "Coshocton", "stateid": 39,"cases": 4}
 ,
 {"name": "Crawford", "stateid": 39,"cases": 1}
 ,
-{"name": "Cuyahoga", "stateid": 39,"cases": 167}
+{"name": "Cuyahoga", "stateid": 39,"cases": 206}
 ,
 {"name": "Darke", "stateid": 39,"cases": 1}
 ,
 {"name": "Defiance", "stateid": 39,"cases": 2}
 ,
-{"name": "Delaware", "stateid": 39,"cases": 11}
+{"name": "Delaware", "stateid": 39,"cases": 12}
 ,
-{"name": "Erie", "stateid": 39,"cases": 1}
+{"name": "Erie", "stateid": 39,"cases": 2}
 ,
-{"name": "Fairfield", "stateid": 39,"cases": 2}
+{"name": "Fairfield", "stateid": 39,"cases": 5}
 ,
-{"name": "Franklin", "stateid": 39,"cases": 75}
+{"name": "Fayette", "stateid": 39,"cases": 1}
+,
+{"name": "Franklin", "stateid": 39,"cases": 88}
 ,
 {"name": "Gallia", "stateid": 39,"cases": 1}
 ,
-{"name": "Geauga", "stateid": 39,"cases": 5}
+{"name": "Geauga", "stateid": 39,"cases": 4}
 ,
 {"name": "Greene", "stateid": 39,"cases": 3}
 ,
-{"name": "Hamilton", "stateid": 39,"cases": 38}
+{"name": "Hamilton", "stateid": 39,"cases": 48}
 ,
 {"name": "Hancock", "stateid": 39,"cases": 1}
 ,
@@ -276,29 +300,35 @@ var countycases = { "counties" : [
 ,
 {"name": "Huron", "stateid": 39,"cases": 2}
 ,
-{"name": "Knox", "stateid": 39,"cases": 1}
+{"name": "Knox", "stateid": 39,"cases": 2}
 ,
-{"name": "Lake", "stateid": 39,"cases": 11}
+{"name": "Lake", "stateid": 39,"cases": 14}
 ,
-{"name": "Licking", "stateid": 39,"cases": 2}
+{"name": "Lawrence", "stateid": 39,"cases": 1}
+,
+{"name": "Licking", "stateid": 39,"cases": 3}
 ,
 {"name": "Logan", "stateid": 39,"cases": 2}
 ,
-{"name": "Lorain", "stateid": 39,"cases": 30}
+{"name": "Lorain", "stateid": 39,"cases": 37}
 ,
-{"name": "Lucas", "stateid": 39,"cases": 11}
+{"name": "Lucas", "stateid": 39,"cases": 23}
 ,
-{"name": "Madison", "stateid": 39,"cases": 1}
+{"name": "Madison", "stateid": 39,"cases": 2}
 ,
-{"name": "Mahoning", "stateid": 39,"cases": 28}
+{"name": "Mahoning", "stateid": 39,"cases": 42}
 ,
 {"name": "Marion", "stateid": 39,"cases": 4}
 ,
-{"name": "Medina", "stateid": 39,"cases": 15}
+{"name": "Medina", "stateid": 39,"cases": 22}
+,
+{"name": "Mercer", "stateid": 39,"cases": 1}
 ,
 {"name": "Miami", "stateid": 39,"cases": 19}
 ,
-{"name": "Montgomery", "stateid": 39,"cases": 10}
+{"name": "Montgomery", "stateid": 39,"cases": 14}
+,
+{"name": "Pickaway", "stateid": 39,"cases": 1}
 ,
 {"name": "Portage", "stateid": 39,"cases": 4}
 ,
@@ -306,257 +336,301 @@ var countycases = { "counties" : [
 ,
 {"name": "Sandusky", "stateid": 39,"cases": 1}
 ,
-{"name": "Stark", "stateid": 39,"cases": 13}
+{"name": "Seneca", "stateid": 39,"cases": 1}
 ,
-{"name": "Summit", "stateid": 39,"cases": 36}
+{"name": "Stark", "stateid": 39,"cases": 12}
 ,
-{"name": "Trumbull", "stateid": 39,"cases": 4}
+{"name": "Summit", "stateid": 39,"cases": 43}
+,
+{"name": "Trumbull", "stateid": 39,"cases": 9}
 ,
 {"name": "Tuscarawas", "stateid": 39,"cases": 3}
 ,
-{"name": "Union", "stateid": 39,"cases": 2}
+{"name": "Union", "stateid": 39,"cases": 3}
 ,
-{"name": "Warren", "stateid": 39,"cases": 7}
+{"name": "Warren", "stateid": 39,"cases": 8}
 ,
 {"name": "Washington", "stateid": 39,"cases": 1}
 ,
-{"name": "Wood", "stateid": 39,"cases": 2}
+{"name": "Wayne", "stateid": 39,"cases": 1}
 ,
-{"name": "Fairfield", "stateid": 9, "cases": 384}
+{"name": "Wood", "stateid": 39,"cases": 3}
 ,
-{"name": "Hartford", "stateid": 9, "cases": 88}
+{"name": "Fairfield", "stateid": 9, "cases": 1012}
 ,
-{"name": "Litchfield", "stateid": 9, "cases": 22}
+{"name": "Hartford", "stateid": 9, "cases": 49}
 ,
-{"name": "Middlesex", "stateid": 9, "cases": 8}
+{"name": "Litchfield", "stateid": 9, "cases": 27}
 ,
-{"name": "New Haven", "stateid": 9, "cases": 89}
+{"name": "Middlesex", "stateid": 9, "cases": 3}
 ,
-{"name": "New London", "stateid": 9, "cases": 6}
+{"name": "New Haven", "stateid": 9, "cases": 5}
 ,
-{"name": "Tolland", "stateid": 9, "cases": 19}
+{"name": "New London", "stateid": 9, "cases": 34}
 ,
-{"name": "Windham", "stateid": 9, "cases": 2}
+{"name": "Tolland", "stateid": 9, "cases": 2}
 ,
-{"name": "Barnstable", "stateid": 25, "cases": 40}
+{"name": "Windham", "stateid": 9, "cases": 5}
 ,
-{"name": "Berkshire", "stateid": 25, "cases": 37}
+{"name": "Barnstable", "stateid": 25, "cases": 67}
 ,
-{"name": "Bristol", "stateid": 25, "cases": 31}
+{"name": "Berkshire", "stateid": 25, "cases": 73}
 ,
-{"name": "Dukes and Nantucket", "stateid": 25, "cases": 2}
+{"name": "Bristol", "stateid": 25, "cases": 90}
 ,
-{"name": "Essex", "stateid": 25, "cases": 118}
+{"name": "Dukes and Nantucket", "stateid": 25, "cases": 3}
 ,
-{"name": "Franklin", "stateid": 25, "cases": 5}
+{"name": "Essex", "stateid": 25, "cases": 247}
 ,
-{"name": "Hampden", "stateid": 25, "cases": 24}
+{"name": "Franklin", "stateid": 25, "cases": 16}
 ,
-{"name": "Hampshire", "stateid": 25, "cases": 8}
+{"name": "Hampden", "stateid": 25, "cases": 55}
 ,
-{"name": "Middlesex", "stateid": 25, "cases": 304}
+{"name": "Hampshire", "stateid": 25, "cases": 17}
 ,
-{"name": "Norfolk", "stateid": 25, "cases": 129}
+{"name": "Middlesex", "stateid": 25, "cases": 538}
 ,
-{"name": "Plymouth", "stateid": 25, "cases": 64}
+{"name": "Norfolk", "stateid": 25, "cases": 292}
 ,
-{"name": "Suffolk", "stateid": 25, "cases": 234}
+{"name": "Plymouth", "stateid": 25, "cases": 138}
 ,
-{"name": "Worcester", "stateid": 25, "cases": 73}
+{"name": "Suffolk", "stateid": 25, "cases": 448}
 ,
-{"name": "Unknown", "stateid": 25, "cases": 90}
+{"name": "Worcester", "stateid": 25, "cases": 166}
+,
+{"name": "Unknown", "stateid": 25, "cases": 267}
 ,
 {"name": "Allegan", "stateid": 26, "cases": 1}
 ,
 {"name": "Barry", "stateid": 26, "cases": 1}
 ,
-{"name": "Bay", "stateid": 26, "cases": 2}
+{"name": "Bay", "stateid": 26, "cases": 4}
 ,
-{"name": "Berrien", "stateid": 26, "cases": 8}
+{"name": "Berrien", "stateid": 26, "cases": 11}
 ,
-{"name": "Calhoun", "stateid": 26, "cases": 4}
+{"name": "Calhoun", "stateid": 26, "cases": 7}
 ,
-{"name": "Charlevoix", "stateid": 26, "cases": 3}
+{"name": "Cass", "stateid": 26, "cases": 1}
 ,
-{"name": "Chippewa", "stateid": 26, "cases": 1}
+{"name": "Charlevoix", "stateid": 26, "cases": 4}
 ,
 {"name": "Clare", "stateid": 26, "cases": 1}
 ,
-{"name": "Clinton", "stateid": 26, "cases": 5}
+{"name": "Clinton", "stateid": 26, "cases": 7}
 ,
-{"name": "Eaton", "stateid": 26, "cases": 3}
+{"name": "Eaton", "stateid": 26, "cases": 4}
 ,
 {"name": "Emmet", "stateid": 26, "cases": 2}
 ,
-{"name": "Genesee", "stateid": 26, "cases": 34}
+{"name": "Genesee", "stateid": 26, "cases": 63}
 ,
 {"name": "Gladwin", "stateid": 26, "cases": 2}
 ,
 {"name": "Grand Traverse", "stateid": 26, "cases": 3}
 ,
-{"name": "Hillsdale", "stateid": 26, "cases": 1}
+{"name": "Hillsdale", "stateid": 26, "cases": 5}
 ,
-{"name": "Ingham", "stateid": 26, "cases": 15}
+{"name": "Ingham", "stateid": 26, "cases": 22}
 ,
-{"name": "Isabella", "stateid": 26, "cases": 2}
+{"name": "Ionia", "stateid": 26, "cases": 2}
 ,
-{"name": "Jackson", "stateid": 26, "cases": 6}
+{"name": "Iosco", "stateid": 26, "cases": 1}
 ,
-{"name": "Kalamazoo", "stateid": 26, "cases": 3}
+{"name": "Isabella", "stateid": 26, "cases": 3}
 ,
-{"name": "Kalkaska", "stateid": 26, "cases": 1}
+{"name": "Jackson", "stateid": 26, "cases": 17}
 ,
-{"name": "Kent", "stateid": 26, "cases": 31}
+{"name": "Kalamazoo", "stateid": 26, "cases": 10}
 ,
-{"name": "Lapeer", "stateid": 26, "cases": 1}
+{"name": "Kalkaska", "stateid": 26, "cases": 2}
+,
+{"name": "Kent", "stateid": 26, "cases": 41}
+,
+{"name": "Lapeer", "stateid": 26, "cases": 3}
 ,
 {"name": "Leelanau", "stateid": 26, "cases": 1}
 ,
-{"name": "Livingston", "stateid": 26, "cases": 13}
+{"name": "Lenawee", "stateid": 26, "cases": 5}
 ,
-{"name": "Macomb", "stateid": 26, "cases": 225}
+{"name": "Livingston", "stateid": 26, "cases": 21}
+,
+{"name": "Macomb", "stateid": 26, "cases": 347}
 ,
 {"name": "Manistee", "stateid": 26, "cases": 1}
 ,
-{"name": "Midland", "stateid": 26, "cases": 5}
+{"name": "Marquette", "stateid": 26, "cases": 1}
 ,
-{"name": "Monroe", "stateid": 26, "cases": 12}
+{"name": "Mecosta", "stateid": 26, "cases": 1}
 ,
-{"name": "Montcalm", "stateid": 26, "cases": 1}
+{"name": "Midland", "stateid": 26, "cases": 6}
+,
+{"name": "Missaukee", "stateid": 26, "cases": 1}
+,
+{"name": "Monroe", "stateid": 26, "cases": 21}
+,
+{"name": "Montcalm", "stateid": 26, "cases": 3}
 ,
 {"name": "Muskegon", "stateid": 26, "cases": 3}
 ,
-{"name": "Newaygo", "stateid": 26, "cases": 2}
+{"name": "Newaygo", "stateid": 26, "cases": 1}
 ,
-{"name": "Oakland", "stateid": 26, "cases": 428}
+{"name": "Oakland", "stateid": 26, "cases": 668}
 ,
-{"name": "Otsego", "stateid": 26, "cases": 5}
+{"name": "Oceana", "stateid": 26, "cases": 1}
 ,
-{"name": "Ottawa", "stateid": 26, "cases": 15}
+{"name": "Ogemaw", "stateid": 26, "cases": 1}
+,
+{"name": "Otsego", "stateid": 26, "cases": 7}
+,
+{"name": "Ottawa", "stateid": 26, "cases": 18}
 ,
 {"name": "Roscommon", "stateid": 26, "cases": 1}
 ,
-{"name": "Saginaw", "stateid": 26, "cases": 8}
+{"name": "Saginaw", "stateid": 26, "cases": 10}
 ,
-{"name": "St. Clair", "stateid": 26, "cases": 8}
+{"name": "Sanilac", "stateid": 26, "cases": 1}
 ,
-{"name": "Tuscola", "stateid": 26, "cases": 1}
+{"name": "Shiawassee", "stateid": 26, "cases": 1}
 ,
-{"name": "Washtenaw", "stateid": 26, "cases": 50}
+{"name": "St. Clair", "stateid": 26, "cases": 13}
 ,
-{"name": "Wayne", "stateid": 26, "cases": 873}
+{"name": "Tuscola", "stateid": 26, "cases": 2}
+,
+{"name": "Van Buren", "stateid": 26, "cases": 2}
+,
+{"name": "Washtenaw", "stateid": 26, "cases": 92}
+,
+{"name": "Wayne", "stateid": 26, "cases": 1389}
 ,
 {"name": "Wexford", "stateid": 26, "cases": 1}
 ,
-{"name": "Out of State", "stateid": 26, "cases": 6}
+{"name": "Other", "stateid": 26, "cases": 13}
 ,
-{"name": "Not Reported", "stateid": 26, "cases": 2}
+{"name": "Out of State", "stateid": 26, "cases": 7}
 ,
 {"name": "Adams", "stateid": 18, "cases": 1}
 ,
-{"name": "Allen", "stateid": 18, "cases": 7}
+{"name": "Allen", "stateid": 18, "cases": 8}
 ,
-{"name": "Bartholomew", "stateid": 18, "cases": 5}
+{"name": "Bartholomew", "stateid": 18, "cases": 6}
 ,
-{"name": "Boone", "stateid": 18, "cases": 3}
+{"name": "Boone", "stateid": 18, "cases": 7}
 ,
 {"name": "Brown", "stateid": 18, "cases": 1}
 ,
-{"name": "Clark", "stateid": 18, "cases": 5}
+{"name": "Clark", "stateid": 18, "cases": 10}
 ,
-{"name": "Dearborn", "stateid": 18, "cases": 2}
+{"name": "Dearborn", "stateid": 18, "cases": 3}
 ,
-{"name": "Decatur", "stateid": 18, "cases": 6}
+{"name": "Decatur", "stateid": 18, "cases": 13}
 ,
-{"name": "Delaware", "stateid": 18, "cases": 4}
+{"name": "DeKalb", "stateid": 18, "cases": 1}
+,
+{"name": "Delaware", "stateid": 18, "cases": 7}
 ,
 {"name": "Dubois", "stateid": 18, "cases": 1}
 ,
-{"name": "Elkhart", "stateid": 18, "cases": 4}
+{"name": "Elkhart", "stateid": 18, "cases": 7}
 ,
-{"name": "Fayette", "stateid": 18, "cases": 2}
+{"name": "Fayette", "stateid": 18, "cases": 3}
 ,
-{"name": "Floyd", "stateid": 18, "cases": 6}
+{"name": "Floyd", "stateid": 18, "cases": 7}
 ,
-{"name": "Franklin", "stateid": 18, "cases": 7}
+{"name": "Fountain", "stateid": 18, "cases": 1}
 ,
-{"name": "Gibson", "stateid": 18, "cases": 2}
+{"name": "Franklin", "stateid": 18, "cases": 13}
+,
+{"name": "Gibson", "stateid": 18, "cases": 3}
 ,
 {"name": "Grant", "stateid": 18, "cases": 3}
 ,
-{"name": "Hamilton", "stateid": 18, "cases": 25}
+{"name": "Hamilton", "stateid": 18, "cases": 40}
 ,
-{"name": "Hancock", "stateid": 18, "cases": 4}
+{"name": "Hancock", "stateid": 18, "cases": 9}
 ,
-{"name": "Harrison", "stateid": 18, "cases": 1}
+{"name": "Harrison", "stateid": 18, "cases": 2}
 ,
-{"name": "Hendricks", "stateid": 18, "cases": 13}
+{"name": "Hendricks", "stateid": 18, "cases": 21}
 ,
 {"name": "Howard", "stateid": 18, "cases": 6}
 ,
-{"name": "Jackson", "stateid": 18, "cases": 1}
+{"name": "Jackson", "stateid": 18, "cases": 2}
 ,
-{"name": "Jennings", "stateid": 18, "cases": 2}
+{"name": "Jasper", "stateid": 18, "cases": 3}
 ,
-{"name": "Johnson", "stateid": 18, "cases": 18}
+{"name": "Jennings", "stateid": 18, "cases": 4}
 ,
-{"name": "Lake", "stateid": 18, "cases": 17}
+{"name": "Johnson", "stateid": 18, "cases": 36}
+,
+{"name": "Lake", "stateid": 18, "cases": 31}
 ,
 {"name": "LaPorte", "stateid": 18, "cases": 2}
 ,
-{"name": "Lawrence", "stateid": 18, "cases": 1}
+{"name": "Lawrence", "stateid": 18, "cases": 2}
 ,
-{"name": "Madison", "stateid": 18, "cases": 3}
+{"name": "Madison", "stateid": 18, "cases": 4}
 ,
-{"name": "Marion", "stateid": 18, "cases": 161}
+{"name": "Marion", "stateid": 18, "cases": 293}
+,
+{"name": "Marshall", "stateid": 18, "cases": 1}
 ,
 {"name": "Miami", "stateid": 18, "cases": 1}
 ,
-{"name": "Monroe", "stateid": 18, "cases": 3}
+{"name": "Monroe", "stateid": 18, "cases": 6}
 ,
-{"name": "Montgomery", "stateid": 18, "cases": 1}
+{"name": "Montgomery", "stateid": 18, "cases": 2}
 ,
-{"name": "Morgan", "stateid": 18, "cases": 3}
+{"name": "Morgan", "stateid": 18, "cases": 7}
 ,
 {"name": "Noble", "stateid": 18, "cases": 1}
 ,
 {"name": "Ohio", "stateid": 18, "cases": 1}
 ,
-{"name": "Owen", "stateid": 18, "cases": 2}
+{"name": "Orange", "stateid": 18, "cases": 1}
 ,
-{"name": "Porter", "stateid": 18, "cases": 1}
+{"name": "Owen", "stateid": 18, "cases": 4}
 ,
-{"name": "Putnam", "stateid": 18, "cases": 1}
+{"name": "Porter", "stateid": 18, "cases": 5}
 ,
-{"name": "Ripley", "stateid": 18, "cases": 6}
+{"name": "Posey", "stateid": 18, "cases": 1}
+,
+{"name": "Putnam", "stateid": 18, "cases": 2}
+,
+{"name": "Ripley", "stateid": 18, "cases": 11}
+,
+{"name": "Rush", "stateid": 18, "cases": 1}
 ,
 {"name": "Scott", "stateid": 18, "cases": 1}
 ,
-{"name": "Shelby", "stateid": 18, "cases": 1}
+{"name": "Shelby", "stateid": 18, "cases": 2}
 ,
-{"name": "St Joseph", "stateid": 18, "cases": 15}
+{"name": "St Joseph", "stateid": 18, "cases": 21}
 ,
 {"name": "Starke", "stateid": 18, "cases": 1}
 ,
 {"name": "Sullivan", "stateid": 18, "cases": 1}
 ,
-{"name": "Tippecanoe", "stateid": 18, "cases": 3}
+{"name": "Tippecanoe", "stateid": 18, "cases": 7}
 ,
 {"name": "Tipton", "stateid": 18, "cases": 2}
 ,
-{"name": "Vander.", "stateid": 18, "cases": 1}
+{"name": "Vander.", "stateid": 18, "cases": 4}
 ,
 {"name": "Vigo", "stateid": 18, "cases": 3}
 ,
-{"name": "Warrick", "stateid": 18, "cases": 1}
+{"name": "Warren", "stateid": 18, "cases": 1}
 ,
-{"name": "Washington", "stateid": 18, "cases": 2}
+{"name": "Warrick", "stateid": 18, "cases": 3}
+,
+{"name": "Washington", "stateid": 18, "cases": 3}
+,
+{"name": "Wayne", "stateid": 18, "cases": 1}
 ,
 {"name": "Wells", "stateid": 18, "cases": 1}
 ,
-{"name": "Illinois", "stateid": 17, "cases": 1535}
+{"name": "Illinois", "stateid": 17, "cases": 2538}
 ,
-{"name": "Chicago", "stateid": 17, "cases": 782}
+{"name": "Chicago", "stateid": 17, "cases": 1161}
 ,
 {"name": "Suburban Cook", "stateid": 17, "cases": 0}
 ,
@@ -578,7 +652,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Cass", "stateid": 17, "cases": 0}
 ,
-{"name": "Champaign", "stateid": 17, "cases": 2}
+{"name": "Champaign", "stateid": 17, "cases": 8}
 ,
 {"name": "Christian", "stateid": 17, "cases": 1}
 ,
@@ -586,23 +660,23 @@ var countycases = { "counties" : [
 ,
 {"name": "Clay", "stateid": 17, "cases": 0}
 ,
-{"name": "Clinton", "stateid": 17, "cases": 3}
+{"name": "Clinton", "stateid": 17, "cases": 5}
 ,
 {"name": "Coles", "stateid": 17, "cases": 0}
 ,
-{"name": "Cook", "stateid": 17, "cases": 412}
+{"name": "Cook", "stateid": 17, "cases": 743}
 ,
 {"name": "Crawford", "stateid": 17, "cases": 0}
 ,
 {"name": "Cumberland", "stateid": 17, "cases": 1}
 ,
-{"name": "DeKalb", "stateid": 17, "cases": 1}
+{"name": "DeKalb", "stateid": 17, "cases": 3}
 ,
 {"name": "De Witt", "stateid": 17, "cases": 0}
 ,
-{"name": "Douglas", "stateid": 17, "cases": 0}
+{"name": "Douglas", "stateid": 17, "cases": 1}
 ,
-{"name": "DuPage", "stateid": 17, "cases": 103}
+{"name": "DuPage", "stateid": 17, "cases": 182}
 ,
 {"name": "Edgar", "stateid": 17, "cases": 0}
 ,
@@ -614,7 +688,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Ford", "stateid": 17, "cases": 0}
 ,
-{"name": "Franklin", "stateid": 17, "cases": 0}
+{"name": "Franklin", "stateid": 17, "cases": 1}
 ,
 {"name": "Fulton", "stateid": 17, "cases": 0}
 ,
@@ -622,7 +696,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Greene", "stateid": 17, "cases": 0}
 ,
-{"name": "Grundy", "stateid": 17, "cases": 1}
+{"name": "Grundy", "stateid": 17, "cases": 2}
 ,
 {"name": "Hamilton", "stateid": 17, "cases": 0}
 ,
@@ -648,15 +722,15 @@ var countycases = { "counties" : [
 ,
 {"name": "Johnson", "stateid": 17, "cases": 0}
 ,
-{"name": "Kane", "stateid": 17, "cases": 24}
+{"name": "Kane", "stateid": 17, "cases": 57}
 ,
-{"name": "Kankakee", "stateid": 17, "cases": 4}
+{"name": "Kankakee", "stateid": 17, "cases": 15}
 ,
-{"name": "Kendall", "stateid": 17, "cases": 4}
+{"name": "Kendall", "stateid": 17, "cases": 7}
 ,
 {"name": "Knox", "stateid": 17, "cases": 0}
 ,
-{"name": "Lake", "stateid": 17, "cases": 111}
+{"name": "Lake", "stateid": 17, "cases": 185}
 ,
 {"name": "LaSalle", "stateid": 17, "cases": 3}
 ,
@@ -670,7 +744,7 @@ var countycases = { "counties" : [
 ,
 {"name": "McDonough", "stateid": 17, "cases": 0}
 ,
-{"name": "McHenry", "stateid": 17, "cases": 14}
+{"name": "McHenry", "stateid": 17, "cases": 27}
 ,
 {"name": "McLean", "stateid": 17, "cases": 7}
 ,
@@ -678,11 +752,11 @@ var countycases = { "counties" : [
 ,
 {"name": "Macoupin", "stateid": 17, "cases": 0}
 ,
-{"name": "Madison", "stateid": 17, "cases": 2}
+{"name": "Madison", "stateid": 17, "cases": 6}
 ,
 {"name": "Marion", "stateid": 17, "cases": 0}
 ,
-{"name": "Marshall", "stateid": 17, "cases": 0}
+{"name": "Marshall", "stateid": 17, "cases": 1}
 ,
 {"name": "Mason", "stateid": 17, "cases": 0}
 ,
@@ -692,17 +766,17 @@ var countycases = { "counties" : [
 ,
 {"name": "Mercer", "stateid": 17, "cases": 0}
 ,
-{"name": "Monroe", "stateid": 17, "cases": 1}
+{"name": "Monroe", "stateid": 17, "cases": 3}
 ,
 {"name": "Montgomery", "stateid": 17, "cases": 0}
 ,
-{"name": "Morgan", "stateid": 17, "cases": 0}
+{"name": "Morgan", "stateid": 17, "cases": 1}
 ,
 {"name": "Moultrie", "stateid": 17, "cases": 0}
 ,
 {"name": "Ogle", "stateid": 17, "cases": 0}
 ,
-{"name": "Peoria", "stateid": 17, "cases": 3}
+{"name": "Peoria", "stateid": 17, "cases": 5}
 ,
 {"name": "Perry", "stateid": 17, "cases": 0}
 ,
@@ -720,13 +794,13 @@ var countycases = { "counties" : [
 ,
 {"name": "Richland", "stateid": 17, "cases": 0}
 ,
-{"name": "Rock Island", "stateid": 17, "cases": 1}
+{"name": "Rock Island", "stateid": 17, "cases": 4}
 ,
-{"name": "St. Clair", "stateid": 17, "cases": 7}
+{"name": "St. Clair", "stateid": 17, "cases": 13}
 ,
 {"name": "Saline", "stateid": 17, "cases": 0}
 ,
-{"name": "Sangamon", "stateid": 17, "cases": 5}
+{"name": "Sangamon", "stateid": 17, "cases": 7}
 ,
 {"name": "Schuyler", "stateid": 17, "cases": 0}
 ,
@@ -736,9 +810,9 @@ var countycases = { "counties" : [
 ,
 {"name": "Stark", "stateid": 17, "cases": 0}
 ,
-{"name": "Stephenson", "stateid": 17, "cases": 1}
+{"name": "Stephenson", "stateid": 17, "cases": 2}
 ,
-{"name": "Tazewell", "stateid": 17, "cases": 0}
+{"name": "Tazewell", "stateid": 17, "cases": 2}
 ,
 {"name": "Union", "stateid": 17, "cases": 0}
 ,
@@ -756,73 +830,87 @@ var countycases = { "counties" : [
 ,
 {"name": "Whiteside", "stateid": 17, "cases": 1}
 ,
-{"name": "Will", "stateid": 17, "cases": 28}
+{"name": "Will", "stateid": 17, "cases": 67}
 ,
-{"name": "Williamson", "stateid": 17, "cases": 0}
+{"name": "Williamson", "stateid": 17, "cases": 1}
 ,
-{"name": "Winnebago", "stateid": 17, "cases": 5}
+{"name": "Winnebago", "stateid": 17, "cases": 8}
 ,
 {"name": "Woodford", "stateid": 17, "cases": 3}
 ,
-{"name": "Milwaukee", "stateid": 55, "cases": 219}
+{"name": "Milwaukee", "stateid": 55, "cases": 347}
 ,
-{"name": "Dane", "stateid": 55, "cases": 72}
+{"name": "Dane", "stateid": 55, "cases": 114}
 ,
-{"name": "Waukesha", "stateid": 55, "cases": 31}
+{"name": "Waukesha", "stateid": 55, "cases": 56}
 ,
-{"name": "Fond du Lac", "stateid": 55, "cases": 18}
+{"name": "Washington", "stateid": 55, "cases": 25}
 ,
-{"name": "Washington", "stateid": 55, "cases": 17}
+{"name": "Ozaukee", "stateid": 55, "cases": 22}
 ,
-{"name": "Ozaukee", "stateid": 55, "cases": 16}
+{"name": "Kenosha", "stateid": 55, "cases": 19}
 ,
-{"name": "Kenosha", "stateid": 55, "cases": 13}
+{"name": "Fond du Lac", "stateid": 55, "cases": 17}
 ,
-{"name": "Sheboygan", "stateid": 55, "cases": 6}
+{"name": "La Crosse", "stateid": 55, "cases": 12}
 ,
-{"name": "La Crosse", "stateid": 55, "cases": 5}
+{"name": "Rock", "stateid": 55, "cases": 8}
 ,
-{"name": "Racine", "stateid": 55, "cases": 5}
+{"name": "Racine", "stateid": 55, "cases": 8}
 ,
-{"name": "Winnebago", "stateid": 55, "cases": 5}
+{"name": "Sauk", "stateid": 55, "cases": 7}
+,
+{"name": "Sheboygan", "stateid": 55, "cases": 7}
+,
+{"name": "Eau Claire", "stateid": 55, "cases": 6}
+,
+{"name": "Winnebago", "stateid": 55, "cases": 6}
+,
+{"name": "Walworth", "stateid": 55, "cases": 5}
+,
+{"name": "Jefferson", "stateid": 55, "cases": 5}
 ,
 {"name": "Columbia", "stateid": 55, "cases": 5}
 ,
-{"name": "Sauk", "stateid": 55, "cases": 4}
-,
-{"name": "Walworth", "stateid": 55, "cases": 4}
-,
-{"name": "Eau Claire", "stateid": 55, "cases": 4}
-,
-{"name": "Jefferson", "stateid": 55, "cases": 4}
+{"name": "Outagamie", "stateid": 55, "cases": 4}
 ,
 {"name": "Douglas", "stateid": 55, "cases": 4}
+,
+{"name": "Brown", "stateid": 55, "cases": 4}
 ,
 {"name": "St. Croix", "stateid": 55, "cases": 4}
 ,
 {"name": "Pierce", "stateid": 55, "cases": 3}
 ,
-{"name": "Rock", "stateid": 55, "cases": 3}
+{"name": "Dodge", "stateid": 55, "cases": 3}
 ,
-{"name": "Brown", "stateid": 55, "cases": 3}
-,
-{"name": "Outagamie", "stateid": 55, "cases": 2}
-,
-{"name": "Dodge", "stateid": 55, "cases": 2}
-,
-{"name": "Chippewa", "stateid": 55, "cases": 2}
+{"name": "Iowa", "stateid": 55, "cases": 3}
 ,
 {"name": "Dunn", "stateid": 55, "cases": 1}
 ,
+{"name": "Vilas", "stateid": 55, "cases": 1}
+,
 {"name": "Bayfield", "stateid": 55, "cases": 1}
+,
+{"name": "Portage", "stateid": 55, "cases": 1}
 ,
 {"name": "Green", "stateid": 55, "cases": 1}
 ,
 {"name": "Marathon", "stateid": 55, "cases": 1}
 ,
+{"name": "Monroe", "stateid": 55, "cases": 1}
+,
 {"name": "Calumet", "stateid": 55, "cases": 1}
 ,
+{"name": "Chippewa", "stateid": 55, "cases": 1}
+,
 {"name": "Wood", "stateid": 55, "cases": 1}
+,
+{"name": "Grant", "stateid": 55, "cases": 1}
+,
+{"name": "Clark", "stateid": 55, "cases": 1}
+,
+{"name": "Juneau", "stateid": 55, "cases": 1}
 ,
 {"name": "Lake of the Woods", "stateid": 27, "cases": 0}
 ,
@@ -834,7 +922,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Marshall", "stateid": 27, "cases": 0}
 ,
-{"name": "St. Louis", "stateid": 27, "cases": 2}
+{"name": "St. Louis", "stateid": 27, "cases": 5}
 ,
 {"name": "Beltrami", "stateid": 27, "cases": 0}
 ,
@@ -854,13 +942,13 @@ var countycases = { "counties" : [
 ,
 {"name": "Norman", "stateid": 27, "cases": 0}
 ,
-{"name": "Mahnomen", "stateid": 27, "cases": 0}
+{"name": "Mahnomen", "stateid": 27, "cases": 1}
 ,
 {"name": "Cass", "stateid": 27, "cases": 1}
 ,
 {"name": "Hubbard", "stateid": 27, "cases": 0}
 ,
-{"name": "Clay", "stateid": 27, "cases": 3}
+{"name": "Clay", "stateid": 27, "cases": 4}
 ,
 {"name": "Becker", "stateid": 27, "cases": 0}
 ,
@@ -874,7 +962,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Otter Tail", "stateid": 27, "cases": 0}
 ,
-{"name": "Wilkin", "stateid": 27, "cases": 0}
+{"name": "Wilkin", "stateid": 27, "cases": 1}
 ,
 {"name": "Pine", "stateid": 27, "cases": 0}
 ,
@@ -910,23 +998,23 @@ var countycases = { "counties" : [
 ,
 {"name": "Swift", "stateid": 27, "cases": 0}
 ,
-{"name": "Kandiyohi", "stateid": 27, "cases": 0}
+{"name": "Kandiyohi", "stateid": 27, "cases": 1}
 ,
-{"name": "Wright", "stateid": 27, "cases": 3}
+{"name": "Wright", "stateid": 27, "cases": 5}
 ,
-{"name": "Anoka", "stateid": 27, "cases": 7}
+{"name": "Anoka", "stateid": 27, "cases": 8}
 ,
 {"name": "Meeker", "stateid": 27, "cases": 0}
 ,
 {"name": "Lac qui Parle", "stateid": 27, "cases": 1}
 ,
-{"name": "Washington", "stateid": 27, "cases": 10}
+{"name": "Washington", "stateid": 27, "cases": 15}
 ,
-{"name": "Hennepin", "stateid": 27, "cases": 103}
+{"name": "Hennepin", "stateid": 27, "cases": 128}
 ,
 {"name": "Chippewa", "stateid": 27, "cases": 0}
 ,
-{"name": "Ramsey", "stateid": 27, "cases": 26}
+{"name": "Ramsey", "stateid": 27, "cases": 32}
 ,
 {"name": "McLeod", "stateid": 27, "cases": 0}
 ,
@@ -934,23 +1022,23 @@ var countycases = { "counties" : [
 ,
 {"name": "Yellow Medicine", "stateid": 27, "cases": 0}
 ,
-{"name": "Dakota", "stateid": 27, "cases": 21}
+{"name": "Dakota", "stateid": 27, "cases": 25}
 ,
 {"name": "Renville", "stateid": 27, "cases": 1}
 ,
-{"name": "Scott", "stateid": 27, "cases": 5}
+{"name": "Scott", "stateid": 27, "cases": 6}
 ,
-{"name": "Sibley", "stateid": 27, "cases": 0}
+{"name": "Sibley", "stateid": 27, "cases": 1}
 ,
 {"name": "Redwood", "stateid": 27, "cases": 0}
 ,
-{"name": "Goodhue", "stateid": 27, "cases": 0}
+{"name": "Goodhue", "stateid": 27, "cases": 1}
 ,
 {"name": "Lincoln", "stateid": 27, "cases": 0}
 ,
 {"name": "Lyon", "stateid": 27, "cases": 0}
 ,
-{"name": "Le Sueur", "stateid": 27, "cases": 5}
+{"name": "Le Sueur", "stateid": 27, "cases": 6}
 ,
 {"name": "Rice", "stateid": 27, "cases": 2}
 ,
@@ -958,9 +1046,9 @@ var countycases = { "counties" : [
 ,
 {"name": "Nicollet", "stateid": 27, "cases": 3}
 ,
-{"name": "Wabasha", "stateid": 27, "cases": 1}
+{"name": "Wabasha", "stateid": 27, "cases": 4}
 ,
-{"name": "Blue Earth", "stateid": 27, "cases": 5}
+{"name": "Blue Earth", "stateid": 27, "cases": 6}
 ,
 {"name": "Pipestone", "stateid": 27, "cases": 0}
 ,
@@ -968,15 +1056,15 @@ var countycases = { "counties" : [
 ,
 {"name": "Cottonwood", "stateid": 27, "cases": 0}
 ,
-{"name": "Winona", "stateid": 27, "cases": 0}
+{"name": "Winona", "stateid": 27, "cases": 4}
 ,
-{"name": "Waseca", "stateid": 27, "cases": 1}
+{"name": "Waseca", "stateid": 27, "cases": 2}
 ,
 {"name": "Steele", "stateid": 27, "cases": 5}
 ,
-{"name": "Dodge", "stateid": 27, "cases": 3}
+{"name": "Dodge", "stateid": 27, "cases": 5}
 ,
-{"name": "Olmsted", "stateid": 27, "cases": 18}
+{"name": "Olmsted", "stateid": 27, "cases": 29}
 ,
 {"name": "Watonwan", "stateid": 27, "cases": 0}
 ,
@@ -986,7 +1074,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Jackson", "stateid": 27, "cases": 1}
 ,
-{"name": "Martin", "stateid": 27, "cases": 8}
+{"name": "Martin", "stateid": 27, "cases": 12}
 ,
 {"name": "Houston", "stateid": 27, "cases": 0}
 ,
@@ -996,37 +1084,37 @@ var countycases = { "counties" : [
 ,
 {"name": "Freeborn", "stateid": 27, "cases": 0}
 ,
-{"name": "Mower", "stateid": 27, "cases": 6}
+{"name": "Mower", "stateid": 27, "cases": 10}
 ,
-{"name": "Montgomery", "stateid": 24, "cases": 107}
+{"name": "Montgomery", "stateid": 24, "cases": 164}
 ,
-{"name": "Prince George's", "stateid": 24, "cases": 63}
+{"name": "Prince George's", "stateid": 24, "cases": 101}
 ,
-{"name": "Baltimore", "stateid": 24, "cases": 42}
+{"name": "Baltimore", "stateid": 24, "cases": 81}
 ,
-{"name": "Baltimore City", "stateid": 24, "cases": 41}
+{"name": "Baltimore City", "stateid": 24, "cases": 72}
 ,
-{"name": "Howard", "stateid": 24, "cases": 30}
+{"name": "Howard", "stateid": 24, "cases": 49}
 ,
-{"name": "Anne Arundel", "stateid": 24, "cases": 24}
+{"name": "Anne Arundel", "stateid": 24, "cases": 41}
 ,
-{"name": "Carroll", "stateid": 24, "cases": 5}
+{"name": "Frederick", "stateid": 24, "cases": 14}
 ,
-{"name": "Charles", "stateid": 24, "cases": 5}
+{"name": "Charles", "stateid": 24, "cases": 10}
 ,
-{"name": "Harford", "stateid": 24, "cases": 5}
+{"name": "Harford", "stateid": 24, "cases": 9}
 ,
-{"name": "Frederick", "stateid": 24, "cases": 4}
+{"name": "Calvert", "stateid": 24, "cases": 7}
 ,
-{"name": "Wicomico", "stateid": 24, "cases": 4}
+{"name": "Carroll", "stateid": 24, "cases": 7}
 ,
-{"name": "Calvert", "stateid": 24, "cases": 3}
+{"name": "Wicomico", "stateid": 24, "cases": 5}
 ,
-{"name": "Cecil", "stateid": 24, "cases": 3}
+{"name": "Cecil", "stateid": 24, "cases": 4}
+,
+{"name": "St. Mary's", "stateid": 24, "cases": 4}
 ,
 {"name": "Garrett", "stateid": 24, "cases": 3}
-,
-{"name": "St. Mary's", "stateid": 24, "cases": 2}
 ,
 {"name": "Washington", "stateid": 24, "cases": 2}
 ,
@@ -1034,107 +1122,115 @@ var countycases = { "counties" : [
 ,
 {"name": "Caroline", "stateid": 24, "cases": 1}
 ,
+{"name": "Kent", "stateid": 24, "cases": 1}
+,
 {"name": "Queen Anne's", "stateid": 24, "cases": 1}
 ,
 {"name": "Somerset", "stateid": 24, "cases": 1}
 ,
 {"name": "Talbot", "stateid": 24, "cases": 1}
 ,
-{"name": "New Castle", "stateid": 10, "cases": 71}
+{"name": "New Castle", "stateid": 10, "cases": 91}
 ,
-{"name": "Kent", "stateid": 10, "cases": 10}
+{"name": "Kent", "stateid": 10, "cases": 19}
 ,
-{"name": "Sussex", "stateid": 10, "cases": 23}
+{"name": "Pea Patch", "stateid": 10, "cases": 0}
 ,
-{"name": "St Louis", "stateid": 29, "cases": 100}
+{"name": "Sussex", "stateid": 10, "cases": 33}
 ,
-{"name": "St Louis City", "stateid": 29, "cases": 23}
+{"name": "Reedy Island", "stateid": 10, "cases": 0}
 ,
-{"name": "Kansas City", "stateid": 29, "cases": 21}
+{"name": "Statewide", "stateid": 10, "cases": 87}
 ,
-{"name": "Boone", "stateid": 29, "cases": 20}
+{"name": "St Louis", "stateid": 29, "cases": 173}
 ,
-{"name": "Greene", "stateid": 29, "cases": 19}
+{"name": "Kansas City", "stateid": 29, "cases": 64}
 ,
-{"name": "Jackson", "stateid": 29, "cases": 14}
+{"name": "St Louis City", "stateid": 29, "cases": 57}
 ,
-{"name": "St Charles", "stateid": 29, "cases": 8}
+{"name": "Jackson", "stateid": 29, "cases": 31}
 ,
-{"name": "TBD", "stateid": 29, "cases": 8}
+{"name": "Boone", "stateid": 29, "cases": 25}
 ,
-{"name": "Cass", "stateid": 29, "cases": 6}
+{"name": "Greene", "stateid": 29, "cases": 25}
 ,
-{"name": "Cole", "stateid": 29, "cases": 5}
+{"name": "St Charles", "stateid": 29, "cases": 22}
 ,
-{"name": "Jefferson", "stateid": 29, "cases": 4}
+{"name": "Jefferson", "stateid": 29, "cases": 10}
+,
+{"name": "TBD", "stateid": 29, "cases": 10}
+,
+{"name": "Johnson", "stateid": 29, "cases": 8}
+,
+{"name": "Cass", "stateid": 29, "cases": 8}
+,
+{"name": "Cole", "stateid": 29, "cases": 8}
+,
+{"name": "Platte", "stateid": 29, "cases": 5}
+,
+{"name": "Clay", "stateid": 29, "cases": 5}
+,
+{"name": "Franklin", "stateid": 29, "cases": 4}
 ,
 {"name": "Pulaski", "stateid": 29, "cases": 4}
 ,
-{"name": "Clay", "stateid": 29, "cases": 2}
+{"name": "Perry", "stateid": 29, "cases": 4}
+,
+{"name": "Cape Girardeau", "stateid": 29, "cases": 3}
+,
+{"name": "Newton", "stateid": 29, "cases": 3}
+,
+{"name": "Lafayette", "stateid": 29, "cases": 2}
+,
+{"name": "Montgomery", "stateid": 29, "cases": 2}
 ,
 {"name": "Callaway", "stateid": 29, "cases": 2}
 ,
+{"name": "Moniteau", "stateid": 29, "cases": 2}
+,
 {"name": "St Francois", "stateid": 29, "cases": 2}
 ,
-{"name": "Perry", "stateid": 29, "cases": 2}
+{"name": "Jasper", "stateid": 29, "cases": 2}
 ,
-{"name": "Adair", "stateid": 29, "cases": 1}
-,
-{"name": "Clinton", "stateid": 29, "cases": 1}
-,
-{"name": "Lafayette", "stateid": 29, "cases": 1}
-,
-{"name": "Johnson", "stateid": 29, "cases": 1}
-,
-{"name": "Moniteau", "stateid": 29, "cases": 1}
-,
-{"name": "Franklin", "stateid": 29, "cases": 1}
-,
-{"name": "Henry", "stateid": 29, "cases": 1}
-,
-{"name": "Bates", "stateid": 29, "cases": 1}
-,
-{"name": "Camden", "stateid": 29, "cases": 1}
-,
-{"name": "Androscoggin", "stateid": 23, "cases": 3}
+{"name": "Androscoggin", "stateid": 23, "cases": 5}
 ,
 {"name": "Aroostook", "stateid": 23, "cases": 0}
 ,
-{"name": "Cumberland", "stateid": 23, "cases": 74}
+{"name": "Cumberland", "stateid": 23, "cases": 90}
 ,
-{"name": "Franklin", "stateid": 23, "cases": 0}
+{"name": "Franklin", "stateid": 23, "cases": 1}
 ,
 {"name": "Hancock", "stateid": 23, "cases": 0}
 ,
-{"name": "Kennebec", "stateid": 23, "cases": 5}
+{"name": "Kennebec", "stateid": 23, "cases": 6}
 ,
 {"name": "Knox", "stateid": 23, "cases": 1}
 ,
 {"name": "Lincoln", "stateid": 23, "cases": 5}
 ,
-{"name": "Oxford", "stateid": 23, "cases": 6}
+{"name": "Oxford", "stateid": 23, "cases": 8}
 ,
-{"name": "Penobscot", "stateid": 23, "cases": 4}
+{"name": "Penobscot", "stateid": 23, "cases": 5}
 ,
 {"name": "Piscataquis", "stateid": 23, "cases": 0}
 ,
-{"name": "Sagadahoc", "stateid": 23, "cases": 3}
+{"name": "Sagadahoc", "stateid": 23, "cases": 4}
 ,
 {"name": "Somerset", "stateid": 23, "cases": 0}
 ,
-{"name": "Waldo", "stateid": 23, "cases": 1}
+{"name": "Waldo", "stateid": 23, "cases": 2}
 ,
 {"name": "Washington", "stateid": 23, "cases": 0}
 ,
-{"name": "York", "stateid": 23, "cases": 16}
+{"name": "York", "stateid": 23, "cases": 27}
 ,
-{"name": "Missing County Info", "stateid": 5, "cases": 2}
+{"name": "Missing County Info", "stateid": 5, "cases": 4}
 ,
-{"name": "Howard", "stateid": 5, "cases": 0}
+{"name": "Howard", "stateid": 5, "cases": 2}
 ,
-{"name": "Pulaski", "stateid": 5, "cases": 64}
+{"name": "Pulaski", "stateid": 5, "cases": 83}
 ,
-{"name": "Lonoke", "stateid": 5, "cases": 0}
+{"name": "Lonoke", "stateid": 5, "cases": 4}
 ,
 {"name": "Prairie", "stateid": 5, "cases": 0}
 ,
@@ -1142,7 +1238,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Phillips", "stateid": 5, "cases": 0}
 ,
-{"name": "Searcy", "stateid": 5, "cases": 2}
+{"name": "Searcy", "stateid": 5, "cases": 4}
 ,
 {"name": "Independence", "stateid": 5, "cases": 3}
 ,
@@ -1154,7 +1250,7 @@ var countycases = { "counties" : [
 ,
 {"name": "Clay", "stateid": 5, "cases": 0}
 ,
-{"name": "Randolph", "stateid": 5, "cases": 0}
+{"name": "Randolph", "stateid": 5, "cases": 1}
 ,
 {"name": "Lawrence", "stateid": 5, "cases": 1}
 ,
@@ -1164,9 +1260,9 @@ var countycases = { "counties" : [
 ,
 {"name": "Perry", "stateid": 5, "cases": 0}
 ,
-{"name": "Jefferson", "stateid": 5, "cases": 22}
+{"name": "Jefferson", "stateid": 5, "cases": 23}
 ,
-{"name": "Washington", "stateid": 5, "cases": 6}
+{"name": "Washington", "stateid": 5, "cases": 12}
 ,
 {"name": "Crawford", "stateid": 5, "cases": 1}
 ,
@@ -1178,25 +1274,25 @@ var countycases = { "counties" : [
 ,
 {"name": "Columbia", "stateid": 5, "cases": 1}
 ,
-{"name": "Union", "stateid": 5, "cases": 1}
+{"name": "Union", "stateid": 5, "cases": 2}
 ,
 {"name": "Ashley", "stateid": 5, "cases": 0}
 ,
-{"name": "Chicot", "stateid": 5, "cases": 0}
+{"name": "Chicot", "stateid": 5, "cases": 1}
 ,
-{"name": "Benton", "stateid": 5, "cases": 3}
+{"name": "Benton", "stateid": 5, "cases": 23}
 ,
 {"name": "Carroll", "stateid": 5, "cases": 0}
 ,
 {"name": "Madison", "stateid": 5, "cases": 0}
 ,
-{"name": "Sebastian", "stateid": 5, "cases": 1}
+{"name": "Sebastian", "stateid": 5, "cases": 3}
 ,
 {"name": "Polk", "stateid": 5, "cases": 2}
 ,
 {"name": "Sevier", "stateid": 5, "cases": 1}
 ,
-{"name": "Garland", "stateid": 5, "cases": 11}
+{"name": "Garland", "stateid": 5, "cases": 19}
 ,
 {"name": "Saline", "stateid": 5, "cases": 4}
 ,
@@ -1210,11 +1306,11 @@ var countycases = { "counties" : [
 ,
 {"name": "Montgomery", "stateid": 5, "cases": 0}
 ,
-{"name": "Pike", "stateid": 5, "cases": 1}
+{"name": "Pike", "stateid": 5, "cases": 2}
 ,
-{"name": "Hempstead", "stateid": 5, "cases": 1}
+{"name": "Hempstead", "stateid": 5, "cases": 0}
 ,
-{"name": "Drew", "stateid": 5, "cases": 0}
+{"name": "Drew", "stateid": 5, "cases": 1}
 ,
 {"name": "Bradley", "stateid": 5, "cases": 4}
 ,
@@ -1224,13 +1320,13 @@ var countycases = { "counties" : [
 ,
 {"name": "Nevada", "stateid": 5, "cases": 0}
 ,
-{"name": "Clark", "stateid": 5, "cases": 6}
+{"name": "Clark", "stateid": 5, "cases": 15}
 ,
 {"name": "Dallas", "stateid": 5, "cases": 0}
 ,
-{"name": "Cleveland", "stateid": 5, "cases": 3}
+{"name": "Cleveland", "stateid": 5, "cases": 4}
 ,
-{"name": "Lincoln", "stateid": 5, "cases": 3}
+{"name": "Lincoln", "stateid": 5, "cases": 5}
 ,
 {"name": "Arkansas", "stateid": 5, "cases": 0}
 ,
@@ -1244,27 +1340,27 @@ var countycases = { "counties" : [
 ,
 {"name": "St. Francis", "stateid": 5, "cases": 0}
 ,
-{"name": "Crittenden", "stateid": 5, "cases": 3}
+{"name": "Crittenden", "stateid": 5, "cases": 7}
 ,
 {"name": "Cross", "stateid": 5, "cases": 1}
 ,
 {"name": "Woodruff", "stateid": 5, "cases": 1}
 ,
-{"name": "White", "stateid": 5, "cases": 4}
+{"name": "White", "stateid": 5, "cases": 6}
 ,
-{"name": "Faulkner", "stateid": 5, "cases": 17}
+{"name": "Faulkner", "stateid": 5, "cases": 24}
 ,
-{"name": "Conway", "stateid": 5, "cases": 1}
+{"name": "Conway", "stateid": 5, "cases": 2}
 ,
 {"name": "Newton", "stateid": 5, "cases": 0}
 ,
-{"name": "Pope", "stateid": 5, "cases": 2}
+{"name": "Pope", "stateid": 5, "cases": 3}
 ,
 {"name": "Johnson", "stateid": 5, "cases": 0}
 ,
-{"name": "Van Buren", "stateid": 5, "cases": 7}
+{"name": "Van Buren", "stateid": 5, "cases": 13}
 ,
-{"name": "Cleburne", "stateid": 5, "cases": 34}
+{"name": "Cleburne", "stateid": 5, "cases": 46}
 ,
 {"name": "Poinsett", "stateid": 5, "cases": 3}
 ,
@@ -1276,97 +1372,117 @@ var countycases = { "counties" : [
 ,
 {"name": "Fulton", "stateid": 5, "cases": 0}
 ,
-{"name": "Stone", "stateid": 5, "cases": 2}
+{"name": "Stone", "stateid": 5, "cases": 4}
 ,
 {"name": "Boone", "stateid": 5, "cases": 1}
 ,
-{"name": "Orleans", "stateid": 22, "cases": 675}
+{"name": "Orleans", "stateid": 22, "cases": 997}
 ,
-{"name": "Jefferson", "stateid": 22, "cases": 293}
+{"name": "Jefferson", "stateid": 22, "cases": 458}
 ,
-{"name": "East Baton Rouge", "stateid": 22, "cases": 58}
+{"name": "East Baton Rouge", "stateid": 22, "cases": 105}
 ,
-{"name": "St. Tammany", "stateid": 22, "cases": 52}
+{"name": "St. John the Baptist", "stateid": 22, "cases": 38}
 ,
-{"name": "Ascension", "stateid": 22, "cases": 36}
+{"name": "St. Charles", "stateid": 22, "cases": 22}
 ,
-{"name": "Iberville", "stateid": 22, "cases": 14}
+{"name": "Caddo", "stateid": 22, "cases": 115}
 ,
-{"name": "Parish Under Investigation", "stateid": 22, "cases": 12}
+{"name": "Ascension", "stateid": 22, "cases": 91}
 ,
-{"name": "Rapides", "stateid": 22, "cases": 10}
+{"name": "St. Tammany", "stateid": 22, "cases": 89}
 ,
-{"name": "St. James", "stateid": 22, "cases": 9}
+{"name": "St. James", "stateid": 22, "cases": 29}
 ,
-{"name": "Ouachita", "stateid": 22, "cases": 7}
+{"name": "Lafourche", "stateid": 22, "cases": 28}
 ,
-{"name": "Calcasieu", "stateid": 22, "cases": 5}
+{"name": "St. Bernard", "stateid": 22, "cases": 28}
 ,
-{"name": "West Baton Rouge", "stateid": 22, "cases": 5}
+{"name": "Rapides", "stateid": 22, "cases": 25}
 ,
-{"name": "Washington", "stateid": 22, "cases": 3}
+{"name": "Ouachita", "stateid": 22, "cases": 19}
 ,
-{"name": "Webster", "stateid": 22, "cases": 3}
+{"name": "Iberville", "stateid": 22, "cases": 17}
+,
+{"name": "Calcasieu", "stateid": 22, "cases": 15}
+,
+{"name": "Parish Under Investigation", "stateid": 22, "cases": 13}
+,
+{"name": "De Soto", "stateid": 22, "cases": 11}
+,
+{"name": "Webster", "stateid": 22, "cases": 8}
+,
+{"name": "West Baton Rouge", "stateid": 22, "cases": 8}
+,
+{"name": "Washington", "stateid": 22, "cases": 6}
+,
+{"name": "Bienville", "stateid": 22, "cases": 1}
 ,
 {"name": "Catahoula", "stateid": 22, "cases": 1}
 ,
-{"name": "Caddo", "stateid": 22, "cases": 40}
+{"name": "Bossier", "stateid": 22, "cases": 32}
 ,
-{"name": "St. John the Baptist", "stateid": 22, "cases": 21}
+{"name": "Lafayette", "stateid": 22, "cases": 30}
 ,
-{"name": "St. Bernard", "stateid": 22, "cases": 19}
+{"name": "Terrebonne", "stateid": 22, "cases": 21}
 ,
-{"name": "Lafourche", "stateid": 22, "cases": 16}
+{"name": "Plaquemines", "stateid": 22, "cases": 13}
 ,
-{"name": "St. Charles", "stateid": 22, "cases": 15}
+{"name": "Livingston", "stateid": 22, "cases": 11}
 ,
-{"name": "Terrebonne", "stateid": 22, "cases": 14}
+{"name": "Avoyelles", "stateid": 22, "cases": 7}
 ,
-{"name": "Bossier", "stateid": 22, "cases": 12}
+{"name": "Tangipahoa", "stateid": 22, "cases": 7}
 ,
-{"name": "Lafayette", "stateid": 22, "cases": 12}
+{"name": "Allen", "stateid": 22, "cases": 5}
 ,
-{"name": "Plaquemines", "stateid": 22, "cases": 8}
+{"name": "Assumption", "stateid": 22, "cases": 5}
 ,
-{"name": "De Soto", "stateid": 22, "cases": 6}
+{"name": "St. Landry", "stateid": 22, "cases": 5}
 ,
-{"name": "Livingston", "stateid": 22, "cases": 6}
+{"name": "St. Mary", "stateid": 22, "cases": 5}
 ,
-{"name": "Tangipahoa", "stateid": 22, "cases": 4}
+{"name": "East Feliciana", "stateid": 22, "cases": 4}
 ,
-{"name": "Avoyelles", "stateid": 22, "cases": 3}
+{"name": "Acadia", "stateid": 22, "cases": 3}
 ,
-{"name": "St. Landry", "stateid": 22, "cases": 3}
+{"name": "Beauregard", "stateid": 22, "cases": 3}
 ,
-{"name": "Acadia", "stateid": 22, "cases": 2}
+{"name": "Iberia", "stateid": 22, "cases": 3}
 ,
-{"name": "Allen", "stateid": 22, "cases": 2}
+{"name": "Lincoln", "stateid": 22, "cases": 3}
 ,
-{"name": "Assumption", "stateid": 22, "cases": 2}
-,
-{"name": "Beauregard", "stateid": 22, "cases": 2}
+{"name": "Morehouse", "stateid": 22, "cases": 3}
 ,
 {"name": "Claiborne", "stateid": 22, "cases": 2}
 ,
 {"name": "Evangeline", "stateid": 22, "cases": 2}
 ,
-{"name": "Iberia", "stateid": 22, "cases": 2}
-,
-{"name": "Lincoln", "stateid": 22, "cases": 2}
-,
 {"name": "Natchitoches", "stateid": 22, "cases": 2}
 ,
-{"name": "St. Mary", "stateid": 22, "cases": 2}
+{"name": "St. Martin", "stateid": 22, "cases": 2}
+,
+{"name": "Union", "stateid": 22, "cases": 2}
 ,
 {"name": "Vernon", "stateid": 22, "cases": 2}
 ,
-{"name": "Bienville", "stateid": 22, "cases": 1}
-,
 {"name": "Grant", "stateid": 22, "cases": 1}
+,
+{"name": "Jackson", "stateid": 22, "cases": 1}
+,
+{"name": "Jefferson Davis", "stateid": 22, "cases": 1}
+,
+{"name": "La Salle", "stateid": 22, "cases": 1}
+,
+{"name": "Madison", "stateid": 22, "cases": 1}
+,
+{"name": "Pointe Coupee", "stateid": 22, "cases": 1}
 ,
 {"name": "Richland", "stateid": 22, "cases": 1}
 ,
-{"name": "St. Martin", "stateid": 22, "cases": 1}
+{"name": "Vermilion", "stateid": 22, "cases": 1}
+,
+{"name": "Winn", "stateid": 22, "cases": 1}
 ,
 {"name": "Caldwell", "stateid": 22, "cases": 0}
 ,
@@ -1376,21 +1492,7 @@ var countycases = { "counties" : [
 ,
 {"name": "East Carroll", "stateid": 22, "cases": 0}
 ,
-{"name": "East Feliciana", "stateid": 22, "cases": 0}
-,
 {"name": "Franklin", "stateid": 22, "cases": 0}
-,
-{"name": "Jackson", "stateid": 22, "cases": 0}
-,
-{"name": "Jefferson Davis", "stateid": 22, "cases": 0}
-,
-{"name": "La Salle", "stateid": 22, "cases": 0}
-,
-{"name": "Madison", "stateid": 22, "cases": 0}
-,
-{"name": "Morehouse", "stateid": 22, "cases": 0}
-,
-{"name": "Pointe Coupee", "stateid": 22, "cases": 0}
 ,
 {"name": "Red River", "stateid": 22, "cases": 0}
 ,
@@ -1400,45 +1502,49 @@ var countycases = { "counties" : [
 ,
 {"name": "Tensas", "stateid": 22, "cases": 0}
 ,
-{"name": "Union", "stateid": 22, "cases": 0}
-,
-{"name": "Vermilion", "stateid": 22, "cases": 0}
-,
 {"name": "West Carroll", "stateid": 22, "cases": 0}
 ,
 {"name": "West Feliciana", "stateid": 22, "cases": 0}
 ,
-{"name": "Winn", "stateid": 22, "cases": 0}
+{"name": "Johnson", "stateid": 19, "cases": 49}
 ,
-{"name": "Johnson", "stateid": 19, "cases": 37}
+{"name": "Polk", "stateid": 19, "cases": 24}
 ,
-{"name": "Polk", "stateid": 19, "cases": 17}
+{"name": "Linn", "stateid": 19, "cases": 12}
+,
+{"name": "Washington", "stateid": 19, "cases": 8}
+,
+{"name": "Allamakee", "stateid": 19, "cases": 7}
 ,
 {"name": "Dallas", "stateid": 19, "cases": 7}
 ,
-{"name": "Allamakee", "stateid": 19, "cases": 6}
+{"name": "Scott", "stateid": 19, "cases": 7}
 ,
 {"name": "Dubuque", "stateid": 19, "cases": 6}
 ,
-{"name": "Linn", "stateid": 19, "cases": 6}
+{"name": "Muscatine", "stateid": 19, "cases": 6}
 ,
-{"name": "Muscatine", "stateid": 19, "cases": 5}
+{"name": "Black Hawk", "stateid": 19, "cases": 5}
 ,
-{"name": "Black Hawk", "stateid": 19, "cases": 4}
+{"name": "Cedar", "stateid": 19, "cases": 4}
+,
+{"name": "Poweshiek", "stateid": 19, "cases": 4}
 ,
 {"name": "Tama", "stateid": 19, "cases": 4}
 ,
-{"name": "Washington", "stateid": 19, "cases": 4}
+{"name": "Hancock", "stateid": 19, "cases": 3}
 ,
 {"name": "Harrison", "stateid": 19, "cases": 3}
 ,
+{"name": "Pottawattamie", "stateid": 19, "cases": 3}
+,
+{"name": "Benton", "stateid": 19, "cases": 2}
+,
 {"name": "Cerro Gordo", "stateid": 19, "cases": 2}
 ,
-{"name": "Hancock", "stateid": 19, "cases": 2}
+{"name": "Jasper", "stateid": 19, "cases": 2}
 ,
-{"name": "Pottawattamie", "stateid": 19, "cases": 2}
-,
-{"name": "Poweshiek", "stateid": 19, "cases": 2}
+{"name": "Sioux", "stateid": 19, "cases": 2}
 ,
 {"name": "Story", "stateid": 19, "cases": 2}
 ,
@@ -1446,23 +1552,27 @@ var countycases = { "counties" : [
 ,
 {"name": "Adair", "stateid": 19, "cases": 1}
 ,
+{"name": "Appanoose", "stateid": 19, "cases": 1}
+,
 {"name": "Buchanan", "stateid": 19, "cases": 1}
 ,
 {"name": "Carroll", "stateid": 19, "cases": 1}
 ,
-{"name": "Cedar", "stateid": 19, "cases": 1}
+{"name": "Clayton", "stateid": 19, "cases": 1}
+,
+{"name": "Des Moines", "stateid": 19, "cases": 1}
 ,
 {"name": "Fayette", "stateid": 19, "cases": 1}
 ,
 {"name": "Henry", "stateid": 19, "cases": 1}
 ,
-{"name": "Jasper", "stateid": 19, "cases": 1}
-,
 {"name": "Kossuth", "stateid": 19, "cases": 1}
 ,
-{"name": "Scott", "stateid": 19, "cases": 1}
+{"name": "Mahaska", "stateid": 19, "cases": 1}
 ,
-{"name": "Sioux", "stateid": 19, "cases": 1}
+{"name": "Monona", "stateid": 19, "cases": 1}
+,
+{"name": "Page", "stateid": 19, "cases": 1}
 ,
 {"name": "Wapello", "stateid": 19, "cases": 1}
 ,
@@ -1470,41 +1580,41 @@ var countycases = { "counties" : [
 ,
 {"name": "Winneshiek", "stateid": 19, "cases": 1}
 ,
-{"name": "Alachua", "stateid": 12, "cases": 37}
+{"name": "Alachua", "stateid": 12, "cases": 53}
 ,
-{"name": "Baker", "stateid": 12, "cases": 4}
+{"name": "Baker", "stateid": 12, "cases": 5}
 ,
-{"name": "Bay", "stateid": 12, "cases": 1}
+{"name": "Bay", "stateid": 12, "cases": 3}
 ,
 {"name": "Bradford", "stateid": 12, "cases": 1}
 ,
-{"name": "Brevard", "stateid": 12, "cases": 9}
+{"name": "Brevard", "stateid": 12, "cases": 14}
 ,
-{"name": "Broward", "stateid": 12, "cases": 312}
+{"name": "Broward", "stateid": 12, "cases": 505}
 ,
 {"name": "Calhoun", "stateid": 12, "cases": 0}
 ,
-{"name": "Charlotte", "stateid": 12, "cases": 3}
+{"name": "Charlotte", "stateid": 12, "cases": 4}
 ,
-{"name": "Citrus", "stateid": 12, "cases": 9}
+{"name": "Citrus", "stateid": 12, "cases": 11}
 ,
-{"name": "Clay", "stateid": 12, "cases": 10}
+{"name": "Clay", "stateid": 12, "cases": 20}
 ,
-{"name": "Collier", "stateid": 12, "cases": 41}
+{"name": "Collier", "stateid": 12, "cases": 67}
 ,
 {"name": "Columbia", "stateid": 12, "cases": 3}
 ,
-{"name": "Miami-Dade", "stateid": 12, "cases": 367}
+{"name": "Miami-Dade", "stateid": 12, "cases": 654}
 ,
-{"name": "Desoto", "stateid": 12, "cases": 1}
+{"name": "Desoto", "stateid": 12, "cases": 5}
 ,
 {"name": "Dixie", "stateid": 12, "cases": 0}
 ,
-{"name": "Duval", "stateid": 12, "cases": 50}
+{"name": "Duval", "stateid": 12, "cases": 82}
 ,
-{"name": "Escambia", "stateid": 12, "cases": 13}
+{"name": "Escambia", "stateid": 12, "cases": 20}
 ,
-{"name": "Flagler", "stateid": 12, "cases": 4}
+{"name": "Flagler", "stateid": 12, "cases": 8}
 ,
 {"name": "Franklin", "stateid": 12, "cases": 0}
 ,
@@ -1522,15 +1632,15 @@ var countycases = { "counties" : [
 ,
 {"name": "Hendry", "stateid": 12, "cases": 0}
 ,
-{"name": "Hernando", "stateid": 12, "cases": 7}
+{"name": "Hernando", "stateid": 12, "cases": 9}
 ,
-{"name": "Highlands", "stateid": 12, "cases": 4}
+{"name": "Highlands", "stateid": 12, "cases": 5}
 ,
-{"name": "Hillsborough", "stateid": 12, "cases": 95}
+{"name": "Hillsborough", "stateid": 12, "cases": 151}
 ,
 {"name": "Holmes", "stateid": 12, "cases": 0}
 ,
-{"name": "Indian River", "stateid": 12, "cases": 12}
+{"name": "Indian River", "stateid": 12, "cases": 14}
 ,
 {"name": "Jackson", "stateid": 12, "cases": 1}
 ,
@@ -1538,11 +1648,11 @@ var countycases = { "counties" : [
 ,
 {"name": "Lafayette", "stateid": 12, "cases": 0}
 ,
-{"name": "Lake", "stateid": 12, "cases": 14}
+{"name": "Lake", "stateid": 12, "cases": 26}
 ,
-{"name": "Lee", "stateid": 12, "cases": 34}
+{"name": "Lee", "stateid": 12, "cases": 66}
 ,
-{"name": "Leon", "stateid": 12, "cases": 8}
+{"name": "Leon", "stateid": 12, "cases": 13}
 ,
 {"name": "Levy", "stateid": 12, "cases": 0}
 ,
@@ -1550,45 +1660,45 @@ var countycases = { "counties" : [
 ,
 {"name": "Madison", "stateid": 12, "cases": 0}
 ,
-{"name": "Manatee", "stateid": 12, "cases": 16}
+{"name": "Manatee", "stateid": 12, "cases": 25}
 ,
-{"name": "Marion", "stateid": 12, "cases": 4}
+{"name": "Marion", "stateid": 12, "cases": 5}
 ,
-{"name": "Martin", "stateid": 12, "cases": 4}
+{"name": "Martin", "stateid": 12, "cases": 11}
 ,
-{"name": "Monroe", "stateid": 12, "cases": 3}
+{"name": "Monroe", "stateid": 12, "cases": 14}
 ,
-{"name": "Nassau", "stateid": 12, "cases": 1}
+{"name": "Nassau", "stateid": 12, "cases": 5}
 ,
-{"name": "Okaloosa", "stateid": 12, "cases": 14}
+{"name": "Okaloosa", "stateid": 12, "cases": 22}
 ,
 {"name": "Okeechobee", "stateid": 12, "cases": 0}
 ,
-{"name": "Orange", "stateid": 12, "cases": 52}
+{"name": "Orange", "stateid": 12, "cases": 119}
 ,
-{"name": "Osceola", "stateid": 12, "cases": 26}
+{"name": "Osceola", "stateid": 12, "cases": 45}
 ,
-{"name": "Palm Beach", "stateid": 12, "cases": 104}
+{"name": "Palm Beach", "stateid": 12, "cases": 174}
 ,
-{"name": "Pasco", "stateid": 12, "cases": 16}
+{"name": "Pasco", "stateid": 12, "cases": 21}
 ,
-{"name": "Pinellas", "stateid": 12, "cases": 45}
+{"name": "Pinellas", "stateid": 12, "cases": 65}
 ,
-{"name": "Polk", "stateid": 12, "cases": 13}
+{"name": "Polk", "stateid": 12, "cases": 20}
 ,
-{"name": "Putnam", "stateid": 12, "cases": 2}
+{"name": "Putnam", "stateid": 12, "cases": 12}
 ,
-{"name": "Santa Rosa", "stateid": 12, "cases": 6}
+{"name": "Santa Rosa", "stateid": 12, "cases": 12}
 ,
-{"name": "Sarasota", "stateid": 12, "cases": 26}
+{"name": "Sarasota", "stateid": 12, "cases": 34}
 ,
-{"name": "Seminole", "stateid": 12, "cases": 25}
+{"name": "Seminole", "stateid": 12, "cases": 40}
 ,
-{"name": "St. Johns", "stateid": 12, "cases": 24}
+{"name": "St. Johns", "stateid": 12, "cases": 36}
 ,
-{"name": "St. Lucie", "stateid": 12, "cases": 6}
+{"name": "St. Lucie", "stateid": 12, "cases": 11}
 ,
-{"name": "Sumter", "stateid": 12, "cases": 10}
+{"name": "Sumter", "stateid": 12, "cases": 24}
 ,
 {"name": "Suwannee", "stateid": 12, "cases": 0}
 ,
@@ -1598,183 +1708,215 @@ var countycases = { "counties" : [
 ,
 {"name": "Unknown", "stateid": 12, "cases": 0}
 ,
-{"name": "Volusia", "stateid": 12, "cases": 19}
+{"name": "Volusia", "stateid": 12, "cases": 34}
 ,
 {"name": "Wakulla", "stateid": 12, "cases": 0}
 ,
-{"name": "Walton", "stateid": 12, "cases": 10}
+{"name": "Walton", "stateid": 12, "cases": 13}
 ,
-{"name": "Washington", "stateid": 12, "cases": 0}
+{"name": "Washington", "stateid": 12, "cases": 1}
 ,
-{"name": "Autauga", "stateid": 1, "cases": 1}
+{"name": "Autauga", "stateid": 1, "cases": 6}
 ,
-{"name": "Baldwin", "stateid": 1, "cases": 4}
+{"name": "Baldwin", "stateid": 1, "cases": 5}
+,
+{"name": "Blount", "stateid": 1, "cases": 2}
+,
+{"name": "Bullock", "stateid": 1, "cases": 2}
+,
+{"name": "Butler", "stateid": 1, "cases": 1}
 ,
 {"name": "Calhoun", "stateid": 1, "cases": 2}
 ,
-{"name": "Chambers", "stateid": 1, "cases": 5}
+{"name": "Chambers", "stateid": 1, "cases": 13}
 ,
-{"name": "Cullman", "stateid": 1, "cases": 3}
+{"name": "Cherokee", "stateid": 1, "cases": 1}
 ,
-{"name": "Elmore", "stateid": 1, "cases": 8}
+{"name": "Chilton", "stateid": 1, "cases": 4}
 ,
-{"name": "Franklin", "stateid": 1, "cases": 1}
+{"name": "Choctaw", "stateid": 1, "cases": 1}
 ,
-{"name": "Houston", "stateid": 1, "cases": 1}
+{"name": "Clay", "stateid": 1, "cases": 1}
 ,
-{"name": "Jackson", "stateid": 1, "cases": 2}
+{"name": "Cleburne", "stateid": 1, "cases": 1}
 ,
-{"name": "Jefferson", "stateid": 1, "cases": 91}
+{"name": "Colbert", "stateid": 1, "cases": 1}
+,
+{"name": "Coosa", "stateid": 1, "cases": 2}
+,
+{"name": "Crenshaw", "stateid": 1, "cases": 1}
+,
+{"name": "Cullman", "stateid": 1, "cases": 6}
+,
+{"name": "Dallas", "stateid": 1, "cases": 2}
+,
+{"name": "DeKalb", "stateid": 1, "cases": 1}
+,
+{"name": "Elmore", "stateid": 1, "cases": 10}
+,
+{"name": "Etowah", "stateid": 1, "cases": 4}
+,
+{"name": "Franklin", "stateid": 1, "cases": 3}
+,
+{"name": "Houston", "stateid": 1, "cases": 3}
+,
+{"name": "Jackson", "stateid": 1, "cases": 4}
+,
+{"name": "Jefferson", "stateid": 1, "cases": 162}
 ,
 {"name": "Lamar", "stateid": 1, "cases": 1}
 ,
-{"name": "Lauderdale", "stateid": 1, "cases": 3}
+{"name": "Fulton", "stateid": 13,"cases": 231}
 ,
-{"name": "Lee", "stateid": 1, "cases": 26}
+{"name": "Dougherty", "stateid": 13,"cases": 164}
 ,
-{"name": "Limestone", "stateid": 1, "cases": 4}
+{"name": "Dekalb", "stateid": 13,"cases": 137}
 ,
-{"name": "Madison", "stateid": 1, "cases": 21}
+{"name": "Cobb", "stateid": 13,"cases": 119}
 ,
-{"name": "Marion", "stateid": 1, "cases": 1}
+{"name": "Bartow", "stateid": 13,"cases": 93}
 ,
-{"name": "Mobile", "stateid": 1, "cases": 6}
+{"name": "Gwinnett", "stateid": 13,"cases": 79}
 ,
-{"name": "Montgomery", "stateid": 1, "cases": 9}
+{"name": "Carroll", "stateid": 13,"cases": 52}
 ,
-{"name": "Morgan", "stateid": 1, "cases": 2}
+{"name": "Cherokee", "stateid": 13,"cases": 44}
 ,
-{"name": "St. Clair", "stateid": 1, "cases": 4}
+{"name": "Clayton", "stateid": 13,"cases": 37}
 ,
-{"name": "Shelby", "stateid": 1, "cases": 27}
+{"name": "Clarke", "stateid": 13,"cases": 29}
 ,
-{"name": "Talladega", "stateid": 1, "cases": 2}
+{"name": "Henry", "stateid": 13,"cases": 29}
 ,
-{"name": "Tallapoosa", "stateid": 1, "cases": 2}
+{"name": "Lee", "stateid": 13,"cases": 29}
 ,
-{"name": "Tuscaloosa", "stateid": 1, "cases": 10}
+{"name": "Hall", "stateid": 13,"cases": 22}
 ,
-{"name": "Walker", "stateid": 1, "cases": 5}
+{"name": "Douglas", "stateid": 13,"cases": 18}
 ,
-{"name": "Fulton", "stateid": 13,"cases": 191}
+{"name": "Floyd", "stateid": 13,"cases": 17}
 ,
-{"name": "Dekalb", "stateid": 13,"cases": 107}
+{"name": "Forsyth", "stateid": 13,"cases": 15}
 ,
-{"name": "Dougherty", "stateid": 13,"cases": 101}
+{"name": "Coweta", "stateid": 13,"cases": 14}
 ,
-{"name": "Cobb", "stateid": 13,"cases": 90}
+{"name": "Fayette", "stateid": 13,"cases": 14}
 ,
-{"name": "Bartow", "stateid": 13,"cases": 76}
+{"name": "Lowndes", "stateid": 13,"cases": 14}
 ,
-{"name": "Gwinnett", "stateid": 13,"cases": 46}
+{"name": "Rockdale", "stateid": 13,"cases": 13}
 ,
-{"name": "Cherokee", "stateid": 13,"cases": 30}
+{"name": "Newton", "stateid": 13,"cases": 12}
 ,
-{"name": "Carroll", "stateid": 13,"cases": 26}
+{"name": "Richmond", "stateid": 13,"cases": 11}
 ,
-{"name": "Lee", "stateid": 13,"cases": 24}
+{"name": "Spalding", "stateid": 13,"cases": 11}
 ,
-{"name": "Clayton", "stateid": 13,"cases": 21}
+{"name": "Columbia", "stateid": 13,"cases": 10}
 ,
-{"name": "Clarke", "stateid": 13,"cases": 17}
+{"name": "Mitchell", "stateid": 13,"cases": 10}
 ,
-{"name": "Hall", "stateid": 13,"cases": 16}
+{"name": "Polk", "stateid": 13,"cases": 10}
 ,
-{"name": "Henry", "stateid": 13,"cases": 13}
+{"name": "Troup", "stateid": 13,"cases": 10}
 ,
-{"name": "Douglas", "stateid": 13,"cases": 12}
+{"name": "Chatham", "stateid": 13,"cases": 9}
 ,
-{"name": "Fayette", "stateid": 13,"cases": 12}
+{"name": "Gordon", "stateid": 13,"cases": 9}
 ,
-{"name": "Floyd", "stateid": 13,"cases": 12}
+{"name": "Houston", "stateid": 13,"cases": 9}
 ,
-{"name": "Lowndes", "stateid": 13,"cases": 11}
+{"name": "Bibb", "stateid": 13,"cases": 8}
 ,
-{"name": "Coweta", "stateid": 13,"cases": 10}
+{"name": "Laurens", "stateid": 13,"cases": 8}
 ,
-{"name": "Richmond", "stateid": 13,"cases": 10}
+{"name": "Early", "stateid": 13,"cases": 7}
 ,
-{"name": "Forsyth", "stateid": 13,"cases": 8}
+{"name": "Oconee", "stateid": 13,"cases": 7}
 ,
-{"name": "Gordon", "stateid": 13,"cases": 8}
+{"name": "Paulding", "stateid": 13,"cases": 7}
 ,
-{"name": "Polk", "stateid": 13,"cases": 8}
+{"name": "Sumter", "stateid": 13,"cases": 7}
 ,
-{"name": "Rockdale", "stateid": 13,"cases": 8}
+{"name": "Tift", "stateid": 13,"cases": 7}
 ,
-{"name": "Chatham", "stateid": 13,"cases": 7}
+{"name": "Glynn", "stateid": 13,"cases": 6}
 ,
-{"name": "Columbia", "stateid": 13,"cases": 6}
+{"name": "Muscogee", "stateid": 13,"cases": 6}
 ,
-{"name": "Laurens", "stateid": 13,"cases": 6}
+{"name": "Whitfield", "stateid": 13,"cases": 6}
 ,
-{"name": "Newton", "stateid": 13,"cases": 6}
+{"name": "Worth", "stateid": 13,"cases": 6}
 ,
-{"name": "Paulding", "stateid": 13,"cases": 6}
+{"name": "Barrow", "stateid": 13,"cases": 5}
 ,
-{"name": "Troup", "stateid": 13,"cases": 6}
+{"name": "Peach", "stateid": 13,"cases": 5}
 ,
-{"name": "Early", "stateid": 13,"cases": 5}
+{"name": "Terrell", "stateid": 13,"cases": 5}
 ,
-{"name": "Glynn", "stateid": 13,"cases": 5}
+{"name": "Colquitt", "stateid": 13,"cases": 4}
 ,
-{"name": "Houston", "stateid": 13,"cases": 5}
+{"name": "Crisp", "stateid": 13,"cases": 4}
 ,
-{"name": "Oconee", "stateid": 13,"cases": 5}
-,
-{"name": "Spalding", "stateid": 13,"cases": 5}
-,
-{"name": "Bibb", "stateid": 13,"cases": 4}
-,
-{"name": "Mitchell", "stateid": 13,"cases": 4}
-,
-{"name": "Muscogee", "stateid": 13,"cases": 4}
+{"name": "Lumpkin", "stateid": 13,"cases": 4}
 ,
 {"name": "Pickens", "stateid": 13,"cases": 4}
 ,
-{"name": "Sumter", "stateid": 13,"cases": 4}
+{"name": "Bryan", "stateid": 13,"cases": 3}
 ,
-{"name": "Tift", "stateid": 13,"cases": 4}
+{"name": "Burke", "stateid": 13,"cases": 3}
 ,
-{"name": "Worth", "stateid": 13,"cases": 4}
-,
-{"name": "Baker", "stateid": 13,"cases": 3}
-,
-{"name": "Crisp", "stateid": 13,"cases": 3}
+{"name": "Butts", "stateid": 13,"cases": 3}
 ,
 {"name": "Effingham", "stateid": 13,"cases": 3}
 ,
+{"name": "Irwin", "stateid": 13,"cases": 3}
+,
 {"name": "Lamar", "stateid": 13,"cases": 3}
 ,
-{"name": "Lumpkin", "stateid": 13,"cases": 3}
+{"name": "Lincoln", "stateid": 13,"cases": 3}
+,
+{"name": "Madison", "stateid": 13,"cases": 3}
+,
+{"name": "Meriwether", "stateid": 13,"cases": 3}
 ,
 {"name": "Monroe", "stateid": 13,"cases": 3}
 ,
-{"name": "Peach", "stateid": 13,"cases": 3}
-,
-{"name": "Terrell", "stateid": 13,"cases": 3}
-,
 {"name": "Baldwin", "stateid": 13,"cases": 2}
 ,
-{"name": "Barrow", "stateid": 13,"cases": 2}
-,
-{"name": "Bryan", "stateid": 13,"cases": 2}
-,
-{"name": "Butts", "stateid": 13,"cases": 2}
+{"name": "Camden", "stateid": 13,"cases": 2}
 ,
 {"name": "Coffee", "stateid": 13,"cases": 2}
 ,
+{"name": "Dawson", "stateid": 13,"cases": 2}
+,
+{"name": "Decatur", "stateid": 13,"cases": 2}
+,
+{"name": "Jackson", "stateid": 13,"cases": 2}
+,
+{"name": "Jasper", "stateid": 13,"cases": 2}
+,
+{"name": "Miller", "stateid": 13,"cases": 2}
+,
+{"name": "Randolph", "stateid": 13,"cases": 2}
+,
 {"name": "Seminole", "stateid": 13,"cases": 2}
 ,
-{"name": "Stephens", "stateid": 13,"cases": 2}
+{"name": "Tattnall", "stateid": 13,"cases": 2}
 ,
-{"name": "Whitfield", "stateid": 13,"cases": 2}
+{"name": "Turner", "stateid": 13,"cases": 2}
+,
+{"name": "Twiggs", "stateid": 13,"cases": 2}
+,
+{"name": "Ware", "stateid": 13,"cases": 2}
+,
+{"name": "Washington", "stateid": 13,"cases": 2}
+,
+{"name": "Baker", "stateid": 13,"cases": 1}
 ,
 {"name": "Ben Hill", "stateid": 13,"cases": 1}
 ,
-{"name": "Burke", "stateid": 13,"cases": 1}
-,
-{"name": "Camden", "stateid": 13,"cases": 1}
+{"name": "Calhoun", "stateid": 13,"cases": 1}
 ,
 {"name": "Catoosa", "stateid": 13,"cases": 1}
 ,
@@ -1784,33 +1926,29 @@ var countycases = { "counties" : [
 ,
 {"name": "Clinch", "stateid": 13,"cases": 1}
 ,
-{"name": "Colquitt", "stateid": 13,"cases": 1}
-,
-{"name": "Dawson", "stateid": 13,"cases": 1}
+{"name": "Dodge", "stateid": 13,"cases": 1}
 ,
 {"name": "Fannin", "stateid": 13,"cases": 1}
 ,
+{"name": "Franklin", "stateid": 13,"cases": 1}
+,
 {"name": "Greene", "stateid": 13,"cases": 1}
+,
+{"name": "Haralson", "stateid": 13,"cases": 1}
 ,
 {"name": "Harris", "stateid": 13,"cases": 1}
 ,
 {"name": "Heard", "stateid": 13,"cases": 1}
 ,
-{"name": "Irwin", "stateid": 13,"cases": 1}
-,
-{"name": "Jasper", "stateid": 13,"cases": 1}
+{"name": "Jones", "stateid": 13,"cases": 1}
 ,
 {"name": "Liberty", "stateid": 13,"cases": 1}
 ,
-{"name": "Lincoln", "stateid": 13,"cases": 1}
+{"name": "Long", "stateid": 13,"cases": 1}
 ,
 {"name": "Macon", "stateid": 13,"cases": 1}
 ,
-{"name": "Madison", "stateid": 13,"cases": 1}
-,
-{"name": "Meriwether", "stateid": 13,"cases": 1}
-,
-{"name": "Miller", "stateid": 13,"cases": 1}
+{"name": "Mcduffie", "stateid": 13,"cases": 1}
 ,
 {"name": "Morgan", "stateid": 13,"cases": 1}
 ,
@@ -1818,197 +1956,221 @@ var countycases = { "counties" : [
 ,
 {"name": "Pulaski", "stateid": 13,"cases": 1}
 ,
-{"name": "Randolph", "stateid": 13,"cases": 1}
+{"name": "Stephens", "stateid": 13,"cases": 1}
 ,
-{"name": "Tattnall", "stateid": 13,"cases": 1}
+{"name": "Taylor", "stateid": 13,"cases": 1}
 ,
-{"name": "Telfair", "stateid": 13,"cases": 1}
+{"name": "Thomas", "stateid": 13,"cases": 1}
 ,
-{"name": "Turner", "stateid": 13,"cases": 1}
+{"name": "Toombs", "stateid": 13,"cases": 1}
 ,
-{"name": "Twiggs", "stateid": 13,"cases": 1}
+{"name": "White", "stateid": 13,"cases": 1}
 ,
-{"name": "Walton", "stateid": 13,"cases": 1}
+{"name": "Wilkes", "stateid": 13,"cases": 1}
 ,
-{"name": "Washington", "stateid": 13,"cases": 1}
+{"name": "Adams", "stateid": 28, "cases": 3}
 ,
-{"name": "Adams", "stateid": 28, "cases": 2}
+{"name": "Attala", "stateid": 28, "cases": 7}
 ,
-{"name": "Attala", "stateid": 28, "cases": 3}
+{"name": "Benton", "stateid": 28, "cases": 1}
 ,
-{"name": "Bolivar", "stateid": 28, "cases": 4}
+{"name": "Bolivar", "stateid": 28, "cases": 6}
 ,
-{"name": "Chickasaw", "stateid": 28, "cases": 6}
+{"name": "Calhoun", "stateid": 28, "cases": 3}
 ,
-{"name": "Choctaw", "stateid": 28, "cases": 1}
+{"name": "Chickasaw", "stateid": 28, "cases": 7}
+,
+{"name": "Choctaw", "stateid": 28, "cases": 4}
 ,
 {"name": "Clay", "stateid": 28, "cases": 1}
 ,
-{"name": "Coahoma", "stateid": 28, "cases": 11}
+{"name": "Coahoma", "stateid": 28, "cases": 17}
 ,
-{"name": "Copiah", "stateid": 28, "cases": 5}
+{"name": "Copiah", "stateid": 28, "cases": 8}
 ,
-{"name": "De Soto", "stateid": 28, "cases": 29}
+{"name": "Desoto", "stateid": 28, "cases": 49}
 ,
-{"name": "Forrest", "stateid": 28, "cases": 14}
+{"name": "Forrest", "stateid": 28, "cases": 16}
 ,
-{"name": "Franklin", "stateid": 28, "cases": 3}
+{"name": "Franklin", "stateid": 28, "cases": 2}
 ,
 {"name": "George", "stateid": 28, "cases": 1}
 ,
 {"name": "Grenada", "stateid": 28, "cases": 2}
 ,
-{"name": "Hancock", "stateid": 28, "cases": 5}
+{"name": "Hancock", "stateid": 28, "cases": 6}
 ,
-{"name": "Harrison", "stateid": 28, "cases": 24}
+{"name": "Harrison", "stateid": 28, "cases": 31}
 ,
-{"name": "Hinds", "stateid": 28, "cases": 31}
+{"name": "Hinds", "stateid": 28, "cases": 43}
 ,
-{"name": "Holmes", "stateid": 28, "cases": 6}
+{"name": "Holmes", "stateid": 28, "cases": 7}
 ,
 {"name": "Humphreys", "stateid": 28, "cases": 1}
 ,
 {"name": "Itawamba", "stateid": 28, "cases": 3}
 ,
-{"name": "Jackson", "stateid": 28, "cases": 10}
+{"name": "Jackson", "stateid": 28, "cases": 16}
 ,
 {"name": "Jones", "stateid": 28, "cases": 1}
 ,
-{"name": "Lafayette", "stateid": 28, "cases": 8}
+{"name": "Lafayette", "stateid": 28, "cases": 10}
 ,
-{"name": "Lamar", "stateid": 28, "cases": 2}
+{"name": "Lamar", "stateid": 28, "cases": 4}
 ,
-{"name": "Lawrence", "stateid": 28, "cases": 2}
+{"name": "Lauderdale", "stateid": 28, "cases": 3}
 ,
-{"name": "Leake", "stateid": 28, "cases": 2}
+{"name": "Lawrence", "stateid": 28, "cases": 5}
 ,
-{"name": "Lee", "stateid": 28, "cases": 12}
+{"name": "Leake", "stateid": 28, "cases": 4}
 ,
-{"name": "Leflore", "stateid": 28, "cases": 10}
+{"name": "Lee", "stateid": 28, "cases": 15}
 ,
-{"name": "Lincoln", "stateid": 28, "cases": 4}
+{"name": "Leflore", "stateid": 28, "cases": 13}
 ,
-{"name": "Lowndes", "stateid": 28, "cases": 6}
+{"name": "Lincoln", "stateid": 28, "cases": 6}
 ,
-{"name": "Madison", "stateid": 28, "cases": 14}
+{"name": "Lowndes", "stateid": 28, "cases": 8}
+,
+{"name": "Madison", "stateid": 28, "cases": 21}
 ,
 {"name": "Marion", "stateid": 28, "cases": 1}
 ,
-{"name": "Marshall", "stateid": 28, "cases": 3}
+{"name": "Marshall", "stateid": 28, "cases": 7}
 ,
 {"name": "Monroe", "stateid": 28, "cases": 3}
 ,
-{"name": "Montgomery", "stateid": 28, "cases": 2}
+{"name": "Montgomery", "stateid": 28, "cases": 4}
 ,
 {"name": "Newton", "stateid": 28, "cases": 1}
 ,
 {"name": "Noxubee", "stateid": 28, "cases": 1}
 ,
-{"name": "Oktibbeha", "stateid": 28, "cases": 5}
+{"name": "Oktibbeha", "stateid": 28, "cases": 10}
 ,
-{"name": "Panola", "stateid": 28, "cases": 2}
+{"name": "Panola", "stateid": 28, "cases": 4}
 ,
-{"name": "Pearl River", "stateid": 28, "cases": 13}
+{"name": "Pearl River", "stateid": 28, "cases": 16}
 ,
 {"name": "Perry", "stateid": 28, "cases": 1}
 ,
-{"name": "Pike", "stateid": 28, "cases": 7}
+{"name": "Pike", "stateid": 28, "cases": 12}
 ,
-{"name": "Pontotoc", "stateid": 28, "cases": 2}
+{"name": "Pontotoc", "stateid": 28, "cases": 3}
 ,
-{"name": "Rankin", "stateid": 28, "cases": 13}
+{"name": "Prentiss", "stateid": 28, "cases": 1}
 ,
-{"name": "Scott", "stateid": 28, "cases": 2}
+{"name": "Quitman", "stateid": 28, "cases": 2}
+,
+{"name": "Rankin", "stateid": 28, "cases": 23}
+,
+{"name": "Scott", "stateid": 28, "cases": 4}
 ,
 {"name": "Simpson", "stateid": 28, "cases": 1}
 ,
 {"name": "Smith", "stateid": 28, "cases": 1}
 ,
-{"name": "Sunflower", "stateid": 28, "cases": 3}
+{"name": "Sunflower", "stateid": 28, "cases": 4}
 ,
 {"name": "Tallahatchie", "stateid": 28, "cases": 2}
 ,
-{"name": "Tate", "stateid": 28, "cases": 1}
+{"name": "Tate", "stateid": 28, "cases": 6}
 ,
-{"name": "Tippah", "stateid": 28, "cases": 11}
+{"name": "Tippah", "stateid": 28, "cases": 14}
 ,
-{"name": "Tunica", "stateid": 28, "cases": 3}
+{"name": "Tunica", "stateid": 28, "cases": 5}
 ,
-{"name": "Union", "stateid": 28, "cases": 1}
+{"name": "Union", "stateid": 28, "cases": 2}
 ,
-{"name": "Walthall", "stateid": 28, "cases": 2}
+{"name": "Walthall", "stateid": 28, "cases": 4}
 ,
-{"name": "Washington", "stateid": 28, "cases": 5}
+{"name": "Washington", "stateid": 28, "cases": 9}
 ,
 {"name": "Webster", "stateid": 28, "cases": 2}
 ,
-{"name": "Wilkinson", "stateid": 28, "cases": 4}
+{"name": "Wilkinson", "stateid": 28, "cases": 8}
 ,
-{"name": "Winston", "stateid": 28, "cases": 2}
+{"name": "Winston", "stateid": 28, "cases": 3}
 ,
-{"name": "Yazoo", "stateid": 28, "cases": 3}
+{"name": "Yalobusha", "stateid": 28, "cases": 3}
 ,
-{"name": "Anderson", "stateid": 47,"cases": 1}
+{"name": "Yazoo", "stateid": 28, "cases": 4}
 ,
-{"name": "Blount", "stateid": 47,"cases": 3}
+{"name": "Anderson", "stateid": 47,"cases": 3}
 ,
-{"name": "Bradley", "stateid": 47,"cases": 2}
+{"name": "Bedford", "stateid": 47,"cases": 1}
+,
+{"name": "Benton", "stateid": 47,"cases": 1}
+,
+{"name": "Blount", "stateid": 47,"cases": 4}
+,
+{"name": "Bradley", "stateid": 47,"cases": 5}
 ,
 {"name": "Campbell", "stateid": 47,"cases": 2}
 ,
+{"name": "Cannon", "stateid": 47,"cases": 1}
+,
 {"name": "Carroll", "stateid": 47,"cases": 3}
 ,
-{"name": "Cheatham", "stateid": 47,"cases": 5}
+{"name": "Cheatham", "stateid": 47,"cases": 7}
 ,
-{"name": "Chester", "stateid": 47,"cases": 1}
+{"name": "Chester", "stateid": 47,"cases": 2}
 ,
-{"name": "Claiborne", "stateid": 47,"cases": 1}
+{"name": "Claiborne", "stateid": 47,"cases": 2}
 ,
 {"name": "Cocke", "stateid": 47,"cases": 1}
 ,
-{"name": "Cumberland", "stateid": 47,"cases": 3}
+{"name": "Cumberland", "stateid": 47,"cases": 6}
 ,
-{"name": "Davidson", "stateid": 47,"cases": 183}
+{"name": "Davidson", "stateid": 47,"cases": 203}
 ,
-{"name": "Dekalb", "stateid": 47,"cases": 1}
+{"name": "Dekalb", "stateid": 47,"cases": 2}
 ,
-{"name": "Dickson", "stateid": 47,"cases": 5}
+{"name": "Dickson", "stateid": 47,"cases": 7}
 ,
-{"name": "Dyer", "stateid": 47,"cases": 2}
+{"name": "Dyer", "stateid": 47,"cases": 3}
 ,
-{"name": "Fayette", "stateid": 47,"cases": 2}
+{"name": "Fayette", "stateid": 47,"cases": 3}
 ,
-{"name": "Franklin", "stateid": 47,"cases": 1}
+{"name": "Franklin", "stateid": 47,"cases": 3}
 ,
 {"name": "Gibson", "stateid": 47,"cases": 2}
 ,
-{"name": "Greene", "stateid": 47,"cases": 5}
+{"name": "Greene", "stateid": 47,"cases": 8}
 ,
 {"name": "Grundy", "stateid": 47,"cases": 1}
 ,
 {"name": "Hamblen", "stateid": 47,"cases": 2}
 ,
-{"name": "Hamilton", "stateid": 47,"cases": 8}
+{"name": "Hamilton", "stateid": 47,"cases": 28}
 ,
 {"name": "Hardin", "stateid": 47,"cases": 1}
 ,
-{"name": "Houston", "stateid": 47,"cases": 1}
+{"name": "Hawkins", "stateid": 47,"cases": 1}
+,
+{"name": "Houston", "stateid": 47,"cases": 2}
 ,
 {"name": "Jefferson", "stateid": 47,"cases": 4}
 ,
-{"name": "Knox", "stateid": 47,"cases": 15}
+{"name": "Knox", "stateid": 47,"cases": 26}
+,
+{"name": "Lewis", "stateid": 47,"cases": 2}
 ,
 {"name": "Lincoln", "stateid": 47,"cases": 1}
 ,
-{"name": "Loudon", "stateid": 47,"cases": 2}
+{"name": "Loudon", "stateid": 47,"cases": 6}
 ,
-{"name": "Madison", "stateid": 47,"cases": 1}
+{"name": "Macon", "stateid": 47,"cases": 1}
 ,
-{"name": "Marion", "stateid": 47,"cases": 1}
+{"name": "Madison", "stateid": 47,"cases": 2}
 ,
-{"name": "Maury", "stateid": 47,"cases": 6}
+{"name": "Marion", "stateid": 47,"cases": 2}
 ,
-{"name": "McMinn", "stateid": 47,"cases": 2}
+{"name": "Maury", "stateid": 47,"cases": 7}
+,
+{"name": "McMinn", "stateid": 47,"cases": 3}
+,
+{"name": "Meigs", "stateid": 47,"cases": 1}
 ,
 {"name": "Monroe", "stateid": 47,"cases": 2}
 ,
@@ -2018,43 +2180,51 @@ var countycases = { "counties" : [
 ,
 {"name": "Perry", "stateid": 47,"cases": 1}
 ,
-{"name": "Putnam", "stateid": 47,"cases": 8}
+{"name": "Putnam", "stateid": 47,"cases": 11}
 ,
 {"name": "Roane", "stateid": 47,"cases": 1}
 ,
-{"name": "Robertson", "stateid": 47,"cases": 12}
+{"name": "Robertson", "stateid": 47,"cases": 20}
 ,
-{"name": "Rutherford", "stateid": 47,"cases": 13}
+{"name": "Rutherford", "stateid": 47,"cases": 27}
 ,
 {"name": "Scott", "stateid": 47,"cases": 1}
 ,
-{"name": "Sevier", "stateid": 47,"cases": 2}
+{"name": "Sevier", "stateid": 47,"cases": 3}
 ,
-{"name": "Shelby", "stateid": 47,"cases": 99}
+{"name": "Shelby", "stateid": 47,"cases": 147}
 ,
-{"name": "Sullivan", "stateid": 47,"cases": 2}
+{"name": "Sullivan", "stateid": 47,"cases": 4}
 ,
-{"name": "Sumner", "stateid": 47,"cases": 34}
+{"name": "Sumner", "stateid": 47,"cases": 43}
 ,
-{"name": "Tipton", "stateid": 47,"cases": 6}
+{"name": "Tipton", "stateid": 47,"cases": 8}
 ,
-{"name": "Washington", "stateid": 47,"cases": 7}
+{"name": "Unicoi", "stateid": 47,"cases": 1}
 ,
-{"name": "Williamson", "stateid": 47,"cases": 64}
+{"name": "Washington", "stateid": 47,"cases": 9}
 ,
-{"name": "Wilson", "stateid": 47,"cases": 7}
+{"name": "White", "stateid": 47,"cases": 1}
 ,
-{"name": "Out of T", "stateid": 47,"cases": 95}
+{"name": "Williamson", "stateid": 47,"cases": 70}
 ,
-{"name": "Pendin", "stateid": 47,"cases": 38}
+{"name": "Wilson", "stateid": 47,"cases": 13}
 ,
-{"name": "Guilford", "stateid": 37, "cases": 16}
+{"name": "Pendin", "stateid": 47,"cases": 112}
 ,
-{"name": "Alamance", "stateid": 37, "cases": 3}
+{"name": "Out of T", "stateid": 47,"cases": 117}
 ,
-{"name": "Randolph", "stateid": 37, "cases": 2}
+{"name": "Guilford", "stateid": 37, "cases": 24}
 ,
-{"name": "Wayne", "stateid": 37, "cases": 2}
+{"name": "Alamance", "stateid": 37, "cases": 4}
+,
+{"name": "Randolph", "stateid": 37, "cases": 3}
+,
+{"name": "Wayne", "stateid": 37, "cases": 1}
+,
+{"name": "Hertford", "stateid": 37, "cases": 2}
+,
+{"name": "Northampton", "stateid": 37, "cases": 3}
 ,
 {"name": "Vance", "stateid": 37, "cases": 2}
 ,
@@ -2062,105 +2232,119 @@ var countycases = { "counties" : [
 ,
 {"name": "Pasquotank", "stateid": 37, "cases": 1}
 ,
-{"name": "Watauga", "stateid": 37, "cases": 2}
+{"name": "Watauga", "stateid": 37, "cases": 3}
 ,
-{"name": "Forsyth", "stateid": 37, "cases": 12}
+{"name": "Forsyth", "stateid": 37, "cases": 16}
 ,
 {"name": "Franklin", "stateid": 37, "cases": 5}
 ,
-{"name": "Orange", "stateid": 37, "cases": 11}
+{"name": "Bertie", "stateid": 37, "cases": 3}
 ,
-{"name": "Durham", "stateid": 37, "cases": 63}
+{"name": "Orange", "stateid": 37, "cases": 16}
 ,
-{"name": "Nash", "stateid": 37, "cases": 1}
+{"name": "Durham", "stateid": 37, "cases": 75}
 ,
-{"name": "Wake", "stateid": 37, "cases": 54}
+{"name": "Nash", "stateid": 37, "cases": 2}
+,
+{"name": "Caldwell", "stateid": 37, "cases": 3}
+,
+{"name": "Wake", "stateid": 37, "cases": 83}
 ,
 {"name": "Davie", "stateid": 37, "cases": 1}
 ,
-{"name": "Davidson", "stateid": 37, "cases": 2}
+{"name": "Burke", "stateid": 37, "cases": 1}
 ,
-{"name": "Chatham", "stateid": 37, "cases": 3}
+{"name": "Davidson", "stateid": 37, "cases": 3}
 ,
-{"name": "Wilson", "stateid": 37, "cases": 3}
+{"name": "McDowell", "stateid": 37, "cases": 2}
 ,
-{"name": "Buncombe", "stateid": 37, "cases": 5}
+{"name": "Chatham", "stateid": 37, "cases": 9}
+,
+{"name": "Wilson", "stateid": 37, "cases": 7}
+,
+{"name": "Buncombe", "stateid": 37, "cases": 15}
 ,
 {"name": "Catawba", "stateid": 37, "cases": 4}
 ,
-{"name": "Pitt", "stateid": 37, "cases": 5}
+{"name": "Pitt", "stateid": 37, "cases": 8}
 ,
-{"name": "Johnston", "stateid": 37, "cases": 4}
+{"name": "Johnston", "stateid": 37, "cases": 9}
+,
+{"name": "Beaufort", "stateid": 37, "cases": 2}
 ,
 {"name": "Lee", "stateid": 37, "cases": 1}
 ,
-{"name": "Jackson", "stateid": 37, "cases": 1}
+{"name": "Cleveland", "stateid": 37, "cases": 2}
 ,
-{"name": "Harnett", "stateid": 37, "cases": 9}
+{"name": "Harnett", "stateid": 37, "cases": 11}
 ,
-{"name": "Henderson", "stateid": 37, "cases": 2}
+{"name": "Henderson", "stateid": 37, "cases": 4}
 ,
 {"name": "Moore", "stateid": 37, "cases": 2}
 ,
-{"name": "Montgomery", "stateid": 37, "cases": 1}
+{"name": "Montgomery", "stateid": 37, "cases": 3}
 ,
 {"name": "Stanly", "stateid": 37, "cases": 1}
 ,
-{"name": "Transylvania", "stateid": 37, "cases": 1}
+{"name": "Transylvania", "stateid": 37, "cases": 2}
 ,
-{"name": "Craven", "stateid": 37, "cases": 2}
+{"name": "Lenoir", "stateid": 37, "cases": 3}
 ,
-{"name": "Cherokee", "stateid": 37, "cases": 4}
+{"name": "Craven", "stateid": 37, "cases": 3}
+,
+{"name": "Cherokee", "stateid": 37, "cases": 3}
 ,
 {"name": "Sampson", "stateid": 37, "cases": 1}
 ,
-{"name": "Cumberland", "stateid": 37, "cases": 2}
+{"name": "Cumberland", "stateid": 37, "cases": 7}
 ,
 {"name": "Carteret", "stateid": 37, "cases": 4}
 ,
-{"name": "Union", "stateid": 37, "cases": 13}
+{"name": "Union", "stateid": 37, "cases": 24}
 ,
 {"name": "Hoke", "stateid": 37, "cases": 2}
 ,
+{"name": "Duplin", "stateid": 37, "cases": 1}
+,
 {"name": "Scotland", "stateid": 37, "cases": 1}
 ,
-{"name": "Onslow", "stateid": 37, "cases": 3}
+{"name": "Onslow", "stateid": 37, "cases": 4}
 ,
-{"name": "Robeson", "stateid": 37, "cases": 1}
+{"name": "Robeson", "stateid": 37, "cases": 2}
 ,
-{"name": "New Hanover", "stateid": 37, "cases": 7}
+{"name": "New Hanover", "stateid": 37, "cases": 11}
 ,
-{"name": "Brunswick", "stateid": 37, "cases": 8}
+{"name": "Brunswick", "stateid": 37, "cases": 11}
 ,
-{"name": "Iredell", "stateid": 37, "cases": 9}
+{"name": "Iredell", "stateid": 37, "cases": 13}
 ,
-{"name": "Rowan", "stateid": 37, "cases": 5}
+{"name": "Rowan", "stateid": 37, "cases": 6}
 ,
 {"name": "Lincoln", "stateid": 37, "cases": 1}
 ,
-{"name": "Mecklenburg", "stateid": 37, "cases": 104}
+{"name": "Mecklenburg", "stateid": 37, "cases": 181}
 ,
-{"name": "Cabarrus", "stateid": 37, "cases": 8}
+{"name": "Cabarrus", "stateid": 37, "cases": 16}
 ,
-{"name": "Gaston", "stateid": 37, "cases": 3}
+{"name": "Gaston", "stateid": 37, "cases": 7}
 ,
-{"name": "Abbeville", "stateid": 45, "cases": 1}
+{"name": "Abbeville", "stateid": 45, "cases": 4}
 ,
-{"name": "Aiken", "stateid": 45, "cases": 2}
+{"name": "Aiken", "stateid": 45, "cases": 4}
 ,
-{"name": "Anderson", "stateid": 45, "cases": 16}
+{"name": "Anderson", "stateid": 45, "cases": 21}
 ,
-{"name": "Beaufort", "stateid": 45, "cases": 22}
+{"name": "Beaufort", "stateid": 45, "cases": 29}
 ,
-{"name": "Berkeley", "stateid": 45, "cases": 4}
+{"name": "Berkeley", "stateid": 45, "cases": 8}
 ,
 {"name": "Calhoun", "stateid": 45, "cases": 1}
 ,
-{"name": "Charleston", "stateid": 45, "cases": 36}
+{"name": "Charleston", "stateid": 45, "cases": 60}
 ,
 {"name": "Chester", "stateid": 45, "cases": 1}
 ,
-{"name": "Chesterfield", "stateid": 45, "cases": 1}
+{"name": "Chesterfield", "stateid": 45, "cases": 3}
 ,
 {"name": "Clarendon", "stateid": 45, "cases": 5}
 ,
@@ -2170,31 +2354,33 @@ var countycases = { "counties" : [
 ,
 {"name": "Dillon", "stateid": 45, "cases": 1}
 ,
-{"name": "Dorchester", "stateid": 45, "cases": 3}
+{"name": "Dorchester", "stateid": 45, "cases": 4}
 ,
 {"name": "Edgefield", "stateid": 45, "cases": 1}
 ,
-{"name": "Fairfield", "stateid": 45, "cases": 2}
+{"name": "Fairfield", "stateid": 45, "cases": 4}
 ,
 {"name": "Florence", "stateid": 45, "cases": 5}
 ,
-{"name": "Georgetown", "stateid": 45, "cases": 2}
+{"name": "Georgetown", "stateid": 45, "cases": 3}
 ,
-{"name": "Greenville", "stateid": 45, "cases": 39}
+{"name": "Greenville", "stateid": 45, "cases": 51}
 ,
 {"name": "Greenwood", "stateid": 45, "cases": 2}
 ,
-{"name": "Horry", "stateid": 45, "cases": 19}
+{"name": "Horry", "stateid": 45, "cases": 21}
 ,
-{"name": "Jasper", "stateid": 45, "cases": 2}
+{"name": "Jasper", "stateid": 45, "cases": 3}
 ,
-{"name": "Kershaw", "stateid": 45, "cases": 58}
+{"name": "Kershaw", "stateid": 45, "cases": 64}
 ,
 {"name": "Lancaster", "stateid": 45, "cases": 7}
 ,
 {"name": "Lee", "stateid": 45, "cases": 2}
 ,
-{"name": "Lexington", "stateid": 45, "cases": 19}
+{"name": "Lexington", "stateid": 45, "cases": 20}
+,
+{"name": "Marion", "stateid": 45, "cases": 1}
 ,
 {"name": "Marlboro", "stateid": 45, "cases": 1}
 ,
@@ -2202,39 +2388,51 @@ var countycases = { "counties" : [
 ,
 {"name": "Oconee", "stateid": 45, "cases": 2}
 ,
-{"name": "Orangeburg", "stateid": 45, "cases": 8}
+{"name": "Orangeburg", "stateid": 45, "cases": 11}
 ,
-{"name": "Pickens", "stateid": 45, "cases": 1}
+{"name": "Pickens", "stateid": 45, "cases": 6}
 ,
-{"name": "Richland", "stateid": 45, "cases": 45}
+{"name": "Richland", "stateid": 45, "cases": 60}
 ,
 {"name": "Saluda", "stateid": 45, "cases": 1}
 ,
-{"name": "Spartanburg", "stateid": 45, "cases": 4}
+{"name": "Spartanburg", "stateid": 45, "cases": 9}
 ,
-{"name": "Sumter", "stateid": 45, "cases": 8}
+{"name": "Sumter", "stateid": 45, "cases": 10}
 ,
-{"name": "York", "stateid": 45, "cases": 11}
+{"name": "Union", "stateid": 45, "cases": 1}
+,
+{"name": "Williamsburg", "stateid": 45, "cases": 1}
+,
+{"name": "York", "stateid": 45, "cases": 19}
 ,
 {"name": "Berkeley", "stateid": 54,"cases": 2}
 ,
 {"name": "Harrison", "stateid": 54,"cases": 3}
 ,
-{"name": "Jackson", "stateid": 54,"cases": 2}
+{"name": "Jackson", "stateid": 54,"cases": 4}
 ,
 {"name": "Jefferson", "stateid": 54,"cases": 3}
 ,
-{"name": "Kanawha", "stateid": 54,"cases": 4}
+{"name": "Kanawha", "stateid": 54,"cases": 5}
+,
+{"name": "Logan", "stateid": 54,"cases": 1}
+,
+{"name": "Marion", "stateid": 54,"cases": 1}
 ,
 {"name": "Marshall", "stateid": 54,"cases": 2}
 ,
 {"name": "Mercer", "stateid": 54,"cases": 2}
 ,
-{"name": "Monongalia", "stateid": 54,"cases": 16}
+{"name": "Monongalia", "stateid": 54,"cases": 18}
 ,
-{"name": "Preston", "stateid": 54,"cases": 1}
+{"name": "Ohio", "stateid": 54,"cases": 2}
 ,
-{"name": "Putnam", "stateid": 54,"cases": 1}
+{"name": "Preston", "stateid": 54,"cases": 2}
+,
+{"name": "Putnam", "stateid": 54,"cases": 2}
+,
+{"name": "Raleigh", "stateid": 54,"cases": 1}
 ,
 {"name": "Tucker", "stateid": 54,"cases": 2}
 ,
@@ -2242,33 +2440,33 @@ var countycases = { "counties" : [
 ,
 {"name": "Coos", "stateid": 33, "cases": 0}
 ,
-{"name": "Grafton", "stateid": 33, "cases": 21}
+{"name": "Grafton", "stateid": 33, "cases": 23}
 ,
 {"name": "Carroll", "stateid": 33, "cases": 7}
 ,
-{"name": "Sullivan", "stateid": 33, "cases": 1}
+{"name": "Sullivan", "stateid": 33, "cases": 2}
 ,
-{"name": "Belknap", "stateid": 33, "cases": 7}
+{"name": "Belknap", "stateid": 33, "cases": 8}
 ,
-{"name": "Merrimack", "stateid": 33, "cases": 4}
+{"name": "Merrimack", "stateid": 33, "cases": 7}
 ,
-{"name": "Strafford", "stateid": 33, "cases": 5}
+{"name": "Strafford", "stateid": 33, "cases": 7}
 ,
-{"name": "Cheshire", "stateid": 33, "cases": 1}
+{"name": "Cheshire", "stateid": 33, "cases": 2}
 ,
-{"name": "Manchester", "stateid": 33, "cases": 8}
+{"name": "Manchester", "stateid": 33, "cases": 14}
 ,
-{"name": "Hillsborough", "stateid": 33, "cases": 20}
+{"name": "Hillsborough", "stateid": 33, "cases": 35}
 ,
 {"name": "Nashua", "stateid": 33, "cases": 1}
 ,
-{"name": "Rockingham", "stateid": 33, "cases": 42}
+{"name": "Rockingham", "stateid": 33, "cases": 67}
 ,
-{"name": "Beadle", "stateid": 46,"cases": 13}
+{"name": "Beadle", "stateid": 46,"cases": 14}
 ,
 {"name": "Bon Homme", "stateid": 46,"cases": 1}
 ,
-{"name": "Brown", "stateid": 46,"cases": 1}
+{"name": "Brown", "stateid": 46,"cases": 2}
 ,
 {"name": "Brookings", "stateid": 46,"cases": 1}
 ,
@@ -2280,11 +2478,15 @@ var countycases = { "counties" : [
 ,
 {"name": "Hughes", "stateid": 46,"cases": 1}
 ,
+{"name": "Lincoln", "stateid": 46,"cases": 2}
+,
 {"name": "Lyman", "stateid": 46,"cases": 1}
 ,
 {"name": "McCook", "stateid": 46,"cases": 2}
 ,
-{"name": "Minnehaha", "stateid": 46,"cases": 5}
+{"name": "Meade", "stateid": 46,"cases": 1}
+,
+{"name": "Minnehaha", "stateid": 46,"cases": 16}
 ,
 {"name": "Pennington", "stateid": 46,"cases": 1}
 ,
@@ -2294,7 +2496,9 @@ var countycases = { "counties" : [
 ,
 {"name": "Cherokee", "stateid": 20, "cases": 2}
 ,
-{"name": "Douglas", "stateid": 20, "cases": 6}
+{"name": "Crawford", "stateid": 20, "cases": 3}
+,
+{"name": "Douglas", "stateid": 20, "cases": 13}
 ,
 {"name": "Doniphan", "stateid": 20, "cases": 1}
 ,
@@ -2304,141 +2508,225 @@ var countycases = { "counties" : [
 ,
 {"name": "Jackson", "stateid": 20, "cases": 1}
 ,
-{"name": "Johnson", "stateid": 20, "cases": 36}
+{"name": "Jefferson", "stateid": 20, "cases": 1}
 ,
-{"name": "Linn", "stateid": 20, "cases": 2}
+{"name": "Johnson", "stateid": 20, "cases": 59}
 ,
-{"name": "Leavenworth", "stateid": 20, "cases": 7}
+{"name": "Linn", "stateid": 20, "cases": 4}
 ,
-{"name": "Lyon", "stateid": 20, "cases": 2}
+{"name": "Leavenworth", "stateid": 20, "cases": 12}
 ,
-{"name": "Mitchell", "stateid": 20, "cases": 1}
+{"name": "Lyon", "stateid": 20, "cases": 3}
+,
+{"name": "Mitchell", "stateid": 20, "cases": 2}
 ,
 {"name": "Miami", "stateid": 20, "cases": 0}
 ,
 {"name": "Morris", "stateid": 20, "cases": 2}
 ,
+{"name": "Neosho", "stateid": 20, "cases": 1}
+,
 {"name": "Pottawatomie", "stateid": 20, "cases": 1}
 ,
-{"name": "Reno", "stateid": 20, "cases": 2}
+{"name": "Riley", "stateid": 20, "cases": 1}
 ,
-{"name": "Sedgwick", "stateid": 20, "cases": 7}
+{"name": "Reno", "stateid": 20, "cases": 4}
+,
+{"name": "Sedgwick", "stateid": 20, "cases": 16}
+,
+{"name": "Shawnee", "stateid": 20, "cases": 4}
+,
+{"name": "Sumner", "stateid": 20, "cases": 1}
 ,
 {"name": "Woodson", "stateid": 20, "cases": 1}
 ,
-{"name": "Wyandotte", "stateid": 20, "cases": 22}
+{"name": "Wyandotte", "stateid": 20, "cases": 34}
+,
+{"name": "Craig", "stateid": 40, "cases": 1}
 ,
 {"name": "Garvin", "stateid": 40, "cases": 2}
 ,
-{"name": "Grady", "stateid": 40, "cases": 1}
+{"name": "Grady", "stateid": 40, "cases": 2}
 ,
-{"name": "Cleveland", "stateid": 40, "cases": 22}
+{"name": "Cleveland", "stateid": 40, "cases": 39}
 ,
-{"name": "Logan", "stateid": 40, "cases": 1}
+{"name": "Comanche", "stateid": 40, "cases": 3}
 ,
-{"name": "Mcclain", "stateid": 40, "cases": 1}
+{"name": "Bryan", "stateid": 40, "cases": 1}
+,
+{"name": "Carter", "stateid": 40, "cases": 1}
+,
+{"name": "Logan", "stateid": 40, "cases": 3}
+,
+{"name": "Mcclain", "stateid": 40, "cases": 2}
 ,
 {"name": "Noble", "stateid": 40, "cases": 2}
 ,
-{"name": "Pawnee", "stateid": 40, "cases": 4}
+{"name": "Osage", "stateid": 40, "cases": 3}
+,
+{"name": "Pawnee", "stateid": 40, "cases": 10}
 ,
 {"name": "Pontotoc", "stateid": 40, "cases": 1}
 ,
-{"name": "Custer", "stateid": 40, "cases": 1}
+{"name": "Custer", "stateid": 40, "cases": 3}
 ,
-{"name": "Wagoner", "stateid": 40, "cases": 1}
+{"name": "Pottawatomie", "stateid": 40, "cases": 2}
 ,
-{"name": "Canadian", "stateid": 40, "cases": 4}
+{"name": "Wagoner", "stateid": 40, "cases": 6}
+,
+{"name": "Canadian", "stateid": 40, "cases": 6}
+,
+{"name": "Adair", "stateid": 40, "cases": 2}
+,
+{"name": "Delaware", "stateid": 40, "cases": 1}
 ,
 {"name": "Jackson", "stateid": 40, "cases": 1}
 ,
-{"name": "Kay", "stateid": 40, "cases": 5}
+{"name": "Kay", "stateid": 40, "cases": 11}
 ,
-{"name": "Oklahoma", "stateid": 40, "cases": 41}
+{"name": "Lincoln", "stateid": 40, "cases": 1}
 ,
-{"name": "Tulsa", "stateid": 40, "cases": 12}
+{"name": "Creek", "stateid": 40, "cases": 10}
 ,
-{"name": "Mayes", "stateid": 40, "cases": 1}
+{"name": "Okmulgee", "stateid": 40, "cases": 2}
 ,
-{"name": "Muskogee", "stateid": 40, "cases": 1}
+{"name": "Oklahoma", "stateid": 40, "cases": 73}
 ,
-{"name": "Washington", "stateid": 40, "cases": 2}
+{"name": "Tulsa", "stateid": 40, "cases": 41}
 ,
-{"name": "Payne", "stateid": 40, "cases": 3}
+{"name": "Mayes", "stateid": 40, "cases": 2}
 ,
-{"name": "Dallas", "stateid": 48, "cases": 131}
+{"name": "Muskogee", "stateid": 40, "cases": 4}
 ,
-{"name": "Travis", "stateid": 48, "cases": 79}
+{"name": "Washington", "stateid": 40, "cases": 5}
 ,
-{"name": "Bexar", "stateid": 48, "cases": 57}
+{"name": "Ottawa", "stateid": 40, "cases": 1}
 ,
-{"name": "Tarrant", "stateid": 48, "cases": 57}
+{"name": "Payne", "stateid": 40, "cases": 5}
 ,
-{"name": "Harris", "stateid": 48, "cases": 54}
+{"name": "Sequoyah", "stateid": 40, "cases": 1}
 ,
-{"name": "Collin", "stateid": 48, "cases": 38}
+{"name": "Stephens", "stateid": 40, "cases": 1}
 ,
-{"name": "Denton", "stateid": 48, "cases": 30}
+{"name": "Dallas", "stateid": 48, "cases": 303}
 ,
-{"name": "Fort Bend", "stateid": 48, "cases": 29}
+{"name": "Harris", "stateid": 48, "cases": 185}
 ,
-{"name": "McLennan", "stateid": 48, "cases": 20}
+{"name": "Travis", "stateid": 48, "cases": 119}
 ,
-{"name": "Montgomery", "stateid": 48, "cases": 19}
+{"name": "Tarrant", "stateid": 48, "cases": 90}
 ,
-{"name": "Brazoria", "stateid": 48, "cases": 18}
+{"name": "Bexar", "stateid": 48, "cases": 84}
 ,
-{"name": "Galveston", "stateid": 48, "cases": 18}
+{"name": "Denton", "stateid": 48, "cases": 70}
 ,
-{"name": "Bell", "stateid": 48, "cases": 16}
+{"name": "Fort Bend", "stateid": 48, "cases": 54}
 ,
-{"name": "Smith", "stateid": 48, "cases": 14}
+{"name": "Collin", "stateid": 48, "cases": 53}
 ,
-{"name": "Williamson", "stateid": 48, "cases": 14}
+{"name": "Brazoria", "stateid": 48, "cases": 33}
 ,
-{"name": "Brazos", "stateid": 48, "cases": 12}
+{"name": "Montgomery", "stateid": 48, "cases": 31}
 ,
-{"name": "Lubbock", "stateid": 48, "cases": 11}
+{"name": "McLennan", "stateid": 48, "cases": 28}
 ,
-{"name": "Ellis", "stateid": 48, "cases": 7}
+{"name": "Galveston", "stateid": 48, "cases": 27}
 ,
-{"name": "El Paso", "stateid": 48, "cases": 7}
+{"name": "Williamson", "stateid": 48, "cases": 22}
 ,
-{"name": "Hays", "stateid": 48, "cases": 7}
+{"name": "Brazos", "stateid": 48, "cases": 21}
 ,
-{"name": "Cameron", "stateid": 48, "cases": 6}
+{"name": "El Paso", "stateid": 48, "cases": 21}
 ,
-{"name": "Webb", "stateid": 48, "cases": 5}
+{"name": "Bell", "stateid": 48, "cases": 19}
 ,
-{"name": "Wichita", "stateid": 48, "cases": 5}
+{"name": "Lubbock", "stateid": 48, "cases": 19}
 ,
-{"name": "Comal", "stateid": 48, "cases": 4}
+{"name": "Smith", "stateid": 48, "cases": 16}
 ,
-{"name": "Hockley", "stateid": 48, "cases": 3}
+{"name": "Nueces", "stateid": 48, "cases": 14}
+,
+{"name": "Webb", "stateid": 48, "cases": 10}
+,
+{"name": "Hays", "stateid": 48, "cases": 9}
+,
+{"name": "Matagorda", "stateid": 48, "cases": 9}
+,
+{"name": "Guadalupe", "stateid": 48, "cases": 8}
+,
+{"name": "Wichita", "stateid": 48, "cases": 8}
+,
+{"name": "Cameron", "stateid": 48, "cases": 7}
+,
+{"name": "Comal", "stateid": 48, "cases": 7}
+,
+{"name": "Hidalgo", "stateid": 48, "cases": 7}
+,
+{"name": "Jefferson", "stateid": 48, "cases": 7}
+,
+{"name": "Castro", "stateid": 48, "cases": 6}
+,
+{"name": "Ellis", "stateid": 48, "cases": 6}
+,
+{"name": "Hockley", "stateid": 48, "cases": 5}
+,
+{"name": "Midland", "stateid": 48, "cases": 4}
+,
+{"name": "Brown", "stateid": 48, "cases": 3}
+,
+{"name": "Gregg", "stateid": 48, "cases": 3}
 ,
 {"name": "Johnson", "stateid": 48, "cases": 3}
 ,
-{"name": "Matagorda", "stateid": 48, "cases": 3}
+{"name": "Kendall", "stateid": 48, "cases": 3}
 ,
-{"name": "Brown", "stateid": 48, "cases": 2}
+{"name": "Terry", "stateid": 48, "cases": 3}
 ,
-{"name": "Castro", "stateid": 48, "cases": 2}
+{"name": "Victoria", "stateid": 48, "cases": 3}
+,
+{"name": "Walker", "stateid": 48, "cases": 3}
+,
+{"name": "Wharton", "stateid": 48, "cases": 3}
+,
+{"name": "Atascosa", "stateid": 48, "cases": 2}
+,
+{"name": "Bastrop", "stateid": 48, "cases": 2}
+,
+{"name": "Calhoun", "stateid": 48, "cases": 2}
 ,
 {"name": "Chambers", "stateid": 48, "cases": 2}
 ,
 {"name": "Deaf Smith", "stateid": 48, "cases": 2}
 ,
+{"name": "De Witt", "stateid": 48, "cases": 2}
+,
 {"name": "Eastland", "stateid": 48, "cases": 2}
+,
+{"name": "Grayson", "stateid": 48, "cases": 2}
 ,
 {"name": "Grimes", "stateid": 48, "cases": 2}
 ,
-{"name": "Hidalgo", "stateid": 48, "cases": 2}
+{"name": "Hardin", "stateid": 48, "cases": 2}
 ,
 {"name": "Kaufman", "stateid": 48, "cases": 2}
 ,
+{"name": "Llano", "stateid": 48, "cases": 2}
+,
+{"name": "Milam", "stateid": 48, "cases": 2}
+,
+{"name": "Parker", "stateid": 48, "cases": 2}
+,
 {"name": "Potter", "stateid": 48, "cases": 2}
 ,
+{"name": "Rockwall", "stateid": 48, "cases": 2}
+,
 {"name": "Rusk", "stateid": 48, "cases": 2}
+,
+{"name": "Tom Green", "stateid": 48, "cases": 2}
+,
+{"name": "Angelina", "stateid": 48, "cases": 1}
+,
+{"name": "Austin", "stateid": 48, "cases": 1}
 ,
 {"name": "Blanco", "stateid": 48, "cases": 1}
 ,
@@ -2452,8 +2740,6 @@ var countycases = { "counties" : [
 ,
 {"name": "Crane", "stateid": 48, "cases": 1}
 ,
-{"name": "De Witt", "stateid": 48, "cases": 1}
-,
 {"name": "Erath", "stateid": 48, "cases": 1}
 ,
 {"name": "Falls", "stateid": 48, "cases": 1}
@@ -2462,38 +2748,439 @@ var countycases = { "counties" : [
 ,
 {"name": "Fayette", "stateid": 48, "cases": 1}
 ,
-{"name": "Grayson", "stateid": 48, "cases": 1}
-,
-{"name": "Gregg", "stateid": 48, "cases": 1}
+{"name": "Gaines", "stateid": 48, "cases": 1}
 ,
 {"name": "Hopkins", "stateid": 48, "cases": 1}
 ,
 {"name": "Hunt", "stateid": 48, "cases": 1}
 ,
+{"name": "Jackson", "stateid": 48, "cases": 1}
+,
+{"name": "Karnes", "stateid": 48, "cases": 1}
+,
 {"name": "Lamar", "stateid": 48, "cases": 1}
 ,
 {"name": "Lavaca", "stateid": 48, "cases": 1}
 ,
+{"name": "Liberty", "stateid": 48, "cases": 1}
+,
 {"name": "Limestone", "stateid": 48, "cases": 1}
+,
+{"name": "Martin", "stateid": 48, "cases": 1}
+,
+{"name": "Maverick", "stateid": 48, "cases": 1}
 ,
 {"name": "Medina", "stateid": 48, "cases": 1}
 ,
-{"name": "Midland", "stateid": 48, "cases": 1}
-,
 {"name": "Morris", "stateid": 48, "cases": 1}
 ,
-{"name": "Nueces", "stateid": 48, "cases": 1}
+{"name": "Nacogdoches", "stateid": 48, "cases": 1}
 ,
 {"name": "Oldham", "stateid": 48, "cases": 1}
 ,
-{"name": "Parker", "stateid": 48, "cases": 1}
+{"name": "Orange", "stateid": 48, "cases": 1}
 ,
 {"name": "Robertson", "stateid": 48, "cases": 1}
 ,
-{"name": "Tom Green", "stateid": 48, "cases": 1}
+{"name": "San Patricio", "stateid": 48, "cases": 1}
 ,
 {"name": "Upshur", "stateid": 48, "cases": 1}
 ,
+{"name": "Val Verde", "stateid": 48, "cases": 1}
+,
 {"name": "Van Zandt", "stateid": 48, "cases": 1}
 ,
+{"name": "Wilson", "stateid": 48, "cases": 1}
+,
+{"name": "Bernalillo", "stateid": 35,"cases": 55}
+,
+{"name": "Catron", "stateid": 35,"cases": 0}
+,
+{"name": "Chaves", "stateid": 35,"cases": 4}
+,
+{"name": "Cibola", "stateid": 35,"cases": 1}
+,
+{"name": "Colfax", "stateid": 35,"cases": 0}
+,
+{"name": "Curry", "stateid": 35,"cases": 1}
+,
+{"name": "De Baca", "stateid": 35,"cases": 0}
+,
+{"name": "Dona Ana", "stateid": 35,"cases": 16}
+,
+{"name": "Eddy", "stateid": 35,"cases": 1}
+,
+{"name": "Grant", "stateid": 35,"cases": 0}
+,
+{"name": "Guadalupe", "stateid": 35,"cases": 0}
+,
+{"name": "Harding", "stateid": 35,"cases": 0}
+,
+{"name": "Hidalgo", "stateid": 35,"cases": 0}
+,
+{"name": "Lea", "stateid": 35,"cases": 1}
+,
+{"name": "Lincoln", "stateid": 35,"cases": 0}
+,
+{"name": "Los Alamos", "stateid": 35,"cases": 0}
+,
+{"name": "Luna", "stateid": 35,"cases": 0}
+,
+{"name": "McKinley", "stateid": 35,"cases": 3}
+,
+{"name": "Mora", "stateid": 35,"cases": 0}
+,
+{"name": "Otero", "stateid": 35,"cases": 0}
+,
+{"name": "Quay", "stateid": 35,"cases": 0}
+,
+{"name": "Rio Arriba", "stateid": 35,"cases": 2}
+,
+{"name": "Roosevelt", "stateid": 35,"cases": 0}
+,
+{"name": "San Juan", "stateid": 35,"cases": 14}
+,
+{"name": "San Miguel", "stateid": 35,"cases": 1}
+,
+{"name": "Sandoval", "stateid": 35,"cases": 10}
+,
+{"name": "Santa Fe", "stateid": 35,"cases": 22}
+,
+{"name": "Sierra", "stateid": 35,"cases": 0}
+,
+{"name": "Socorro", "stateid": 35,"cases": 2}
+,
+{"name": "Taos", "stateid": 35,"cases": 3}
+,
+{"name": "Torrance", "stateid": 35,"cases": 0}
+,
+{"name": "Union", "stateid": 35,"cases": 0}
+,
+{"name": "Valencia", "stateid": 35,"cases": 0}
+,
+{"name": "Crowley", "stateid": 8, "cases": 1}
+,
+{"name": "Yuma", "stateid": 8, "cases": 2}
+,
+{"name": "Morgan", "stateid": 8, "cases": 3}
+,
+{"name": "Alamosa", "stateid": 8, "cases": 0}
+,
+{"name": "Boulder", "stateid": 8, "cases": 66}
+,
+{"name": "Cheyenne", "stateid": 8, "cases": 0}
+,
+{"name": "Douglas", "stateid": 8, "cases": 67}
+,
+{"name": "Adams", "stateid": 8, "cases": 50}
+,
+{"name": "Delta", "stateid": 8, "cases": 1}
+,
+{"name": "Jefferson", "stateid": 8, "cases": 131}
+,
+{"name": "Phillips", "stateid": 8, "cases": 0}
+,
+{"name": "Las Animas", "stateid": 8, "cases": 0}
+,
+{"name": "San Juan", "stateid": 8, "cases": 0}
+,
+{"name": "Kiowa", "stateid": 8, "cases": 0}
+,
+{"name": "Lake", "stateid": 8, "cases": 0}
+,
+{"name": "Clear Creek", "stateid": 8, "cases": 3}
+,
+{"name": "Garfield", "stateid": 8, "cases": 16}
+,
+{"name": "Broomfield", "stateid": 8, "cases": 10}
+,
+{"name": "Baca", "stateid": 8, "cases": 0}
+,
+{"name": "Grand", "stateid": 8, "cases": 2}
+,
+{"name": "Archuleta", "stateid": 8, "cases": 0}
+,
+{"name": "Rio Grande", "stateid": 8, "cases": 2}
+,
+{"name": "Pitkin", "stateid": 8, "cases": 23}
+,
+{"name": "Saguache", "stateid": 8, "cases": 0}
+,
+{"name": "Logan", "stateid": 8, "cases": 2}
+,
+{"name": "Fremont", "stateid": 8, "cases": 1}
+,
+{"name": "Jackson", "stateid": 8, "cases": 0}
+,
+{"name": "Lincoln", "stateid": 8, "cases": 0}
+,
+{"name": "Eagle", "stateid": 8, "cases": 147}
+,
+{"name": "Prowers", "stateid": 8, "cases": 0}
+,
+{"name": "Dolores", "stateid": 8, "cases": 0}
+,
+{"name": "Weld", "stateid": 8, "cases": 107}
+,
+{"name": "Custer", "stateid": 8, "cases": 0}
+,
+{"name": "San Miguel", "stateid": 8, "cases": 1}
+,
+{"name": "Huerfano", "stateid": 8, "cases": 1}
+,
+{"name": "Ouray", "stateid": 8, "cases": 0}
+,
+{"name": "Summit", "stateid": 8, "cases": 9}
+,
+{"name": "Arapahoe", "stateid": 8, "cases": 119}
+,
+{"name": "Larimer", "stateid": 8, "cases": 61}
+,
+{"name": "La Plata", "stateid": 8, "cases": 5}
+,
+{"name": "Teller", "stateid": 8, "cases": 7}
+,
+{"name": "Chaffee", "stateid": 8, "cases": 5}
+,
+{"name": "Elbert", "stateid": 8, "cases": 3}
+,
+{"name": "Mineral", "stateid": 8, "cases": 0}
+,
+{"name": "Routt", "stateid": 8, "cases": 9}
+,
+{"name": "Denver", "stateid": 8, "cases": 262}
+,
+{"name": "Conejos", "stateid": 8, "cases": 0}
+,
+{"name": "Gilpin", "stateid": 8, "cases": 0}
+,
+{"name": "Sedgwick", "stateid": 8, "cases": 0}
+,
+{"name": "Kit Carson", "stateid": 8, "cases": 1}
+,
+{"name": "Montrose", "stateid": 8, "cases": 4}
+,
+{"name": "Montezuma", "stateid": 8, "cases": 0}
+,
+{"name": "Mesa", "stateid": 8, "cases": 6}
+,
+{"name": "Hinsdale", "stateid": 8, "cases": 1}
+,
+{"name": "Otero", "stateid": 8, "cases": 1}
+,
+{"name": "Moffat", "stateid": 8, "cases": 0}
+,
+{"name": "El Paso", "stateid": 8, "cases": 137}
+,
+{"name": "Costilla", "stateid": 8, "cases": 0}
+,
+{"name": "Rio Blanco", "stateid": 8, "cases": 0}
+,
+{"name": "Gunnison", "stateid": 8, "cases": 57}
+,
+{"name": "Pueblo", "stateid": 8, "cases": 3}
+,
+{"name": "Bent", "stateid": 8, "cases": 0}
+,
+{"name": "Park", "stateid": 8, "cases": 1}
+,
+{"name": "Washington", "stateid": 8, "cases": 1}
+,
+{"name": "Albany", "stateid": 56,"cases":  1}
+,
+{"name": "Campbell", "stateid": 56,"cases":  1}
+,
+{"name": "Carbon", "stateid": 56,"cases":  3}
+,
+{"name": "Fremont", "stateid": 56,"cases":  14}
+,
+{"name": "Johnson", "stateid": 56,"cases":  1}
+,
+{"name": "Laramie", "stateid": 56,"cases":  15}
+,
+{"name": "Natrona", "stateid": 56,"cases":  6}
+,
+{"name": "Park", "stateid": 56,"cases":  1}
+,
+{"name": "Sheridan", "stateid": 56,"cases":  4}
+,
+{"name": "Sweetwater", "stateid": 56,"cases":  1}
+,
+{"name": "Teton", "stateid": 56,"cases":  8}
+,
+{"name": "Gallatin", "stateid": 30, "cases": 38}
+,
+{"name": "Yellowstone", "stateid": 30, "cases": 14}
+,
+{"name": "Missoula", "stateid": 30, "cases": 7}
+,
+{"name": "Silver Bow", "stateid": 30, "cases": 5}
+,
+{"name": "Cascade", "stateid": 30, "cases": 5}
+,
+{"name": "Lewis and Clark", "stateid": 30, "cases": 5}
+,
+{"name": "Flathead", "stateid": 30, "cases": 5}
+,
+{"name": "Madison", "stateid": 30, "cases": 2}
+,
+{"name": "Broadwater", "stateid": 30, "cases": 2}
+,
+{"name": "Jefferson", "stateid": 30, "cases": 1}
+,
+{"name": "Ravalli", "stateid": 30, "cases": 1}
+,
+{"name": "Meagher", "stateid": 30, "cases": 1}
+,
+{"name": "Roosevelt", "stateid": 30, "cases": 1}
+,
+{"name": "Hill", "stateid": 30, "cases": 1}
+,
+{"name": "Toole", "stateid": 30, "cases": 1}
+,
+{"name": "Lincoln", "stateid": 30, "cases": 1}
+,
+{"name": "Washington", "stateid": 41, "cases": 104}
+,
+{"name": "Marion", "stateid": 41, "cases": 57}
+,
+{"name": "Multnomah", "stateid": 41, "cases": 45}
+,
+{"name": "Linn", "stateid": 41, "cases": 26}
+,
+{"name": "Clackamas", "stateid": 41, "cases": 21}
+,
+{"name": "Deschutes", "stateid": 41, "cases": 15}
+,
+{"name": "Lane", "stateid": 41, "cases": 7}
+,
+{"name": "Yamhill", "stateid": 41, "cases": 7}
+,
+{"name": "Benton", "stateid": 41, "cases": 6}
+,
+{"name": "Polk", "stateid": 41, "cases": 6}
+,
+{"name": "Jackson", "stateid": 41, "cases": 4}
+,
+{"name": "Josephine", "stateid": 41, "cases": 4}
+,
+{"name": "Douglas", "stateid": 41, "cases": 3}
+,
+{"name": "Clatsop", "stateid": 41, "cases": 2}
+,
+{"name": "Umatilla", "stateid": 41, "cases": 2}
+,
+{"name": "Grant", "stateid": 41, "cases": 1}
+,
+{"name": "Hood River", "stateid": 41, "cases": 1}
+,
+{"name": "Klamath", "stateid": 41, "cases": 1}
+,
+{"name": "Lincoln", "stateid": 41, "cases": 1}
+,
+{"name": "Tillamook", "stateid": 41, "cases": 1}
+,
+{"name": "Union", "stateid": 41, "cases": 1}
+,
+{"name": "Wasco", "stateid": 41, "cases": 1}
+,
+{"name": "Adams", "stateid": 53, "cases": 3}
+,
+{"name": "Benton", "stateid": 53, "cases": 19}
+,
+{"name": "Chelan", "stateid": 53, "cases": 10}
+,
+{"name": "Clallam", "stateid": 53, "cases": 5}
+,
+{"name": "Clark", "stateid": 53, "cases": 48}
+,
+{"name": "Columbia", "stateid": 53, "cases": 1}
+,
+{"name": "Cowlitz", "stateid": 53, "cases": 7}
+,
+{"name": "Douglas", "stateid": 53, "cases": 5}
+,
+{"name": "Ferry", "stateid": 53, "cases": 1}
+,
+{"name": "Franklin", "stateid": 53, "cases": 7}
+,
+{"name": "Grant", "stateid": 53, "cases": 33}
+,
+{"name": "Grays Harbor", "stateid": 53, "cases": 1}
+,
+{"name": "Island", "stateid": 53, "cases": 64}
+,
+{"name": "Jefferson", "stateid": 53, "cases": 11}
+,
+{"name": "King", "stateid": 53, "cases": 1577}
+,
+{"name": "Kitsap", "stateid": 53, "cases": 33}
+,
+{"name": "Kittitas", "stateid": 53, "cases": 8}
+,
+{"name": "Klickitat", "stateid": 53, "cases": 7}
+,
+{"name": "Lewis", "stateid": 53, "cases": 5}
+,
+{"name": "Lincoln", "stateid": 53, "cases": 1}
+,
+{"name": "Mason", "stateid": 53, "cases": 2}
+,
+{"name": "Okanogan", "stateid": 53, "cases": 1}
+,
+{"name": "Pierce", "stateid": 53, "cases": 186}
+,
+{"name": "San Juan", "stateid": 53, "cases": 2}
+,
+{"name": "Skagit", "stateid": 53, "cases": 78}
+,
+{"name": "Snohomish", "stateid": 53, "cases": 778}
+,
+{"name": "Spokane", "stateid": 53, "cases": 67}
+,
+{"name": "Stevens", "stateid": 53, "cases": 2}
+,
+{"name": "Thurston", "stateid": 53, "cases": 24}
+,
+{"name": "Walla Walla", "stateid": 53, "cases": 2}
+,
+{"name": "Whatcom", "stateid": 53, "cases": 86}
+,
+{"name": "Whitman", "stateid": 53, "cases": 3}
+,
+{"name": "Yakima", "stateid": 53, "cases": 61}
+,
+{"name": "Kootenai", "stateid": 16,"cases": 9}
+,
+{"name": "Idaho", "stateid": 16,"cases": 1}
+,
+{"name": "Nez Perce", "stateid": 16,"cases": 4}
+,
+{"name": "Canyon", "stateid": 16,"cases": 21}
+,
+{"name": "Payette", "stateid": 16,"cases": 1}
+,
+{"name": "Ada", "stateid": 16,"cases": 53}
+,
+{"name": "Valley", "stateid": 16,"cases": 1}
+,
+{"name": "Blaine", "stateid": 16,"cases": 86}
+,
+{"name": "Cassia", "stateid": 16,"cases": 1}
+,
+{"name": "Twin Falls", "stateid": 16,"cases": 1}
+,
+{"name": "Bannock", "stateid": 16,"cases": 2}
+,
+{"name": "Bingham", "stateid": 16,"cases": 1}
+,
+{"name": "Custer", "stateid": 16,"cases": 1}
+,
+{"name": "Fremont", "stateid": 16,"cases": 1}
+,
+{"name": "Jefferson", "stateid": 16,"cases": 2}
+,
+{"name": "Madison", "stateid": 16,"cases": 2}
+,
+{"name": "Teton", "stateid": 16,"cases": 2}
 ]}
