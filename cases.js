@@ -1990,6 +1990,74 @@ var countycases = { "counties" : [
 ,
 {"name": "Franklin", "stateid": 1, "cases": 3}
 ,
+{"name": "Greene", "stateid": 1, "cases": 3}
+,
+{"name": "Hale", "stateid": 1, "cases": 1}
+,
+{"name": "Houston", "stateid": 1, "cases": 9}
+,
+{"name": "Jackson", "stateid": 1, "cases": 7}
+,
+{"name": "Jefferson", "stateid": 1, "cases": 257}
+,
+{"name": "Lamar", "stateid": 1, "cases": 1}
+,
+{"name": "Lauderdale", "stateid": 1, "cases": 12}
+,
+{"name": "Lawrence", "stateid": 1, "cases": 3}
+,
+{"name": "Lee", "stateid": 1, "cases": 74}
+,
+{"name": "Limestone", "stateid": 1, "cases": 20}
+,
+{"name": "Lowndes", "stateid": 1, "cases": 1}
+,
+{"name": "Macon", "stateid": 1, "cases": 1}
+,
+{"name": "Madison", "stateid": 1, "cases": 96}
+,
+{"name": "Marengo", "stateid": 1, "cases": 4}
+,
+{"name": "Marion", "stateid": 1, "cases": 9}
+,
+{"name": "Marshall", "stateid": 1, "cases": 7}
+,
+{"name": "Mobile", "stateid": 1, "cases": 45}
+,
+{"name": "Monroe", "stateid": 1, "cases": 1}
+,
+{"name": "Montgomery", "stateid": 1, "cases": 29}
+,
+{"name": "Morgan", "stateid": 1, "cases": 19}
+,
+{"name": "Pickens", "stateid": 1, "cases": 3}
+,
+{"name": "Pike", "stateid": 1, "cases": 4}
+,
+{"name": "Randolph", "stateid": 1, "cases": 2}
+,
+{"name": "Russell", "stateid": 1, "cases": 1}
+,
+{"name": "St. Clair", "stateid": 1, "cases": 14}
+,
+{"name": "Shelby", "stateid": 1, "cases": 88}
+,
+{"name": "Sumter", "stateid": 1, "cases": 1}
+,
+{"name": "Talladega", "stateid": 1, "cases": 6}
+,
+{"name": "Tallapoosa", "stateid": 1, "cases": 12}
+,
+{"name": "Tuscaloosa", "stateid": 1, "cases": 28}
+,
+{"name": "Walker", "stateid": 1, "cases": 31}
+,
+{"name": "Washington", "stateid": 1, "cases": 3}
+,
+{"name": "Wilcox", "stateid": 1, "cases": 2}
+,
+{"name": "Winston", "stateid": 1, "cases": 2}
+,
 {"name": "Fulton", "stateid": 13,"cases": 503}
 ,
 {"name": "Dekalb", "stateid": 13,"cases": 294}
