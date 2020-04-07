@@ -8,6 +8,15 @@
    crossorigin=""></script>
    <script src="counties.json"></script>
    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <style>
+   .loading-label {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+  font-size: 32px;
+  text-align: center;
+  }
+  </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161411893-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,11 +24,12 @@
   gtag('js', new Date());
   gtag('config', 'UA-161411893-1');
 </script>
+<script src="leaflet-slider.js"></script>
+<link rel="stylesheet" href="leaflet-slider.css"/>
 
 </head><body>
 
    <div id="map" style="height: 100%"></div>
-   <script src="cases.js"></script>
    <script language="javascript">
    var map = L.map('map').setView([38, -95], 5);
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,108 +40,193 @@
     onAdd: function(map) {
         var theDiv = L.DomUtil.create('div');
         theDiv.style.fontSize = "14px";
-        theDiv.innerHTML = "<strong>COVID19 cases by county</strong><br><a href=\"https://github.com/SciFiDryer/COVID19ByCounty\">Project page</a><br>State Data Refreshed " + batchTime + "<br>Visualization by Matt Jamesson";
+        theDiv.innerHTML = "<strong>COVID19 cases by county</strong><br><a href=\"https://github.com/SciFiDryer/COVID19ByCounty\">Project page</a><br>County data from <a href=\"https://coronadatascraper.com\">coronadatascraper.com</a><br>Visualization by Matt Jamesson<br><span style=\"font-size: 10px; font-style: italic;\">Accuracy of data not guaranteed</span>";
         theDiv.style.backgroundColor = "#ffffff";
         theDiv.style.opacity = ".75";
+        theDiv.style.padding = "5px";
         theDiv.align = "center";
         return theDiv;
     },
 });
+var loading = new L.Marker([40, -100], {
+    icon: new L.DivIcon({
+        html: 'Loading data for past and present cases<br>this may take a while',
+        iconSize: L.point(600,50),
+        className: "loading-label"
+    })
+});
+loading.addTo(map);
+var loadingVisible = true;
 
 L.control.watermark = function(opts) {
     return new L.Control.Watermark(opts);
 }
 
 L.control.watermark({ position: 'topright' }).addTo(map);
-var nycCases = getNYCCases();
-var i;
-for (i = 0; i < counties.features.length; i++)
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://coronadatascraper.com/timeseries-byLocation.json", true);
+xhr.responseType = 'json';
+var dateArr = [];
+var firstRun = true;
+var markerGroup = L.layerGroup().addTo(map);
+var countiesTmp = null;
+xhr.onload = function()
 {
-	
-	var properties = generateProperties(counties.features[i].properties.NAME, counties.features[i].properties.STATE);
-	var theStyle = {"color" : properties.color, "weight" : 0};
-	var marker = L.geoJSON(counties.features[i], {style: theStyle});
-	marker.bindTooltip(properties.popupContent);	
-	marker.addTo(map)
-	
-}
-function generateProperties(countyName, stateId)
+  var status = xhr.status;
+  if (status === 200)
+  {
+  	var i = 0;
+	countycases = xhr.response;
+	getDates();
+	slider = L.control.slider(function(value) {
+    			showCasesOnDate(dateArr[value]);
+			}, {
+    		max: dateArr.length-1,
+    		value: dateArr.length-1,
+    		step: 1,
+    		size: '300px',
+    		orientation:'horizontal',
+    		id: 'slider',
+    		position: "topright",
+    		increment: true,
+    		logo: "Spread History",
+    		getValue: function(value){
+    			return dateArr[value];
+    		}
+		}).addTo(map);
+  }
+};
+xhr.send();
+//csv
+/*var xhr = new XMLHttpRequest();
+xhr.open('GET', "http://192.168.2.120/cases.csv", true);
+
+xhr.onload = function()
 {
-	var popupContent = countyName + " County: no reported cases";
-	var color = "#00ff00";
-	var i = 0;
-	for (i = 0; i < countycases.counties.length; i++)
+  var status = xhr.status;
+  if (status === 200)
+  {
+  	var i = 0;
+	countycases = xhr.responseText.split("\n");
+	for (i = 0; i < countycases.length; i++)
 	{
-		
-		if ((stateId == countycases.counties[i].stateid && countyName == countycases.counties[i].name) || isBigApple(countyName))
+		var line = countycases[i].split(",");
+		//console.log(line[5]);
+		if (line[5] != null && line[6] != null)
 		{
-			popupContent = countyName + " County: " + countycases.counties[i].cases + " reported case";
-			var numCases = countycases.counties[i].cases;
-			//make plurl if needed
-			if (countycases.counties[i].cases > 1)
+			addCountyCases(line[6], line[5], line[line.length-1]);
+		}
+	}
+  }
+};
+xhr.send();*/
+function getDates()
+{
+	for (x in countycases)
+	{
+		if (countycases[x].country == "United States" && countycases[x].state != null && countycases[x].county != null)
+		{
+			if (firstRun)
 			{
-				popupContent = popupContent + "s";
-			}
-			if (isBigApple(countyName) && stateId == 36)
-			{
-				popupContent = "NYC: " + nycCases + " reported cases";
-				numCases = nycCases;
-			}
-			if (numCases > 0 && numCases <= 5)
-			{
-				color = "#ddff00";
-			}
-			if (numCases > 5 && numCases <= 10)
-			{
-				color = "#ffdd00";
-			}
-			if (numCases > 10 && numCases <= 20)
-			{
-				color = "#ffaa00";
-			}
-			if (numCases > 20 && numCases <= 50)
-			{
-				color = "#ff7500";
-			}
-			if (numCases > 50 && numCases <= 100)
-			{
-				color = "#ff4000";
-			}
-			if (numCases > 100 && numCases <= 500)
-			{
-				color = "#ff2500";
-			}
-			if (numCases > 500 && numCases <=1000)
-			{
-				color = "#ff1500";
-			}
-			if (numCases > 1000)
-			{
-				color = "#850000";
+				firstRun = false;
+				for (date in countycases[x].dates)
+				{
+					lastDate = date;
+					dateArr.push(date);
+				}
 			}
 		}
+	}
+}  
+function showCasesOnDate(theDate)
+{
+	markerGroup.clearLayers();
+	lastDate = theDate;
+	countiesTmp = counties.features.slice();
+	for (x in countycases)
+	{
+		//fixes shannon county glitch
+		addCountyCases("fips:46113", 0);
+		if (countycases[x].country == "United States")
+		{
+			if (countycases[x].dates[lastDate] != undefined && countycases[x].featureId != undefined)
+			{
+				addCountyCases(countycases[x].featureId, countycases[x].dates[lastDate].cases);
+			}
+		}
+	}
+	if (loadingVisible)
+	{
+		map.removeLayer(loading);
+	}
+}
+
+function addCountyCases(fips, numCases)
+{
+	var i;
+	for (i = 0; i < countiesTmp.length; i++)
+	{
+		var fipsId = fips.substring(5);
+		if (fipsId == countiesTmp[i].properties.GEO_ID.substring(9))
+		{
+			var properties = generateProperties(countiesTmp[i].properties.NAME + " " + countiesTmp[i].properties.LSAD, numCases);
+			var theStyle = {"color" : properties.color, "weight" : 0};
+			var marker = L.geoJSON(countiesTmp[i], {style: theStyle});
+			marker.bindTooltip(properties.popupContent);
+			//marker.addTo(map);
+			marker.addTo(markerGroup);
+			countiesTmp.splice(i,1);
+		}
 		
+	}
+}
+function generateProperties(countyName, numCases)
+{
+	var popupContent = countyName + ": no reported cases";
+	var color = "#00ff00";
+	if (numCases >= 1)
+	{
+		popupContent = countyName + ": " + numCases + " reported case";
+	}
+	//make plurl if needed
+	if (numCases > 1)
+	{
+		popupContent = popupContent + "s";
+	}
+	if (numCases > 0 && numCases <= 5)
+	{
+		color = "#ddff00";
+	}
+	if (numCases > 5 && numCases <= 10)
+	{
+		color = "#ffdd00";
+	}
+	if (numCases > 10 && numCases <= 20)
+	{
+		color = "#ffaa00";
+	}
+	if (numCases > 20 && numCases <= 50)
+	{
+		color = "#ff7500";
+	}
+	if (numCases > 50 && numCases <= 100)
+	{
+		color = "#ff4000";
+	}
+	if (numCases > 100 && numCases <= 500)
+	{
+		color = "#ff2500";
+	}
+	if (numCases > 500 && numCases <=1000)
+	{
+		color = "#ff1500";
+	}
+	if (numCases > 1000)
+	{
+		color = "#850000";
 	}
 	return {"color" : color, "popupContent": popupContent};
-}
-function getNYCCases()
-{
-	for (i = 0; i < countycases.counties.length; i++)
-	{
-		if (countycases.counties[i].name == "New York City")
-		{
-			return countycases.counties[i].cases;
-		}
-	}
-	return 0;
-}
-function isBigApple(countyName)
-{
-	if (countyName == "New York" || countyName == "Queens" || countyName == "Kings" || countyName == "Bronx" || countyName == "Richmond")
-	{
-		return true;
-	}
-	return false;
 }
 </script>
    </body>
