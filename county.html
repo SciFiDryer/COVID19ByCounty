@@ -14,11 +14,15 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161411893-1"></script>
 </head>
 <body>
-<div id="totalcases" style="width:100%;height:40%;"></div>
+<div id="totalcases" style="width:100%;height:27%;"></div>
 <center><strong>The closer the positive cases line is to the total tested line, the greater the potential for missed positive tests.</strong></center>
 <hr>
-<p><div id="plot" style="width:100%;height:40%;"></div></p>
-
+<p><div id="plot" style="width:100%;height:27%;"></div></p>
+<center>Normalize on: <input name="normalize" type="radio" onclick="displayDailyCases()" checked>Absolute numbers (don't normalize)</input><input name="normalize" type="radio" onclick="displayPercentPositive()">Percent positive cases</input></center>
+<div id="deathsarea">
+<hr>
+<p><div id="deaths" style="width:100%;height:27%;"></div></p>
+</div>
 <script language="javascript">
 
 	fipsId = window.location.search.substring(1);
@@ -28,11 +32,18 @@
 	var dateArr = [];
 	var casesArr = [];
 	var deathsArr = [];
+	var totalDeathsArr = [];
+	var newDeathsArr = [];
 	var newCasesDates = [];
 	var newCasesArr = [];
 	var totalCasesArr = [];
 	var testedArr = [];
 	var totalTestedArr = [];
+	var newTestedArr = [];
+	var newDeathsDates = [];
+	var testedRatioArr = [];
+	var countyName = "";
+	var titleName = "";
 	xhr.onload = function()
 	{
 	  var status = xhr.status;
@@ -40,10 +51,9 @@
 	  {
 		var i = 0;
 		countycases = xhr.response;
-		var countyName = "";
+		
 		for (x in countycases)
 		{
-			//console.log(countycases[x].featureId);
 			if (typeof countycases[x].featureId == "string" && countycases[x].featureId.substring(5) == fipsId)
 			{
 				countyName = countycases[x].county;
@@ -52,10 +62,12 @@
 					dateArr.push(date);
 					casesArr.push(countycases[x].dates[date].cases);
 					testedArr.push(countycases[x].dates[date].tested);
+					deathsArr.push(countycases[x].dates[date].deaths);
 				}
 			}
 		}
 		var startAdding = false;
+		var displayDeaths = false;
 		for (i = 1; i < dateArr.length; i++)
 		{
 			if (casesArr[i] - casesArr[i-1] > 0)
@@ -66,36 +78,93 @@
 			{
 				newCasesDates.push(dateArr[i]);
 				newCasesArr.push(casesArr[i] - casesArr[i-1]);
+				newTestedArr.push(testedArr[i] - testedArr[i-1]);
 				totalCasesArr.push(casesArr[i]);
 				totalTestedArr.push(testedArr[i]);
+				totalDeathsArr.push(deathsArr[i]);
+				if (deathsArr[i] > 0)
+				{
+					displayDeaths = true;
+				}
+				newDeathsArr.push(deathsArr[i] - deathsArr[i-1]);
 			}
 		}
+		for (i=0; i<newCasesDates.length; i++)
+		{
+			testedRatioArr.push(newCasesArr[i]/newTestedArr[i]);
+		}
+		var totalCasesPlot = document.getElementById('totalcases');
 		var plot = document.getElementById('plot');
+		titleName = countyName + " total tested, cases and deaths";
+		if (!displayDeaths)
+		{
+			titleName = countyName + " total tested vs cases"
+			document.getElementById("deathsarea").style.display = "none";
+			plot.style.height = "40%";
+			totalCasesPlot.style.height = "40%";
+			
+		}
+		displayDailyCases();
+		var data = [
+		{
+		x: newCasesDates,
+		y: totalCasesArr ,
+		type: "line",
+		fill: "tonexty",
+		name: "Positive cases"}, 
+		{
+		x: newCasesDates,
+		y: totalTestedArr,
+		type: "line",
+		fill: 'tonexty',
+		name: "Total tested"}];
+		if (displayDeaths)
+		{
+			data.push({
+			x: newCasesDates,
+			y: totalDeathsArr,
+			type: "line",
+			fill: 'tozeroy',
+			line: { color: "#ff0000"},
+			name: "Total deaths"});
+		}
+		Plotly.newPlot(totalCasesPlot, data,
+		{title: titleName,  margin: {t:30}});
+		
+		var deathsPlot = document.getElementById('deaths');
+		Plotly.newPlot( deathsPlot, [{
+		x: newCasesDates,
+		y: newDeathsArr ,
+		type: "bar",
+		name: "Deaths",
+		marker: { color: "#ff0000"}
+		}],
+		{title: countyName + " daily reported new deaths",  margin: {t:30}}
+		);
+	  }
+	};
+	xhr.send();
+	function displayDailyCases()
+	{
 		Plotly.newPlot( plot, [{
 		x: newCasesDates,
 		y: newCasesArr ,
 		type: "bar",
 		name: "New Cases" }],
-		{title: countyName + " daily reported new cases",  margin: {t:30}}
+		{title: countyName + " daily reported new cases"}
 		);
-		var totalCasesPlot = document.getElementById('totalcases');
-		Plotly.newPlot( totalCasesPlot, [{
+	}
+	function displayPercentPositive()
+	{
+		var plot = document.getElementById('plot');
+		Plotly.newPlot( plot, [{
 		x: newCasesDates,
-		y: totalCasesArr ,
-		type: "scatter",
-		fill: "tozeroy",
-		name: "Positive cases"}, 
-		{
-		x: newCasesDates,
-		y: totalTestedArr,
-		type: "scatter",
-		fill: 'tonexty',
-		name: "Total tested"}],
-		{title: countyName + " total cases",  margin: {t:30}}
+		y: testedRatioArr ,
+		type: "bar",
+		name: "New Cases" }],
+		{title: countyName + " daily percentage positive cases",  margin: {t:30},  margin: {t:30}, yaxis: { tickformat: "%"}}
 		);
-	  }
-	};
-	xhr.send();
+	}
 	
 
 </script>
