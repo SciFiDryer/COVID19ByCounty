@@ -172,7 +172,11 @@ function addCountyCases(fips, numCases)
 		{
 			var properties = generateProperties(countiesTmp[i].properties.NAME + " " + countiesTmp[i].properties.LSAD, numCases);
 			var theStyle = {"color" : properties.color, "weight" : 0};
-			var marker = L.geoJSON(countiesTmp[i], {style: theStyle});
+			var marker = L.geoJSON(countiesTmp[i], {style: theStyle, onEachFeature: function onEachFeature(feature, layer){
+					layer.on('click', function(e) {
+						window.open("county.html?" + fipsId, "_blank");
+					});
+			}});
 			marker.bindTooltip(properties.popupContent);
 			//marker.addTo(map);
 			marker.addTo(markerGroup);
@@ -193,6 +197,10 @@ function generateProperties(countyName, numCases)
 	if (numCases > 1)
 	{
 		popupContent = popupContent + "s";
+	}
+	if (numCases >= 1)
+	{
+		popupContent = popupContent + "<br><i>Click to view detailed historic stats for county</i>";
 	}
 	if (numCases > 0 && numCases <= 5)
 	{
