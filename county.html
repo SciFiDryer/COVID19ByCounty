@@ -68,6 +68,7 @@
 		}
 		var startAdding = false;
 		var displayDeaths = false;
+		var displayTested = false;
 		for (i = 1; i < dateArr.length; i++)
 		{
 			if (casesArr[i] - casesArr[i-1] > 0)
@@ -86,6 +87,10 @@
 				{
 					displayDeaths = true;
 				}
+				if (testedArr[i] > 0)
+				{
+					displayTested = true;
+				}
 				newDeathsArr.push(deathsArr[i] - deathsArr[i-1]);
 			}
 		}
@@ -95,29 +100,41 @@
 		}
 		var totalCasesPlot = document.getElementById('totalcases');
 		var plot = document.getElementById('plot');
-		titleName = countyName + " total tested, cases and deaths";
+		titleName = countyName + " total cases";
+		if (displayDeaths && displayTested)
+		{
+			titleName = countyName + " total tested, cases and deaths";
+		}
+		if (displayTested && !displayDeaths)
+		{
+			titleName = countyName + " total tested vs cases";
+		}
+		if (displayDeaths)
+		{
+			titleName = countyName + " total cases vs deaths";
+		}
 		if (!displayDeaths)
 		{
-			titleName = countyName + " total tested vs cases"
 			document.getElementById("deathsarea").style.display = "none";
 			plot.style.height = "40%";
 			totalCasesPlot.style.height = "40%";
-			
 		}
 		displayDailyCases();
-		var data = [
-		{
+		var data = [{
 		x: newCasesDates,
 		y: totalCasesArr ,
 		type: "line",
 		fill: "tonexty",
-		name: "Positive cases"}, 
+		name: "Positive cases"}];
+		if (displayTested)
 		{
-		x: newCasesDates,
-		y: totalTestedArr,
-		type: "line",
-		fill: 'tonexty',
-		name: "Total tested"}];
+			data.push({
+			x: newCasesDates,
+			y: totalTestedArr,
+			type: "line",
+			fill: 'tonexty',
+			name: "Total tested"});
+		}
 		if (displayDeaths)
 		{
 			data.push({
