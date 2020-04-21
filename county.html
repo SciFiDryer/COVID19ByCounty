@@ -14,11 +14,13 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161411893-1"></script>
 </head>
 <body>
+<div style="font-family: sans-serif">Select other area:<select id="country" onChange="getStates(document.getElementById('country').options[document.getElementById('country').selectedIndex].text)"></select><select style="display: none" id="state" onChange="getCounties(document.getElementById('state').options[document.getElementById('state').selectedIndex].text)"></select><select style="display: none" id="county"></select><button type="button" onClick="getStats()">Apply</button></div>
 <div id="totalcases" style="width:100%;height:27%;"></div>
-<center><strong>The closer the positive cases line is to the total tested line, the greater the potential for missed positive tests.</strong></center>
+<center><strong style="font-family: sans-serif">The closer the positive cases line is to the total tested line, the greater the potential for missed positive tests.</strong></center>
 <hr>
+<center><div style="font-family: sans-serif"><input type="radio" id="noAvg"  onChange="displayDailyCases()" name="average" checked>Daily numbers <input type="radio" id="rollingAvg"  onChange="displayDailyCases()" name="average">3 day rolling average</div></center>
 <p><div id="plot" style="width:100%;height:27%;"></div></p>
-<center>Normalize on: <input name="normalize" type="radio" onclick="displayDailyCases()" checked>Absolute numbers (don't normalize)</input><input name="normalize" type="radio" onclick="displayPercentPositive()">Percent positive cases</input></center>
+<center style="font-family: sans-serif">Normalize on: <input id="absCases" name="normalize" type="radio" onclick="displayDailyCases()" checked>Absolute numbers (don't normalize)</input><input id="percentCases" name="normalize" type="radio" onclick="displayDailyCases()">Percent positive cases</input></center>
 <div id="deathsarea">
 <hr>
 <p><div id="deaths" style="width:100%;height:27%;"></div></p>
@@ -42,147 +44,342 @@
 	var newTestedArr = [];
 	var newDeathsDates = [];
 	var testedRatioArr = [];
+	var casesRollingAvg = [];
+	var deathsRollingAvg = [];
+	var ratioRollingAvg = [];
 	var countyName = "";
 	var titleName = "";
+	var countycases = undefined;
 	xhr.onload = function()
 	{
 	  var status = xhr.status;
 	  if (status === 200)
 	  {
-		var i = 0;
 		countycases = xhr.response;
-		
-		for (x in countycases)
-		{
-			if (typeof countycases[x].featureId == "string" && countycases[x].featureId.substring(5) == fipsId)
-			{
-				countyName = countycases[x].county;
-				for (date in countycases[x].dates)
-				{
-					dateArr.push(date);
-					casesArr.push(countycases[x].dates[date].cases);
-					testedArr.push(countycases[x].dates[date].tested);
-					deathsArr.push(countycases[x].dates[date].deaths);
-				}
-			}
-		}
-		var startAdding = false;
-		var displayDeaths = false;
-		var displayTested = false;
-		for (i = 1; i < dateArr.length; i++)
-		{
-			if (casesArr[i] - casesArr[i-1] > 0)
-			{
-				startAdding = true;
-			}
-			if (startAdding)
-			{
-				newCasesDates.push(dateArr[i]);
-				newCasesArr.push(casesArr[i] - casesArr[i-1]);
-				newTestedArr.push(testedArr[i] - testedArr[i-1]);
-				totalCasesArr.push(casesArr[i]);
-				totalTestedArr.push(testedArr[i]);
-				totalDeathsArr.push(deathsArr[i]);
-				if (deathsArr[i] > 0)
-				{
-					displayDeaths = true;
-				}
-				if (testedArr[i] > 0)
-				{
-					displayTested = true;
-				}
-				newDeathsArr.push(deathsArr[i] - deathsArr[i-1]);
-			}
-		}
-		for (i=0; i<newCasesDates.length; i++)
-		{
-			testedRatioArr.push(newCasesArr[i]/newTestedArr[i]);
-		}
-		var totalCasesPlot = document.getElementById('totalcases');
-		var plot = document.getElementById('plot');
-		titleName = countyName + " total cases";
-		if (displayDeaths && displayTested)
-		{
-			titleName = countyName + " total tested, cases and deaths";
-		}
-		if (displayTested && !displayDeaths)
-		{
-			titleName = countyName + " total tested vs cases";
-		}
-		if (displayDeaths)
-		{
-			titleName = countyName + " total cases vs deaths";
-		}
-		if (!displayDeaths)
-		{
-			document.getElementById("deathsarea").style.display = "none";
-			plot.style.height = "40%";
-			totalCasesPlot.style.height = "40%";
-		}
-		displayDailyCases();
-		var data = [{
-		x: newCasesDates,
-		y: totalCasesArr ,
-		type: "line",
-		fill: "tonexty",
-		name: "Positive cases"}];
-		if (displayTested)
-		{
-			data.push({
-			x: newCasesDates,
-			y: totalTestedArr,
-			type: "line",
-			fill: 'tonexty',
-			name: "Total tested"});
-		}
-		if (displayDeaths)
-		{
-			data.push({
-			x: newCasesDates,
-			y: totalDeathsArr,
-			type: "line",
-			fill: 'tozeroy',
-			line: { color: "#ff0000"},
-			name: "Total deaths"});
-		}
-		Plotly.newPlot(totalCasesPlot, data,
-		{title: titleName,  margin: {t:30}});
-		
-		var deathsPlot = document.getElementById('deaths');
-		Plotly.newPlot( deathsPlot, [{
-		x: newCasesDates,
-		y: newDeathsArr ,
-		type: "bar",
-		name: "Deaths",
-		marker: { color: "#ff0000"}
-		}],
-		{title: countyName + " daily reported new deaths",  margin: {t:30}}
-		);
+		displayData(true);
 	  }
+	  getCountries();
 	};
 	xhr.send();
 	function displayDailyCases()
 	{
+		var style = undefined;
+		if (document.getElementById("absCases").checked)
+		{
+			if (document.getElementById("noAvg").checked)
+			{
+				yArr = newCasesArr;
+			}
+			if (document.getElementById("rollingAvg").checked)
+			{
+				yArr = casesRollingAvg;
+			}
+			style = {title: countyName + " daily reported new cases"};
+		}
+		if (document.getElementById("percentCases").checked)
+		{
+			if (document.getElementById("noAvg").checked)
+			{
+				yArr = testedRatioArr;
+			}
+			if (document.getElementById("rollingAvg").checked)
+			{
+				yArr = ratioRollingAvg;
+			}
+			style = {title: countyName + " daily percentage positive cases",  margin: {t:30},  margin: {t:30}, yaxis: { tickformat: "%"}};
+		}
 		Plotly.newPlot( plot, [{
 		x: newCasesDates,
-		y: newCasesArr ,
+		y: yArr ,
 		type: "bar",
 		name: "New Cases" }],
-		{title: countyName + " daily reported new cases"}
+		style
 		);
+		displayDeaths();
 	}
-	function displayPercentPositive()
+function displayDeaths()
+{
+	var deathsPlot = document.getElementById('deaths');
+	if (document.getElementById("noAvg").checked)
 	{
-		var plot = document.getElementById('plot');
-		Plotly.newPlot( plot, [{
-		x: newCasesDates,
-		y: testedRatioArr ,
-		type: "bar",
-		name: "New Cases" }],
-		{title: countyName + " daily percentage positive cases",  margin: {t:30},  margin: {t:30}, yaxis: { tickformat: "%"}}
-		);
+		yArr = newDeathsArr;
 	}
+	if (document.getElementById("rollingAvg").checked)
+	{
+		yArr = deathsRollingAvg;
+	}
+	Plotly.newPlot( deathsPlot, [{
+	x: newCasesDates,
+	y: yArr ,
+	type: "bar",
+	name: "Deaths",
+	marker: { color: "#ff0000"}
+	}],
+	{title: countyName + " daily reported new deaths",  margin: {t:30}}
+	);
+}
+function addData(dates)
+{
+	var i = 0;
+	for (date in dates)
+	{
+		dateArr.push(date);
+		casesArr.push(dates[date].cases);
+		testedArr.push(dates[date].tested);
+		deathsArr.push(dates[date].deaths);
+	}
+}
+function displayData(isUsFips, level, country, state, county)
+{
+	dateArr = [];
+	casesArr = [];
+	deathsArr = [];
+	totalDeathsArr = [];
+	newDeathsArr = [];
+	newCasesDates = [];
+	newCasesArr = [];
+	totalCasesArr = [];
+	testedArr = [];
+	totalTestedArr = [];
+	newTestedArr = [];
+	newDeathsDates = [];
+	testedRatioArr = [];
+	casesRollingAvg = [];
+	deathsRollingAvg = [];
+	casesRollingAvg = [];
+	countyName = "";
+	titleName = "";
+	var done = false;
+	//get dates
+	for (x in countycases)
+	{
+		
+		if ((isUsFips && (typeof countycases[x].featureId == "string" && countycases[x].featureId.substring(5) == fipsId)))
+		{
+			countyName = countycases[x].county;
+			addData(countycases[x].dates);
+		}
+		else if (countycases[x].level == level && !done)
+		{
+			if (countycases[x].country == country)
+			{
+				if (level == "country")
+				{
+					countyName = countycases[x].country;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				if (level == "state" && countycases[x].state == state)
+				{
+					countyName = countycases[x].state;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				if (level == "county" && countycases[x].county == county)
+				{
+					countyName = countycases[x].county;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				
+			}
+		}
+	}
+	var startAdding = false;
+	var displayDeaths = false;
+	var displayTested = false;
+	var j = 0;
+	for (var i = 1; i < dateArr.length; i++)
+	{
+		if (casesArr[i] - casesArr[i-1] > 0)
+		{
+			startAdding = true;
+		}
+		if (startAdding)
+		{
+			newCasesDates.push(dateArr[i]);
+			newCasesArr.push(casesArr[i] - casesArr[i-1]);
+			newTestedArr.push(testedArr[i] - testedArr[i-1]);
+			totalCasesArr.push(casesArr[i]);
+			totalTestedArr.push(testedArr[i]);
+			totalDeathsArr.push(deathsArr[i]);
+			if (deathsArr[i] > 0)
+			{
+				displayDeaths = true;
+			}
+			if (testedArr[i] > 0)
+			{
+				displayTested = true;
+			}
+			newDeathsArr.push(deathsArr[i] - deathsArr[i-1]);
+			if (j > 2)
+			{
+				casesRollingAvg.push((newCasesArr[newCasesArr.length-1] + newCasesArr[newCasesArr.length - 2] + newCasesArr[newCasesArr.length - 3])/3);
+				deathsRollingAvg.push((newDeathsArr[newDeathsArr.length - 1] + newDeathsArr[newDeathsArr.length - 2] + newDeathsArr[newDeathsArr.length - 3]) / 3);
+			}
+			j++;
+		}
+	}
+	for (var i=0; i<newCasesDates.length; i++)
+	{
+		testedRatioArr.push(newCasesArr[i]/newTestedArr[i]);
+		if (i > 1)
+		{
+			ratioRollingAvg.push((testedRatioArr[i] + testedRatioArr[i-1] + testedRatioArr[i-2])/3);
+		}
+	}
+	var totalCasesPlot = document.getElementById('totalcases');
+	var plot = document.getElementById('plot');
+	titleName = countyName + " total cases";
+	if (displayDeaths && displayTested)
+	{
+		titleName = countyName + " total tested, cases and deaths";
+	}
+	if (displayTested && !displayDeaths)
+	{
+		titleName = countyName + " total tested vs cases";
+	}
+	if (displayDeaths)
+	{
+		titleName = countyName + " total cases vs deaths";
+		document.getElementById("deathsarea").style.display = "block";
+		plot.style.height = "27%";
+		totalCasesPlot.style.height = "27%";
+	}
+	if (!displayDeaths)
+	{
+		document.getElementById("deathsarea").style.display = "none";
+		plot.style.height = "40%";
+		totalCasesPlot.style.height = "40%";
+	}
+	displayDailyCases();
+	var data = [{
+	x: newCasesDates,
+	y: totalCasesArr ,
+	type: "line",
+	fill: "tonexty",
+	name: "Positive cases"}];
+	if (displayTested)
+	{
+		data.push({
+		x: newCasesDates,
+		y: totalTestedArr,
+		type: "line",
+		fill: 'tonexty',
+		name: "Total tested"});
+	}
+	if (displayDeaths)
+	{
+		data.push({
+		x: newCasesDates,
+		y: totalDeathsArr,
+		type: "line",
+		fill: 'tozeroy',
+		line: { color: "#ff0000"},
+		name: "Total deaths"});
+	}
+	Plotly.newPlot(totalCasesPlot, data,
+	{title: titleName,  margin: {t:30}});
 	
-
+	
+}
+function getCountries()
+{
+	var countryList = document.getElementById("country");
+	var countriesArr = [];
+	for (x in countycases)
+	{
+		if (countycases[x].level == "country")
+		{
+			countriesArr.push(countycases[x].country);
+		}
+	}
+	countriesArr.sort();
+	for (var i = 0; i < countriesArr.length; i++)
+	{
+		var option = document.createElement("option");
+		option.text = countriesArr[i];
+		countryList.options.add(option);
+	}
+}
+function getStates(country)
+{
+	var stateList = document.getElementById("state");
+	stateList.style.display = "none";
+	var countyList = document.getElementById("county");
+	countyList.style.display = "none";
+	while (stateList.length > 0)
+	{
+		stateList.remove(0);
+	}
+	var option = document.createElement("option");
+	option.text = "All cases";
+	stateList.add(option);
+	for (x in countycases)
+	{
+		if (countycases[x].country == country && countycases[x].level == "state")
+		{
+			var option = document.createElement("option");
+			option.text = countycases[x].state;
+			stateList.options.add(option);
+		}
+	}
+	if (stateList.options.length > 1)
+	{
+		stateList.style.display = "inline";
+	}
+}
+function getCounties(state)
+{
+	var countyList = document.getElementById("county");
+	countyList.style.display = "none";
+	while (countyList.length > 0)
+	{
+		countyList.remove(0);
+	}
+	var option = document.createElement("option");
+	option.text = "All cases";
+	countyList.add(option);
+	for (x in countycases)
+	{
+		if (countycases[x].state == state && countycases[x].level == "county")
+		{
+			var option = document.createElement("option");
+			option.text = countycases[x].county;
+			countyList.options.add(option);
+		}
+	}
+	if (countyList.options.length > 1)
+	{
+		countyList.style.display = "inline";
+	}
+}
+function getStats()
+{
+	var countryList = document.getElementById("country").options;
+	var states = document.getElementById("state");
+	var counties = document.getElementById("county");
+	var state = "";
+	var county = "";
+	var level = "country";
+	if (states.style.display != "none")
+	{
+		state = states.options[states.options.selectedIndex].text
+	}
+	if (counties.style.display != "none")
+	{
+		county = counties.options[counties.options.selectedIndex].text
+	}
+	if (state != "" && state != "All cases")
+	{
+		level = "state";
+	}
+	if (county != "" && county != "All cases")
+	{
+		level = "county";
+	}
+	displayData(false, level, countryList[countryList.selectedIndex].text, state, county);
+	document.getElementById("absCases").checked = true;
+}
 </script>
 </body>
