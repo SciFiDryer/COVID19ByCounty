@@ -15,16 +15,18 @@
 </head>
 <body>
 <div style="font-family: sans-serif">Select other area:<select id="country" onChange="getStates(document.getElementById('country').options[document.getElementById('country').selectedIndex].text)"></select><select style="display: none" id="state" onChange="getCounties(document.getElementById('state').options[document.getElementById('state').selectedIndex].text)"></select><select style="display: none" id="county"></select><button type="button" onClick="getStats()">Apply</button></div>
-<div id="totalcases" style="width:100%;height:27%;"></div>
+<div id="totalcases" style="width:100%;height:300px;"></div>
 <center><strong style="font-family: sans-serif">The closer the positive cases line is to the total tested line, the greater the potential for missed positive tests.</strong></center>
 <hr>
 <center><div style="font-family: sans-serif"><input type="radio" id="noAvg"  onChange="displayDailyCases()" name="average" checked>Daily numbers <input type="radio" id="rollingAvg"  onChange="displayDailyCases()" name="average">3 day rolling average</div></center>
-<p><div id="plot" style="width:100%;height:27%;"></div></p>
+<p><div id="plot" style="width:100%;height:300px;"></div></p>
 <center style="font-family: sans-serif">Normalize on: <input id="absCases" name="normalize" type="radio" onclick="displayDailyCases()" checked>Absolute numbers (don't normalize)</input><input id="percentCases" name="normalize" type="radio" onclick="displayDailyCases()">Percent positive cases</input></center>
 <div id="deathsarea">
 <hr>
-<p><div id="deaths" style="width:100%;height:27%;"></div></p>
+<p><div id="deaths" style="width:100%;height:300px;"></div></p>
 </div>
+<hr>
+<p><div id="active" style="width:100%;height:300px;"></div></p>
 <script language="javascript">
 
 	fipsId = window.location.search.substring(1);
@@ -47,6 +49,9 @@
 	var casesRollingAvg = [];
 	var deathsRollingAvg = [];
 	var ratioRollingAvg = [];
+	var estResolved1 = [];
+	var estResolved2 = [];
+	var estActive = [];
 	var countyName = "";
 	var titleName = "";
 	var countycases = undefined;
@@ -229,6 +234,30 @@ function displayData(isUsFips, level, country, state, county)
 			ratioRollingAvg.push((testedRatioArr[i] + testedRatioArr[i-1] + testedRatioArr[i-2])/3);
 		}
 	}
+	estActive = [];
+	var total = 0;
+	for (var i = 0; i < newCasesArr.length; i++)
+	{
+		
+		estActive.push(newCasesArr[i]);
+		if (i > 0)
+		{
+			estActive[i] = estActive[i] + estActive[i-1];
+		}
+		if (i > 15)
+		{
+			estActive[i] = estActive[i] - (newCasesArr[i-15]*.5);
+		}
+		if (i > 35)
+		{
+			estActive[i] = estActive[i] - (newCasesArr[i-35]*.3);
+		}
+		if (i > 60)
+		{
+			estActive[i] = estActive[i] - (newCasesArr[i-60]*.2);
+		}
+	}
+	var activePlot = document.getElementById("active");
 	var totalCasesPlot = document.getElementById('totalcases');
 	var plot = document.getElementById('plot');
 	titleName = countyName + " total cases";
@@ -244,14 +273,14 @@ function displayData(isUsFips, level, country, state, county)
 	{
 		titleName = countyName + " total cases vs deaths";
 		document.getElementById("deathsarea").style.display = "block";
-		plot.style.height = "27%";
-		totalCasesPlot.style.height = "27%";
+		//plot.style.height = "27%";
+		//totalCasesPlot.style.height = "27%";
 	}
 	if (!displayDeaths)
 	{
 		document.getElementById("deathsarea").style.display = "none";
-		plot.style.height = "40%";
-		totalCasesPlot.style.height = "40%";
+		//plot.style.height = "40%";
+		//totalCasesPlot.style.height = "40%";
 	}
 	displayDailyCases();
 	var data = [{
@@ -281,7 +310,13 @@ function displayData(isUsFips, level, country, state, county)
 	}
 	Plotly.newPlot(totalCasesPlot, data,
 	{title: titleName,  margin: {t:30}});
-	
+	var data1 = [{
+	x: newCasesDates,
+	y: estActive ,
+	type: "line",
+	name: "Modeled Active cases"}];
+	Plotly.newPlot(activePlot, data1,
+	{title: "Projected active cases (not actual data)",  margin: {t:30}});
 	
 }
 function getCountries()
