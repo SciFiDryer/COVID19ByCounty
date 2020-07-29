@@ -159,8 +159,41 @@ function displayData(isUsFips, level, country, state, county)
 	//get dates
 	for (x in countycases)
 	{
-		
-		if ((isUsFips && (typeof countycases[x].featureId == "string" && countycases[x].featureId.substring(5) == fipsId)))
+		if (isUsFips)
+		{
+			var fips = countycases[x].locationID.substring(countycases[x].locationID.indexOf("fips"));
+			if (fips.substring(5) == fipsId)
+			{
+				countyName = countycases[x].countyName;
+				addData(countycases[x].dates);
+			}
+		}
+		else if (countycases[x].level == level && !done)
+		{
+			if (countycases[x].countryName == country)
+			{
+				if (level == "country")
+				{
+					countyName = countycases[x].countryName;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				if (level == "state" && countycases[x].stateName == state)
+				{
+					countyName = countycases[x].stateName;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				if (level == "county" && countycases[x].countyName == county)
+				{
+					countyName = countycases[x].countyName;
+					addData(countycases[x].dates);
+					done = true;
+				}
+				
+			}
+		}
+		/*if ((isUsFips && (typeof countycases[x].featureId == "string" && countycases[x].featureId.substring(5) == fipsId)))
 		{
 			countyName = countycases[x].county;
 			addData(countycases[x].dates);
@@ -189,7 +222,7 @@ function displayData(isUsFips, level, country, state, county)
 				}
 				
 			}
-		}
+		}*/
 	}
 	var startAdding = false;
 	var displayDeaths = false;
@@ -327,7 +360,7 @@ function getCountries()
 	{
 		if (countycases[x].level == "country")
 		{
-			countriesArr.push(countycases[x].country);
+			countriesArr.push(countycases[x].countryName);
 		}
 	}
 	countriesArr.sort();
@@ -353,10 +386,10 @@ function getStates(country)
 	stateList.add(option);
 	for (x in countycases)
 	{
-		if (countycases[x].country == country && countycases[x].level == "state")
+		if (countycases[x].countryName == country && countycases[x].level == "state")
 		{
 			var option = document.createElement("option");
-			option.text = countycases[x].state;
+			option.text = countycases[x].stateName;
 			stateList.options.add(option);
 		}
 	}
@@ -378,10 +411,10 @@ function getCounties(state)
 	countyList.add(option);
 	for (x in countycases)
 	{
-		if (countycases[x].state == state && countycases[x].level == "county")
+		if (countycases[x].stateName == state && countycases[x].level == "county")
 		{
 			var option = document.createElement("option");
-			option.text = countycases[x].county;
+			option.text = countycases[x].countyName;
 			countyList.options.add(option);
 		}
 	}

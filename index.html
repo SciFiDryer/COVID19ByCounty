@@ -98,34 +98,26 @@ xhr.onload = function()
   }
 };
 xhr.send();
-//csv
-/*var xhr = new XMLHttpRequest();
-xhr.open('GET', "http://192.168.2.120/cases.csv", true);
 
-xhr.onload = function()
-{
-  var status = xhr.status;
-  if (status === 200)
-  {
-  	var i = 0;
-	countycases = xhr.responseText.split("\n");
-	for (i = 0; i < countycases.length; i++)
-	{
-		var line = countycases[i].split(",");
-		//console.log(line[5]);
-		if (line[5] != null && line[6] != null)
-		{
-			addCountyCases(line[6], line[5], line[line.length-1]);
-		}
-	}
-  }
-};
-xhr.send();*/
 function getDates()
 {
 	for (x in countycases)
 	{
-		if (countycases[x].country == "United States" && countycases[x].state != null && countycases[x].county != null)
+		for (y in countycases[x])
+		{
+			if (y == "countryName" && countycases[x][y] == "United States")
+			{
+				if (countycases[x].level == "state")
+				{
+					for (date in countycases[x].dates)
+					{
+						lastDate = date;
+						dateArr.push(date);
+					}
+				}
+			}
+		}
+		if (countycases[x].countryName == "United States" && countycases[x].state != null && countycases[x].county != null)
 		{
 			if (firstRun)
 			{
@@ -146,15 +138,20 @@ function showCasesOnDate(theDate)
 	countiesTmp = counties.features.slice();
 	for (x in countycases)
 	{
+		if (countycases[x].countryName == "United States" && countycases[x].dates[lastDate] != undefined)
+		{	
+			var fips = countycases[x].locationID.substring(countycases[x].locationID.indexOf("fips"));
+			addCountyCases(fips, countycases[x].dates[lastDate].cases);
+		}
 		//fixes shannon county glitch
-		addCountyCases("fips:46113", 0);
+		/*addCountyCases("fips:46113", 0);
 		if (countycases[x].country == "United States")
 		{
 			if (countycases[x].dates[lastDate] != undefined && countycases[x].featureId != undefined)
 			{
 				addCountyCases(countycases[x].featureId, countycases[x].dates[lastDate].cases);
 			}
-		}
+		}*/
 	}
 	if (loadingVisible)
 	{
